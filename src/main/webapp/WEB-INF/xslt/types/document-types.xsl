@@ -9,7 +9,7 @@
                 xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
                 exclude-result-prefixes="ems i18n">
 
-    <xsl:template match="HtmlBlock">
+    <xsl:template match="HtmlCode">
         <xsl:value-of select="html" disable-output-escaping="yes"/>
     </xsl:template>
 

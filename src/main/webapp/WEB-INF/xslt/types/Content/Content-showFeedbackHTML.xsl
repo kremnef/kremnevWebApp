@@ -13,7 +13,7 @@
             <xsl:variable name="backgroundColor" select="'0x323A3F'"/>
             <div id="{typifiedObject/emsObject/systemName}" class="{typeAction/name}">
                 <div class="html-content">
-                    <xsl:value-of select="$doc/xmlSource/HtmlBlock/html" disable-output-escaping="yes"/>
+                    <xsl:value-of select="$doc/xmlSource/HtmlCode/html" disable-output-escaping="yes"/>
                 </div>
 
                 <link rel="stylesheet" type="text/css" href="{$blockPrefix}/resource/css/jquery/jquery-ui.css"/>

@@ -123,7 +123,7 @@
     </xsl:template>
 
 
-    <xsl:template match="HtmlBlock">
+    <xsl:template match="HtmlCode">
         <xsl:value-of select="html" disable-output-escaping="yes"/>
     </xsl:template>
 

@@ -32,7 +32,7 @@
                     <xsl:for-each select="/root/childrenMap/children/entry[key/systemName=$systemName and key/parentId=$parentId]/value/item">
                         <xsl:variable name="doc" select="documents/xmlSource"/>
                         <div id="{emsObject/systemName}">
-                            <xsl:value-of select="$doc/HtmlBlock/html" disable-output-escaping="yes"/>
+                            <xsl:value-of select="$doc/HtmlCode/html" disable-output-escaping="yes"/>
                         </div>
                     </xsl:for-each>
                 </div>

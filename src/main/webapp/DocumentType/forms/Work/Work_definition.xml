@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+
+<fd:form 
+         xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+         xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+
+    <fd:widgets>
+        <fd:group id="Work">
+
+            <fd:widgets>
+                <fd:field id="text">
+                    <fd:label>
+                        <i18n:text i18n:catalogue="documenttypes" key="Work.text"/>
+                    </fd:label>
+                    <fd:datatype base="string"/>
+                </fd:field>
+            </fd:widgets>
+
+            <fd:repeater id="authors" initial-size="1" orderable="true">
+
+                <fd:widgets>
+
+                    <fd:field id="author">
+                        <fd:label>
+                            <i18n:text i18n:catalogue="documenttypes" key="Work.author"/>
+                        </fd:label>
+                        <fd:datatype base="string">
+                        </fd:datatype>
+                        <fd:validation>
+                            <fd:length max="100"/>
+                        </fd:validation>
+                    </fd:field>
+
+                    <fd:field id="email">
+                        <fd:label>
+                            <i18n:text i18n:catalogue="documenttypes" key="Work.email"/>
+                        </fd:label>
+                        <fd:datatype base="string">
+                        </fd:datatype>
+                        <fd:validation>
+                            <fd:length max="200"/>
+                        </fd:validation>
+                    </fd:field>
+
+                    <!--<fd:row-action id="up" command="move-up"/>-->
+                    <!--<fd:row-action id="down" command="move-down"/>-->
+
+                    <fd:booleanfield id="select">
+                        <fd:label>Select</fd:label>
+                    </fd:booleanfield>
+                </fd:widgets>
+                <fd:on-create>
+                    <fd:javascript>
+                        var repeater = widget;
+                        print("repeater!! = " + repeater.getSize());
+                    </fd:javascript>
+                </fd:on-create>
+            </fd:repeater>
+
+            <!--<fd:repeater-action id="remove" command="delete-rows" repeater="authors" select="select">
+                <fd:label><i18n:text i18n:catalogue="documenttypes" key="Work.removeSelected"/></fd:label>
+            </fd:repeater-action>
+
+            <fd:repeater-action id="add" command="add-row" repeater="authors">
+                <fd:label><i18n:text i18n:catalogue="documenttypes" key="Work.addAuthor"/></fd:label>
+
+            </fd:repeater-action>-->
+        </fd:group>
+        <fd:submit id="saveDocumentType">
+            <fd:label><i18n:text key="Save"/></fd:label>
+        </fd:submit>
+    </fd:widgets>
+
+</fd:form>

@@ -2,7 +2,7 @@
 <fb:context xmlns:fb="http://apache.org/cocoon/forms/1.0#binding" path="/">
 
     <!--<fb:value  path="event"/>-->
-    <fb:group id="HtmlBlock" path="HtmlBlock">
+    <fb:group id="HtmlCode" path="HtmlCode">
         <fb:value id="html" path="html"/>
     </fb:group>
         <!--<fb:value id="place" path="place"/>-->

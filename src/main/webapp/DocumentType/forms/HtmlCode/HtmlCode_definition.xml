@@ -6,7 +6,7 @@
          xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
 
     <fd:widgets>
-        <fd:group id="HtmlBlock">
+        <fd:group id="HtmlCode">
 
             <fd:widgets>
                 <fd:field id="html">

@@ -1,36 +1,37 @@
 <?xml version="1.0"?>
 <catalogue xml:lang="ru">
     <!--doctypes-->
+
     <!--event-->
-    <message key="Event">Событие</message>
-    <message key="Events">События</message>
-    <message key="Event.title">Заголовок</message>
-    <message key="Event.type">Тип События</message>
-    <message key="Event.url">URL</message>
-    <message key="Event.date">Дата</message>
-    <message key="Event.time">Время</message>
-    <message key="Event.image">Картинка</message>
-    <message key="Event.issue">Суть</message>
-    
-    <message key="Event.removeSelectedEvent">Удалить выбранное событие</message>
-    <message key="Event.addEvent">Добавить Событие</message>
-    <message key="Event.save">Сохранить</message>
-    
-    <message key="Event.datetime">Время</message>
-    <message key="Event.create">Создать событие</message>
-    <message key="Event.edit">Редактировать событие</message>
-    <message key="Event.place">Место</message>
-    <message key="event.idea">Идея</message>
-    <message key="event.placephoto">Фотография места</message>
-    <message key="event.participment">Участники</message>
-    <message key="event.org">Организаторы</message>
-    <message key="Event.description">Описание</message>
-    <message key="event.partnerlogos">Логотипы партнеров</message>
-    <message key="event.partnertext">Тект о партнере</message>
-    <message key="Event.photo">Фото</message>
-    <message key="Event.video">Видео</message>
-    <message key="Event.audio">Аудио</message>
-    <message key="Event.edit">Редактировать данные события</message>
+    <!--<message key="Event">Событие</message>-->
+    <!--<message key="Events">События</message>-->
+    <!--<message key="Event.title">Заголовок</message>-->
+    <!--<message key="Event.type">Тип События</message>-->
+    <!--<message key="Event.url">URL</message>-->
+    <!--<message key="Event.date">Дата</message>-->
+    <!--<message key="Event.time">Время</message>-->
+    <!--<message key="Event.image">Картинка</message>-->
+    <!--<message key="Event.issue">Суть</message>-->
+    <!---->
+    <!--<message key="Event.removeSelectedEvent">Удалить выбранное событие</message>-->
+    <!--<message key="Event.addEvent">Добавить Событие</message>-->
+    <!--<message key="Event.save">Сохранить</message>-->
+    <!--<message key="Event.datetime">Время</message>-->
+    <!--<message key="Event.create">Создать событие</message>-->
+    <!--<message key="Event.edit">Редактировать событие</message>-->
+    <!--<message key="Event.place">Место</message>-->
+    <!--<message key="event.idea">Идея</message>-->
+    <!--<message key="event.placephoto">Фотография места</message>-->
+    <!--<message key="event.participment">Участники</message>-->
+    <!--<message key="event.org">Организаторы</message>-->
+    <!--<message key="Event.description">Описание</message>-->
+    <!--<message key="event.partnerlogos">Логотипы партнеров</message>-->
+    <!--<message key="event.partnertext">Тект о партнере</message>-->
+    <!--<message key="Event.photo">Фото</message>-->
+    <!--<message key="Event.video">Видео</message>-->
+    <!--<message key="Event.audio">Аудио</message>-->
+    <!--<message key="Event.edit">Редактировать данные события</message>-->
+
     <!--article-->
     <message key="Article">Статья</message>
     <message key="Article.title">Заголовок</message>
@@ -40,6 +41,22 @@
     <message key="Article.edit">Редактировать статью</message>
     <message key="Article.save">Сохранить статью</message>
     <message key="Article.edit">Редактировать данные статьи</message>
+
+    <!--work-->
+    <message key="Work">Работа</message>
+    <message key="Work.title">Заголовок</message>
+    <message key="Work.text">Текст</message>
+    <message key="Work.datetime">Время</message>
+    <message key="Work.create">Создать Новую работу</message>
+    <message key="Work.author">Автор</message>
+    <message key="Work.email">Email автора</message>
+
+    <message key="Work.edit">Редактировать статью</message>
+    <message key="Work.save">Сохранить статью</message>
+    <message key="Work.edit">Редактировать данные статьи</message>
+
+
+
     <!--NewsAndEvents-->
     <message key="NewsAndEvents">Новости и события</message>
     <message key="NewsAndEvents.title">Заголовок</message>
@@ -49,24 +66,27 @@
     <message key="NewsAndEvents.edit">Редактировать Новость</message>
     <message key="NewsAndEvents.save">Сохранить Новость</message>
     <message key="NewsAndEvents.edit">Редактировать данные Новость</message>
+
     <!--SMI-->
-    <message key="SMI">Публикация</message>
-    <message key="SMI.title">Заголовок</message>
-    <message key="SMI.datetime">дата (Время)</message>
-    <message key="SMI.author">Автор</message>
-    <message key="SMI.url">URL</message>
-    <message key="SMI.text">Текст</message>
-    <message key="SMI.save">Сохранить Публикацию</message>
-    <message key="SMI.edit">Редактировать данные публикации</message>
+    <!--<message key="SMI">Публикация</message>-->
+    <!--<message key="SMI.title">Заголовок</message>-->
+    <!--<message key="SMI.datetime">дата (Время)</message>-->
+    <!--<message key="SMI.author">Автор</message>-->
+    <!--<message key="SMI.url">URL</message>-->
+    <!--<message key="SMI.text">Текст</message>-->
+    <!--<message key="SMI.save">Сохранить Публикацию</message>-->
+    <!--<message key="SMI.edit">Редактировать данные публикации</message>-->
+
     <!--Project-->
-    <message key="Project">Проект</message>
-    <message key="Project.title">Заголовок</message>
-    <message key="Project.datetime">дата (Время)</message>
+    <!--<message key="Project">Проект</message>-->
+    <!--<message key="Project.title">Заголовок</message>-->
+    <!--<message key="Project.datetime">дата (Время)</message>-->
     <!--<message key="Project.author">Автор</message>-->
     <!--<message key="Project.url">URL</message>-->
-    <message key="Project.text">Текст</message>
-    <message key="Project.save">Сохранить проект</message>
-    <message key="Project.edit">Редактировать данные проекта</message>
+    <!--<message key="Project.text">Текст</message>-->
+    <!--<message key="Project.save">Сохранить проект</message>-->
+    <!--<message key="Project.edit">Редактировать данные проекта</message>-->
+
     <!--Partner-->
     <message key="Partner">Партнёр</message>
     <message key="Partners">Партнёры</message>
@@ -81,33 +101,39 @@
     <message key="Partner.removeSelectedCategory">удалить Категорию</message>
     <message key="Partner.edit">Редактировать данные партнера</message>
 
-    <message key="Movie">Видео клип</message>    
-    <message key="Movie.edit">Редактировать данные видео клипа</message>
+    <!--Product-->
+    <!--<message key="Movie">Видео клип</message>    -->
+    <!--<message key="Movie.edit">Редактировать данные видео клипа</message>-->
 
-    <message key="HtmlBlock">HTML блок</message>    
-    <message key="HtmlBlock.edit">Редактировать данные HTML блока</message>
+    <!--Product-->
+    <message key="HtmlCode">HTML блок</message>
+    <message key="HtmlCode.edit">Редактировать данные HTML блока</message>
 
+    <!--Product-->
     <message key="ImageBanner">Картинка-баннер</message>
     <message key="ImageBanner.edit">Редактировать данные картинки-баннера</message>
 
+    <!--Product-->
     <message key="Product">Продукт</message>
     <message key="Product.edit">Редактировать данные продукта</message>
     <message key="Product.description">Описание</message>
     <message key="Product.price">Цена</message>
     <message key="Product.unit">Единица измерения</message>
 
-    <message key="People">Люди</message>
-    <message key="People.edit">Редактировать данные людей</message>
-    <message key="Peoples">Люди</message>
-    <message key="People.name">Имя</message>
-    <message key="People.avatar">Аватар(фото)</message>
-    <message key="People.email">email</message>
-    <message key="People.heading">Заголовок Категории</message>
-    <message key="People.save">Сохранить</message>
-    <message key="People.addPeople">Добавить</message>
-    <message key="People.removeSelectedPeople">Удалить выделенного</message>
-    <message key="People.addCategory">Добавить Категорию</message> 
-    <message key="People.removeSelectedCategory">Удалить выбранную категорию</message>
+    <!--People-->
+    <!--<message key="People">Люди</message>-->
+    <!--<message key="People.edit">Редактировать данные людей</message>-->
+    <!--<message key="Peoples">Люди</message>-->
+    <!--<message key="People.name">Имя</message>-->
+    <!--<message key="People.avatar">Аватар(фото)</message>-->
+    <!--<message key="People.email">email</message>-->
+    <!--<message key="People.heading">Заголовок Категории</message>-->
+    <!--<message key="People.save">Сохранить</message>-->
+    <!--<message key="People.addPeople">Добавить</message>-->
+    <!--<message key="People.removeSelectedPeople">Удалить выделенного</message>-->
+    <!--<message key="People.addCategory">Добавить Категорию</message> -->
+    <!--<message key="People.removeSelectedCategory">Удалить выбранную категорию</message>-->
+
      <!--Calendar-->
     <message key="Calendar.exhibition">Выставка</message>
     <message key="Calendar.forum">Форум</message>
@@ -127,29 +153,29 @@
     <message key="Vacancy.contacts">Контактная информация</message>
 
      <!--PressRelease-->
-    <message key="PressRelease.title">Заголовок</message>
-    <message key="PressRelease.text">Содержание</message>
-    <message key="PressRelease.contacts">Контакты пресс-службы</message>
-    <message key="PressRelease.information">Справочная информация</message>
-    <message key="PressRelease.showAll">Все пресс-релизы</message>
+    <!--<message key="PressRelease.title">Заголовок</message>-->
+    <!--<message key="PressRelease.text">Содержание</message>-->
+    <!--<message key="PressRelease.contacts">Контакты пресс-службы</message>-->
+    <!--<message key="PressRelease.information">Справочная информация</message>-->
+    <!--<message key="PressRelease.showAll">Все пресс-релизы</message>-->
 
         <!--Tariffs-->
-    <message key="Tariffs">Тарифы</message>
-    <message key="Tariffs.category">Категория потребителей</message>
-    <message key="Tariffs.hot-water">Горячая вода</message>
-    <message key="Tariffs.selected-vapor">Отборный пар</message>
-    <message key="Tariffs.live-steam">Острый пар</message>
+    <!--<message key="Tariffs">Тарифы</message>-->
+    <!--<message key="Tariffs.category">Категория потребителей</message>-->
+    <!--<message key="Tariffs.hot-water">Горячая вода</message>-->
+    <!--<message key="Tariffs.selected-vapor">Отборный пар</message>-->
+    <!--<message key="Tariffs.live-steam">Острый пар</message>-->
 
       <!--Rent-->
-    <message key="Rent">Аренда</message>
-    <message key="Rent.category">Категория помещений</message>
-    <message key="Rent.address">Адрес</message>
-    <message key="Rent.object">Объект</message>
-    <message key="Rent.object-description">Подробнее</message>
-    <message key="Rent.building">Здание, Помещение</message>
-    <message key="Rent.area">Площадь(кв.м.)</message>
-    <message key="Rent.addRow">Добавит строку</message>
-    <message key="Rent.removeSelected">Удалить выбранную строку</message>
+    <!--<message key="Rent">Аренда</message>-->
+    <!--<message key="Rent.category">Категория помещений</message>-->
+    <!--<message key="Rent.address">Адрес</message>-->
+    <!--<message key="Rent.object">Объект</message>-->
+    <!--<message key="Rent.object-description">Подробнее</message>-->
+    <!--<message key="Rent.building">Здание, Помещение</message>-->
+    <!--<message key="Rent.area">Площадь(кв.м.)</message>-->
+    <!--<message key="Rent.addRow">Добавит строку</message>-->
+    <!--<message key="Rent.removeSelected">Удалить выбранную строку</message>-->
 
 
 
@@ -165,14 +191,6 @@
     <message key="Search.records2">Записи</message>
     <message key="Search.record21">Запись</message>
 
-
-    <!--MAP-->
-    <message key="Map.novgorod">Новгородская область</message>
-    <message key="Map.tver">Тверская область</message>
-    <message key="Map.yaroslavl">Ярославская область</message>
-    <message key="Map.vologda">Вологодская область</message>
-    <message key="Map.kostroma">Костромская область</message>
-    <message key="Map.arkhangelsk">Архангельская область</message>
 
     <message key="Breadcrumb.home">Главная</message>
 

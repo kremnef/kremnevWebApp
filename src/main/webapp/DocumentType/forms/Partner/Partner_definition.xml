@@ -1,0 +1,108 @@
+<?xml version="1.0"?>
+
+<fd:form
+         xmlns:fd="http://apache.org/cocoon/forms/1.0#definition"
+         xmlns:i18n="http://apache.org/cocoon/i18n/2.1">
+    <fd:widgets>
+        <fd:group id="Partner">
+            <fd:widgets>
+
+                <fd:repeater id="categories" initial-size="1" orderable="true">
+                    <fd:widgets>
+                        <fd:field id="heading">
+                            <fd:label>
+                                <i18n:text i18n:catalogue="documenttypes" key="Partner.heading"/>
+                            </fd:label>
+                            <fd:datatype base="string">
+                            </fd:datatype>
+                            <fd:validation>
+                                <fd:length max="200"/>
+                            </fd:validation>
+                        </fd:field>
+                        <fd:repeater id="PartnerList" initial-size="1" orderable="true">
+
+                            <fd:widgets>
+                                <fd:field id="name">
+                                    <fd:label>
+                                        <i18n:text i18n:catalogue="documenttypes" key="Partner.name"/>
+                                    </fd:label>
+                                    <fd:datatype base="string">
+                                    </fd:datatype>
+                                    <fd:validation>
+                                        <fd:length max="200"/>
+                                    </fd:validation>
+                                </fd:field>
+
+                                <fd:field id="logo">
+                                    <fd:label>
+                                        <i18n:text i18n:catalogue="documenttypes" key="Partner.logo"/>
+                                    </fd:label>
+                                    <fd:datatype base="string">
+                                    </fd:datatype>
+                                    <fd:validation>
+                                        <fd:length max="100"/>
+                                    </fd:validation>
+                                </fd:field>
+                                <fd:field id="url">
+                                    <fd:label>
+                                        <i18n:text i18n:catalogue="documenttypes" key="Partner.url"/>
+                                    </fd:label>
+                                    <fd:datatype base="string">
+                                    </fd:datatype>
+                                    <fd:validation>
+                                        <fd:length max="100"/>
+                                    </fd:validation>
+                                </fd:field>
+                                <fd:row-action id="up" command="move-up"/>
+                                <fd:row-action id="down" command="move-down"/>
+
+                                <fd:booleanfield id="select">
+                                    <fd:label>Select</fd:label>
+                                </fd:booleanfield>
+                            </fd:widgets>
+                            <fd:on-create>
+                                <fd:javascript>
+                                    var repeater = widget;
+                                    print("repeater!! = " + repeater.getSize());
+                                </fd:javascript>
+                            </fd:on-create>
+                        </fd:repeater>
+
+                        <fd:repeater-action id="remove" command="delete-rows" repeater="partnersList" select="select">
+                            <fd:label><i18n:text i18n:catalogue="documenttypes" key="Partner.removeSelectedPartner"/></fd:label>
+                        </fd:repeater-action>
+
+                        <fd:repeater-action id="add" command="add-row" repeater="partnersList">
+                            <fd:label><i18n:text i18n:catalogue="documenttypes" key="Partner.addPartner"/></fd:label>
+
+                        </fd:repeater-action>
+
+                        <fd:booleanfield id="select">
+                            <fd:label>Select</fd:label>
+                        </fd:booleanfield>
+                    </fd:widgets>
+                    <fd:on-create>
+                        <fd:javascript>
+                            var repeater = widget;
+                            print("repeater!! = " + repeater.getSize());
+                        </fd:javascript>
+                    </fd:on-create>
+                </fd:repeater>
+
+                <fd:repeater-action id="remove" command="delete-rows" repeater="categories" select="select">
+                    <fd:label><i18n:text i18n:catalogue="documenttypes" key="Partner.removeSelectedCategory"/></fd:label>
+                </fd:repeater-action>
+
+                <fd:repeater-action id="add" command="add-row" repeater="categories">
+                    <fd:label><i18n:text i18n:catalogue="documenttypes" key="Partner.addCategory"/></fd:label>
+                </fd:repeater-action>
+
+
+            </fd:widgets>
+        </fd:group>
+        <fd:submit id="saveDocumentType">
+            <fd:label><i18n:text key="Save"/></fd:label>
+        </fd:submit>
+    </fd:widgets>
+
+</fd:form>
