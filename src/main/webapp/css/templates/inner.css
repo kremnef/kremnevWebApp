@@ -1,0 +1,442 @@
+@import "global.css";
+
+
+.content .main ol {
+    background-color: #f7f7f7;
+    padding: 10px;
+    display: inline-block;
+}
+.content .main ol li a{
+    color: #4E4F5A;
+    display: block;
+    font-size: 14px;
+    padding: 5px 0;
+
+}
+.content .main ul li a{
+    color: #4E4F5A;
+    display: block;
+    font-size: 13px;
+    padding: 5px 0;
+
+}
+.content .main h3 {
+    padding: 20px 0 10px 0;
+}
+.content .main p{
+    padding: 0px 0 20px 0;
+
+}
+.content .main a {
+    color: #4E4F5A;
+    font-size: 12px;
+    display: block;
+    padding: 5px 0;
+}
+.header {
+    margin: 0 auto;
+    max-width: 1100px;
+    min-width: 800px;
+    padding: 28px 35px 0 20px;
+    text-align: left;
+}
+
+.logo {
+    float: left;
+    padding: 0 40px 0 0;
+}
+
+.header .instruments {
+    padding-top: 25px;
+}
+
+.header .instruments a {
+    color: #CCCCCC;
+    text-decoration: none;
+}
+
+.header .contacts {
+    float: left;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.header .instruments .showHTML {
+    font-family: Verdana, Tahoma, sans-serif;
+    font-size: 8px;
+    text-transform: uppercase;
+    float: right;
+    padding-left: 35px;
+}
+
+.header .instruments .showHTML h1 {
+    display: none;
+}
+
+.header .instruments .widget-2 .showHTML {
+    background: url("../../img/bg-search.png") no-repeat scroll left top transparent;
+    padding: 5px 28px 5px 7px;
+}
+
+.header .instruments .widget-2 .showHTML input {
+    background-color: transparent;
+    border: 0 none;
+    width: 170px;
+    color: white;
+}
+
+/*.header .horMenu {
+    clear: right;
+    list-style: none outside none;
+    margin: 0;
+    min-width: 950px;
+}
+.header .horMenu li.first {
+    padding: 10px 0 0;
+}
+.header .horMenu li {
+    float: left;
+    font-size: 14px;
+    padding: 10px 0 0 8%;
+    text-transform: uppercase;
+}
+.header .horMenu li a {
+    color: white;
+    white-space: nowrap;
+}
+.header .horMenu li.selected a {
+    color: #FF6600;
+}*/
+
+
+.content .main {
+    margin: 0 5% 5% 30%;
+    padding: 20px 5px 0 10px ;
+}
+
+.content .main h1{
+    margin: 0;
+    /*padding: 20px 20px 60px;*/
+}
+
+
+
+.content .main .news-block .date {
+    color: #74778B;
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+
+.content .main .news-block .title a {
+    color: #4C4E5B;
+    display: block;
+    font-size: 13px;
+    padding: 0 0 10px;
+    text-decoration: underline;
+}
+
+.content .main .news-block .text {
+    color: #545563;
+    font-size: 13px;
+}
+
+.content .main .instruments {
+    padding: 40px 0;
+}
+
+.content .main .instruments a {
+    color: #CC3300;
+    float: left;
+    font-size: 13px;
+    height: 26px;
+    padding-right: 20px;
+}
+
+.content .main .instruments a.rss {
+    background: url("../../img/rss.png") no-repeat scroll left top transparent;
+    padding-left: 30px;
+}
+
+.content .extra {
+    margin-top: 50px;
+    background: url("../../img/subcontent-t.png") repeat-x scroll left top #F7F7F7;
+    clear: both;
+    padding-top: 40px;
+}
+
+
+.content .extra .showHierarchy {
+    margin: 0 60px 0 450px;
+}
+
+.content .extra .showHierarchy ul {
+    clear: right;
+}
+
+.content .extra .showHierarchy ul li {
+    display: block;
+}
+
+.content .extra .showHierarchy ul li a {
+    clear: right;
+    color: #4C4E5B;
+    float: left;
+    font-size: 14px;
+    padding: 20px 20px 20px 0;
+    width: 210px;
+}
+
+.content .extra .showHierarchy ul li a.img {
+    padding: 10px 20px 20px 0;
+    width: 30px;
+}
+
+.content .extra .showHierarchy ul li span {
+    color: #999999;
+    display: block;
+    font-size: 11px;
+    padding: 25px 20px 35px 0;
+}
+
+.content .extra .director {
+    border-right: 1px solid #E2E2E2;
+    float: left;
+    font-family: Aria, sans-serif;
+    margin: 40px 0;
+    padding: 10px 30px 10px 40px;
+}
+
+.content .extra .director .position {
+    color: #333333;
+    font-size: 12px;
+    padding: 10px 0;
+}
+
+.content .extra .director .name {
+    color: #598E00;
+    font-size: 14px;
+    padding: 10px 0;
+    text-decoration: underline;
+    width: 135px;
+}
+
+.content .extra .slave {
+    border-left: 1px solid #E2E2E2;
+    color: #0099FF;
+    float: right;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 40px 0;
+    padding: 10px 20px;
+    width: 216px;
+}
+
+.content .extra .representatives {
+    border-left: 1px solid #E2E2E2;
+    color: #0099FF;
+    float: right;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 40px 0;
+    padding: 10px 30px;
+    width: 156px;
+}
+
+.content .extra .representatives h3 {
+    color: #333333;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+
+.content .extra .representatives ul li {
+    display: block;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.content .extra .representatives ul li a {
+    border-top: 1px solid #E2E2E2;
+    color: #598C00;
+    display: block;
+    font-size: 12px;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.content .extra .representatives ul li:first-child a {
+    border-top: 0 none;
+}
+
+.content .extra .structure {
+    margin-left: 225px;
+}
+
+.content .extra .structure h1 {
+    padding-bottom: 30px;
+}
+
+.content .extra .structure ul li a {
+    color: #4E4F5A;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 0;
+    text-decoration: underline;
+}
+
+
+
+.verMenu {
+    float: left;
+    padding: 30px 5px 0 30px;
+    /*width: 340px;*/
+    display: inline-block;
+}
+
+.verMenu h2 {
+    /*font-size: 16px;*/
+    display: none;
+}
+/*.verMenu h2 a{
+    color: #666;
+text-decoration: none;
+}*/
+.verMenu ul {
+    padding-left: 3%;
+    max-width: 250px;
+}
+.verMenu ul li {
+    font-size: 14px;
+    padding-top: 15px;
+    font-weight: normal;
+}
+
+.verMenu ul li.selected {
+    /*color: #F23B00;*/
+    font-weight: bold;
+}
+.verMenu ul li a {
+    color: #069;
+
+    text-decoration: underline;
+}
+.verMenu ul li.selected  > a {
+    color: #F23B00;
+    text-decoration: none;
+    text-decoration: none;
+}
+
+.verMenu ul li.level-2 {
+    font-size: 12px;
+    padding: 5px;
+}
+.verMenu ul li.level-3 {
+    font-size: 11px;
+    padding: 5px;
+}
+.verMenu ul li.level-4 {
+    font-size: 10px;
+    padding: 5px;
+}
+/*.verMenu .last {
+    clear: both;
+    padding-top: 40px;
+}
+
+.verMenu .last a {
+    color: #4C4E5B;
+    font-size: 12px;
+}*/
+
+.unspoken ul {
+    width: 600px;
+}
+
+.unspoken li {
+    display: inline-block;
+    width: 85px;
+    height: 85px;
+    margin: 10px 10px 5px 0;
+}
+
+.unspoken li a {
+    display: block;
+}
+
+.unspoken li a img {
+    display: block;
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.unspoken li a:hover img {
+    border-color: #464D60;
+}
+
+.extra .showFiles {
+    display: block;
+    margin: 0px 20px 30px 330px;
+    clear: both;
+    /*width: 75%;*/
+    /*border: 1px solid red;*/
+}
+.extra .showFiles li {
+    border-top: 1px dotted #666666;
+    padding: 10px 0;
+}
+.extra .showFiles li:first-child {
+    border-top: 0;
+}
+.extra .showFiles li a {
+    font-size: 13px;
+    color: #63920C;
+    display: inline-block;
+    padding-left: 10px;
+}
+.extra .showFiles li a.img {
+    float:left;
+    padding-left: 0;
+}
+.extra .showFiles li span {
+    display: inline-block;
+    width: 180px;
+    padding-left: 10px;
+    white-space: nowrap;
+    color: #999999;
+    font-family: Arial, sans-serif;
+}
+.extra .showFiles h2 {
+    display: none;
+}
+
+/*.sidebar {
+    min-width: 310px;
+    padding-bottom: 40px;
+    padding-top: 0;
+    width: 100%;
+    float: none;
+    margin: -50em 0 0 123%;
+    display: block;
+}*/
+
+/*.main .info {
+    margin-right: 2%;
+    float: none;
+}
+.main .info h1 {
+    margin-left: 0;
+}*/
+/*
+.custom-content{
+    margin-top: 15px;
+    margin-bottom: 60px;
+
+}*/
+

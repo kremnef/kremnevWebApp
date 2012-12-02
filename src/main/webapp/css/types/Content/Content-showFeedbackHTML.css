@@ -1,0 +1,24 @@
+.ui-dialog, .ui-dialog .ui-dialog-buttonpane {
+    background: #323A3F;
+}
+.ui-widget-header {
+    background: #323A3F;
+    border: 0;
+    font-weight:normal;
+}
+.ui-dialog .ui-dialog-title {
+    color: #BDD869;
+    padding-left:8px;
+    padding-top:20px;
+    font-size:20pt;
+    margin-bottom:0;
+}
+.ui-corner-all {
+ -moz-border-radius: 18px 18px 18px 18px;
+}
+.ui-dialog .ui-dialog-titlebar {
+    padding-bottom:0;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+    top:18px;
+}

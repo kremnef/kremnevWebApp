@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <!ENTITY amp "&#x0026;">
+  <!ENTITY copy "&#x00A9;">
+  <!ENTITY nbsp "&#x00A0;">
+  <!ENTITY laquo "&#x00AB;">
+  <!ENTITY raquo "&#x00BB;">
+  <!ENTITY lt "&#x003C;">
+  <!ENTITY gt "&#x003E;">
+  <!ENTITY rarr "&#x2192;">
+  <!ENTITY reg "&#x00AE;">
+  <!ENTITY minus "&#x002D;">
+  <!ENTITY quotation "&#x0022;">
+  <!ENTITY mdash "&#151;">
+  <!--1-->
+

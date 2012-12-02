@@ -1,0 +1,25 @@
+<configuration>
+  <fonts>
+    <font metrics-file="file:///fop-fonts/arial.xml"
+          kerning="yes" embed-file="file:///fop-fonts/arial.ttf">
+      <font-triplet name="Arial" style="normal" weight="normal"/>
+      <font-triplet name="ArialMT" style="normal" weight="normal"/>
+    </font>
+    <!--<font metrics-file="D:/fop-fonts/arialb.ttf.xml"
+          kerning="yes" embed-file="C:/WINNT/Fonts/arialb.ttf">
+      <font-triplet name="Arial" style="normal" weight="bold"/>
+      <font-triplet name="ArialMT" style="normal" weight="bold"/>
+    </font>
+    <font metrics-file="D:/fop-fonts/arialbi.ttf.xml"
+          kerning="yes" embed-file="C:/WINNT/Fonts/arialbi.ttf">
+      <font-triplet name="Arial" style="italic" weight="bold"/>
+      <font-triplet name="ArialMT" style="italic" weight="bold"/>
+    </font>
+    <font metrics-file="D:/fop-fonts/ariali.ttf.xml"
+          kerning="yes" embed-file="C:/WINNT/Fonts/ariali.ttf">
+      <font-triplet name="Arial" style="italic" weight="normal"/>
+      <font-triplet name="ArialMT" style="italic" weight="normal"/>
+    </font>-->
+      <!--1-->
+  </fonts>
+</configuration>

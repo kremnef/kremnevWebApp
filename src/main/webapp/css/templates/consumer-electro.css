@@ -1,0 +1,196 @@
+@import "global.css";
+
+h4 {
+    margin: 0;
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    color: #F23900;
+    padding-left: 10px;
+    padding-bottom: 5px;
+    float: left;
+    font-weight: normal;
+}
+.geography {
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.info {
+    padding: 20px 60px;
+}
+
+.info ul.horMenu li {
+    float: right;
+    padding-left: 20px;
+}
+.info ul.horMenu li a {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #F23B00;
+}
+.info ul.horMenu li.last {
+    font-weight: bold;
+}
+
+.info .verMenu {
+    float: left;
+    display: block;
+    padding:0 0 0 210px ;
+
+    /*border: 1px red solid;*/
+    /*margin-left: 230px;*/
+    margin-left: 35px;
+    clear: both;
+}
+.info .verMenu h2{
+    margin-bottom: 20px;
+}
+.info .verMenu h2 a {
+    color: #000000;
+    text-decoration: none;
+
+}
+
+.info .verMenu ul li{
+  border-top: 1px dotted #666666;
+}
+.info .verMenu ul li a {
+    color: #63940E;
+}
+.info .verMenu ul li a.selected {
+    color: #4C4D59;
+    text-decoration: none;
+}
+
+.info .verMenu ul li.selected a {
+    color: #4C4D59;
+    text-decoration: none;
+}
+
+.info ul li a {
+    color: #4E4F5A;
+    display: block;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 0;
+    text-decoration: underline;
+}
+.main {
+
+    float: left;
+    clear: both;
+
+    padding: 10px 20px 20px 40px;
+}
+.main .showItemsPositionSorted{
+    display: block;
+    clear: both;
+    /*padding:20px 0 0 265px;*/
+}
+.main .showItemsPositionSorted h1{
+    font-size: 24px;
+    padding-bottom: 0px;
+    color: #000000;
+}
+
+.main .showHTML {
+    float: left;
+    clear: none;
+    width: 40%;
+    padding-right: 2%;
+}
+.main .showHTML ul.files {
+    float: left;
+    margin-top: 30px;
+}
+.main .showHTML ul.files li {
+    border-top: 1px dotted #666666;
+    padding-bottom: 10px;
+}
+.main .showHTML ul.files li:first-child {
+    border-top: 0;
+}
+.main .showHTML ul.files li a {
+    font-size: 14px;
+}
+
+.main .news-block .date {
+    color: #74778B;
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+
+.main .news-block .title a {
+    color: #4C4E5B;
+    display: block;
+    font-size: 13px;
+    padding: 0 0 10px;
+    text-decoration: underline;
+}
+
+.main .news-block .text {
+    color: #545563;
+    font-size: 13px;
+}
+
+.main .instruments {
+    padding: 40px 0;
+}
+
+.main .instruments a {
+    color: #CC3300;
+    float: left;
+    font-size: 13px;
+    height: 26px;
+    padding-right: 20px;
+}
+
+.main .instruments a.rss {
+    background: url("../../img/rss.png") no-repeat scroll left top transparent;
+    padding-left: 30px;
+}
+
+.extra {
+    background: url("../../img/subcontent-t.png") repeat-x scroll left top #F7F7F7;
+    clear: both;
+    padding: 40px;
+}
+.extra h1 {
+    float: left;
+    padding-bottom: 20px;
+}
+
+
+.extra .showHTML .item-content{
+    display: block;
+    float: left;
+    clear: both;
+
+}
+
+
+.help {
+    background: url("../../img/subcontent-b.png") repeat-x scroll left top white;
+    clear: both;
+    padding: 30px 20px 20px;
+}
+.help .showHTML h1 {
+    margin-left: 250px;
+    padding-bottom: 30px;
+}
+.help .showHTML .custom-content {
+    margin-left: 250px;
+    padding-bottom: 30px;
+    font-size: 16px;
+    color: #676D6E;
+}
+
+
+.size {
+    font-family: verdana, sans-serif;
+    color: #666666;
+    font-size: 11px;
+}
+.doc {
+    padding-top: 10px;
+}
