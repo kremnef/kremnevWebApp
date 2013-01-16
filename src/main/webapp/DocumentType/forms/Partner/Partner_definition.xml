@@ -19,7 +19,7 @@
                                 <fd:length max="200"/>
                             </fd:validation>
                         </fd:field>
-                        <fd:repeater id="PartnerList" initial-size="1" orderable="true">
+                        <!--<fd:repeater id="PartnerList" initial-size="1" orderable="true">
 
                             <fd:widgets>
                                 <fd:field id="name">
@@ -77,16 +77,17 @@
 
                         </fd:repeater-action>
 
+                        -->
                         <fd:booleanfield id="select">
                             <fd:label>Select</fd:label>
                         </fd:booleanfield>
                     </fd:widgets>
-                    <fd:on-create>
+                    <!--<fd:on-create>
                         <fd:javascript>
                             var repeater = widget;
                             print("repeater!! = " + repeater.getSize());
                         </fd:javascript>
-                    </fd:on-create>
+                    </fd:on-create>-->
                 </fd:repeater>
 
                 <fd:repeater-action id="remove" command="delete-rows" repeater="categories" select="select">

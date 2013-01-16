@@ -2,20 +2,20 @@
 <fb:context xmlns:fb="http://apache.org/cocoon/forms/1.0#binding" path="/">
 
     <fb:group id="Partner" path="Partner">
-        <fb:repeater id="categories" parent-path="categories" row-path="item">
-            <fb:identity>
-            </fb:identity>
+        <fb:repeater id="categories" parent-path="categories" row-path="category">
+            <!--<fb:identity>-->
+            <!--</fb:identity>-->
             <fb:on-bind>
                 <fb:value id="heading" path="heading"/>
-                <fb:repeater id="PartnerList" parent-path="PartnerList" row-path="item">
-                    <fb:identity>
-                    </fb:identity>
-                    <fb:on-bind>
-                        <fb:value id="name" path="name"/>
-                        <fb:value id="logo" path="logo"/>
-                        <fb:value id="url" path="url"/>
-                    </fb:on-bind>
-                </fb:repeater>
+                <!--<fb:repeater id="PartnerList" parent-path="PartnerList" row-path="item">-->
+                    <!--<fb:identity>-->
+                    <!--</fb:identity>-->
+                    <!--<fb:on-bind>-->
+                        <!--<fb:value id="name" path="name"/>-->
+                        <!--<fb:value id="logo" path="logo"/>-->
+                        <!--<fb:value id="url" path="url"/>-->
+                    <!--</fb:on-bind>-->
+                <!--</fb:repeater>-->
             </fb:on-bind>
         </fb:repeater>
     </fb:group>
