@@ -21,14 +21,14 @@ img {
     border: 0;
 }
 
-body {
+/*body {
     font-family: Verdana, Tahoma, sans-serif;
-    /*background: url(../../img/bg/cardboard-texture.jpeg) repeat-y center left;*/
+    *//*background: url(../../img/bg/cardboard-texture.jpeg) repeat-y center left;*//*
     font-size: 13px;
     text-align: center;
     background: #ffffff;
     margin: 0;
-}
+}*/
 
 .showNewsListNoImage {
     max-width: 650px;
@@ -169,14 +169,20 @@ ul.files li.doc {
 
 /**/
 
+/*
 body {
-    /*background: #32313B url("../../img/index-bg-gradient.png") top center no-repeat;*/
-    /*background: #464D60 url("../../img/index-bg-gradient.png") top center no-repeat;*/
+    */
+/*background: #32313B url("../../img/index-bg-gradient.png") top center no-repeat;*//*
+
+    */
+/*background: #464D60 url("../../img/index-bg-gradient.png") top center no-repeat;*//*
+
     background: #FFFFFF;
     margin-left: 50px;
     margin-right: 40px;
     font-family: Verdana, Arial, Tahoma, sans-serif;
 }
+*/
 
 .header {
     padding-top: 18px;

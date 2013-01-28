@@ -287,7 +287,7 @@
                     <div class="item-content">
                         <h1>1111
                             <!--<xsl:value-of select="$name"/>-->
-                            <xsl:value-of select="name"/>
+                            <xsl:value-of select="$name"/>
                         </h1>
                         <xsl:value-of disable-output-escaping="yes" select="$doc/xmlSource"/>
                         <!--<xsl:apply-templates-->

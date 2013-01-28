@@ -50,10 +50,19 @@ body {
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 13px;
     text-align: center;
-    background: #FFFFFF;
+    /*background: #FFFFFF;*/
+    background-color: #FBC725;
+
     /*background: #55586F url("../../img/bg-main.png") repeat-x scroll left top;*/
     margin: 0;
 }
+/*.header{
+    background-color: #FBC725;
+}.content {
+    background-color: #FBC725;
+}.footer {
+    background-color: #FBC725;
+}*/
 
 #ems-search {
 
