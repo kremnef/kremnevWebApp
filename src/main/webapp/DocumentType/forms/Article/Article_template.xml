@@ -13,7 +13,7 @@
     <!--<parentObjects />-->
     <ft:form-template id="dynamicForm" location="${cocoon.request.getAttribute('dynamicForm')}"
                       ajax-action="${cocoon.session.getAttribute('dynamicForm.id')}.continue"
-                      action="${cocoon.session.getAttribute('dynamicForm.id')}.continue" method="POST" ajax="true">
+                      action="${cocoon.session.getAttribute('dynamicForm.id')}.continue" method="POST" ajax="false">
 
         <!--<script type="text/javascript">
 

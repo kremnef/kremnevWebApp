@@ -1,0 +1,138 @@
+/* ISOTOPE Elements */
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 1s;
+     -moz-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+.element {
+  width: 93px;
+  height: 93px;
+  margin: 3px 0;
+  float: left;
+  position: relative;
+}
+
+.element.click img, .element.linker img {
+	width: 100%;
+	height: 100%;
+}
+
+.projblank {
+	background-color: #1c1c1c;
+}
+
+/* Project sets */
+
+/*.sketches_set,
+.development_set,
+.drawings_set,
+.construction_set {
+	margin: 4px 0 2px;
+}*/
+.element.video { width: 390px; height: 106px;}
+
+.element.w192 { width: 192px; }
+.element.w291 { width: 291px; }
+.element.w390 { width: 390px; }
+.element.w489 { width: 489px; }
+.element.w588 { width: 588px; }
+.element.w687 { width: 687px; }
+.element.w786 { width: 786px; }
+.element.w885 { width: 885px; }
+.element.w984 { width: 984px; }
+.element.t106 { height: 106px; }
+.element.t147 { height: 147px; }
+
+.element.t192 { height: 192px; }
+.element.t291 { height: 291px; }
+.element.t390 { height: 390px; }
+.element.t489 { height: 489px; }
+.element.t588 { height: 588px; }
+.element.t687 { height: 687px; }
+.element.t786 { height: 786px; }
+.element.t885 { height: 885px; }
+.element.t984 { height: 984px; }
+
+.element.w192.t192.thumb { width: 192px; height: 192px; }
+.element.w390.t390.thumb { width: 192px; height: 192px; }
+.element.w588.t588.thumb { width: 291px; height: 291px; }
+.element.w786.t786.thumb { width: 192px; height: 192px; }
+.element.w588.t390.thumb { width: 291px; height: 192px; }
+.element.w390.t588.thumb { width: 192px; height: 291px; }
+.element.w984.t291.thumb { width: 489px; height: 192px; }
+.element.w885.t588.thumb { width: 291px; height: 192px; }
+.element.w885.t885.thumb { width: 291px; height: 291px; }
+.element.w588.t885.thumb { width: 291px; height: 390px; }
+
+/* Text quotes in studio */
+
+table.txt {
+
+  background-color: #0b0b0b;
+  width:192px;
+  height:192px;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+table.txt tr td  {
+	height: 190px;
+	vertical-align: middle;
+	font-size: 1.3em;
+	color: #fff;
+	padding-top: 0;
+	padding-left: 16px;
+	padding-right: 9px;
+	font-weight: 200;
+	line-height: 1.2em;
+}
+.clickable .element:hover {
+  cursor: pointer;
+}
+
+.clickable .noclick:hover {
+  cursor: auto;
+}
+
+.click:hover {
+  cursor: pointer;
+	
+}
+
