@@ -1,7 +1,9 @@
-@import url("reset.css");
+/*@import url("reset.css");*/
+/*
 .level2{
     display: none;
 }
+*/
 
 .headline.select { color: #fff }
 
@@ -302,7 +304,7 @@ a.headline {
 .nav { 
 	background-color: transparent;
 	/*margin-bottom:10px;*/
-	height:34px;
+	height:80px;
 }
 
 .navbar {
@@ -316,7 +318,8 @@ a.headline {
 .mainbar {
     float: left;
     width:1182px;
-	height: 34px;
+	/*height: 34px;*/
+	height: auto;
     background-color: #FFFFFF;
 	margin-bottom: 0;
 }

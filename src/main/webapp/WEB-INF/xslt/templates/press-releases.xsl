@@ -14,16 +14,6 @@
     <xsl:import href="../import/header.xsl"/>
     <xsl:import href="../import/footer.xsl"/>
     <xsl:template name="scripts">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144"
-              href="http://www.fosterandpartners.com/m/core/ico/apple-touch-icon-144-precomposed.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="114x114"
-              href="http://www.fosterandpartners.com/m/core/ico/apple-touch-icon-114-precomposed.png"/>
-        <link rel="apple-touch-icon-precomposed" sizes="72x72"
-              href="http://www.fosterandpartners.com/m/core/ico/apple-touch-icon-72-precomposed.png"/>
-        <link rel="apple-touch-icon-precomposed"
-              href="http://www.fosterandpartners.com/m/core/ico/apple-touch-icon-57-precomposed.png"/>
-
-        <link rel="stylesheet" href="{$servletPath}/{$sitemapPath}css/others/9833.css" type="text/css"/>
 
         <link rel="stylesheet" href="{$servletPath}/{$sitemapPath}css/others/fp2.css" type="text/css" media="screen"/>
         <link rel="stylesheet" href="{$servletPath}/{$sitemapPath}js/isotope/isotope.css" type="text/css"
@@ -46,7 +36,20 @@
         <script type="text/javascript" async="" src="{$servletPath}/{$sitemapPath}js/others/ga.js"></script>
         <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/others/bootstrap-collapse.js"></script>
 
-        <link rel="stylesheet" href=""/>
+        <!--<link rel="apple-touch-icon-precomposed" sizes="144x144"
+              href="http://www.fosterandpartners.com/m/core/ico/apple-touch-icon-144-precomposed.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="114x114"
+              href="http://www.fosterandpartners.com/m/core/ico/apple-touch-icon-114-precomposed.png"/>
+        <link rel="apple-touch-icon-precomposed" sizes="72x72"
+              href="http://www.fosterandpartners.com/m/core/ico/apple-touch-icon-72-precomposed.png"/>
+        <link rel="apple-touch-icon-precomposed"
+              href="http://www.fosterandpartners.com/m/core/ico/apple-touch-icon-57-precomposed.png"/>-->
+
+        <!--<link rel="stylesheet" href="{$servletPath}/{$sitemapPath}css/others/9833.css" type="text/css"/>-->
+
+
+
+        <!--<link rel="stylesheet" href=""/>-->
 
 
         <!--<link rel="stylesheet" type="text/css" href="/js/flowplayer/css/form.css"/>-->
@@ -69,33 +72,8 @@
 
     <xsl:template match="root">
         <div class="outer">
-            <div class="search collapse " id="accordionSearch">
-                <iframe frameborder="0" border="0" style="border:0;" id="searching" scrolling="no"
-                        src="./News   Foster + Partners_files/saved_resource.html"></iframe>
-            </div>
+            <xsl:call-template name="header"/>
 
-            <div class="nav">
-                <div class="navbar">
-                    <xsl:call-template name="header"/>
-                    <div class="srch " data-toggle="collapse" data-target="#accordionSearch"></div>
-                    <div class="mnubutton " data-toggle="collapse" data-target="#menu">
-                        <h4>Menu</h4>
-                    </div>
-
-                </div>
-                <!-- .navbar -->
-            </div>
-            <!-- .nav -->
-
-            <div class="clear"></div>
-
-            <div class="mainbar">
-                <div class="main-menu">
-                    <xsl:apply-templates select="systemNodeObjects/object/entry[key = 1]/value"/>
-                </div>
-            </div>
-
-            <div class="clear"></div>
 
             <div class="accordion" id="accordion">
 
@@ -103,7 +81,7 @@
 
                 <div class="accordion-group">
 
-                    <div id="menu" class="accordion-body collapse">
+                    <div id="option" class="accordion-body collapse">
                         <div class="accordion-inner">
                             <div class="subcol idcol ">
                                 <ul class="smenu">
@@ -268,7 +246,7 @@
                 <!-- .end nav -->
 
 
-                <div class="accordion-group">
+<!--                <div class="accordion-group">
 
                     <div class="accordion-heading">
                         <a class="accordion-toggle clickable arrowheadup " data-toggle="collapse"
@@ -295,7 +273,7 @@
 
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <!-- .accordion-group -->
 
 

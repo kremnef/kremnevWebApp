@@ -16,59 +16,7 @@
             <div class="clear"></div>
             <xsl:apply-templates select="systemNodeObjects/object/entry[key = 18]/value"/>
 
-            <form method="get" action="/ems/service/search" id="searchNews">
-                <div class="ui-widget">
-                    <form method="get" action="/ems/service/search" id="searchForm">
-                        <input value="Поиск" id="ems-search" resulte="10" name="query" type="text" class="text"/>
-                    </form>
-                </div>
-                <!--<div id="keys">
-                    <label>
-                        Keywords
-                        <br/>
-                        <input value="" id="ems-search" resulte="10" name="query"
-                               type="text"/>
 
-                    </label>
-                    <label>
-                        Tag
-                        <br/>
-                        <div class="dropdown" id="tagsDropDown">
-                            &lt;!&ndash;     <script src="/js/jquery/jquery.selectbox-0.5.js"
-                                    type="text/javascript"></script>
-                            <script type="text/javascript">
-                                $(document).ready(function() {
-                                $('#select-tagsDropDown').selectbox();
-                                });
-                            </script>&ndash;&gt;
-
-                            <select id="select-tagsDropDown">
-                                <option value="1">Ярославский</option>
-                                <option value="2">Новгородский</option>
-                                <option value="3">Тверской</option>
-                                <option value="4">Костромской</option>
-                                <option value="5">Архангельский</option>
-                            </select>
-                        </div>
-                    </label>
-                </div>
-                <div id="flight">
-                    <label>
-                        Start
-                        <br/>
-                        <input type="date" class="date" name="arrival"
-                               value="Today"></input>
-                    </label>
-
-                    <label>
-                        End
-                        <br/>
-                        <input type="date" class="date" name="departure" data-value="7"
-                               value="After one week"></input>
-                    </label>
-
-                </div>-->
-            </form>
             <div class="instruments">
                 <div class="contacts">
                     <xsl:apply-templates select="systemNodeObjects/object/entry[key = 19]/value"/>
