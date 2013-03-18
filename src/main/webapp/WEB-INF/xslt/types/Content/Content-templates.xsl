@@ -167,7 +167,7 @@
                         <xsl:with-param name="position" select="$position"/>
                     </xsl:call-template>
                     <div class="item-content">
-                        <h1>
+                        <h1>Заголовок!!!
                             <xsl:value-of select="$name"/>
                         </h1>
 
@@ -285,15 +285,13 @@
                         <xsl:with-param name="position" select="$position"/>
                     </xsl:call-template>
                     <div class="item-content">
-                        <h1>1111
-                            <!--<xsl:value-of select="$name"/>-->
+                        <h1>
                             <xsl:value-of select="$name"/>
                         </h1>
                         <xsl:value-of disable-output-escaping="yes" select="$doc/xmlSource"/>
-                        <!--<xsl:apply-templates-->
-                        <!--select="$doc/xmlSource">-->
-                        <!--<xsl:with-param name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>-->
-                        <!--</xsl:apply-templates>-->
+                        <!--<xsl:apply-templates select="$doc/xmlSource">
+                            <xsl:with-param name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
+                        </xsl:apply-templates>-->
                     </div>
 
                     <div class="attachements">

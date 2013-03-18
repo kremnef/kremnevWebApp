@@ -19,17 +19,43 @@
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
-
+        <xsl:variable name="parentId" select="typifiedObject/id"/>
         <xsl:variable name="position" select="../key"/>
 
-        <xsl:call-template name="showContent">
-            <xsl:with-param name="content" select="typifiedObject"/>
-            <xsl:with-param name="initialContent" select="''"/>
-            <xsl:with-param name="objectURL" select="$objectURL"/>
-            <xsl:with-param name="path" select="$baseURL"/>
-            <xsl:with-param name="typeActionName" select="$typeActionName"/>
-            <xsl:with-param name="position" select="$position"/>
-        </xsl:call-template>
+        <!--<xsl:choose>-->
+            <!--<xsl:when test="$objectURL=''">-->
+                <xsl:call-template name="render-as-list">
+                    <xsl:with-param name="content" select="typifiedObject"/>
+                    <xsl:with-param name="initialContent" select="''"/>
+                    <xsl:with-param name="objectURL" select="$objectURL"/>
+                    <xsl:with-param name="path" select="$baseURL"/>
+                    <xsl:with-param name="typeActionName" select="$typeActionName"/>
+                    <xsl:with-param name="position" select="$position"/>
+                </xsl:call-template>
+            <!--</xsl:when>-->
+            <xsl:if test="$objectURL!=''">
+            <!--<xsl:otherwise>-->
+                <!--<h1>objectURL:
+                    <xsl:value-of select="$objectURL"/>
+                </h1>
+                <h1>$baseURL:
+                    <xsl:value-of select="$baseURL"/>
+                </h1>
+                <h1>$baseURL:
+                    <xsl:value-of select="$systemName"/>
+                </h1>-->
+                <xsl:call-template name="showOneContentWithOutChildren">
+                    <xsl:with-param name="content" select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item[objectURL=$objectURL]"/>
+                    <xsl:with-param name="initialContent" select="''"/>
+                    <xsl:with-param name="objectURL" select="$objectURL"/>
+                    <xsl:with-param name="path" select="$baseURL"/>
+                    <xsl:with-param name="typeActionName" select="$typeActionName"/>
+                    <xsl:with-param name="position" select="$position"/>
+                </xsl:call-template>
+        </xsl:if>
+            <!--</xsl:otherwise>-->
+        <!--</xsl:choose>-->
+
 
     </xsl:template>
 
@@ -142,7 +168,6 @@
                     </div>
                 </xsl:otherwise>
             </xsl:choose>
-
 
 
             <div class="date">

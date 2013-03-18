@@ -461,7 +461,7 @@
                         <p class="newsdate">17.09.2012</p>
                     </div>
                 </a>-->
-                <xsl:apply-templates select="systemNodeObjects/object/entry[key = 3]/value"/>
+
             </div>
             <!-- .container -->
 
@@ -520,41 +520,6 @@
         <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/others/head.min.js"></script>
         <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/others/adapt.min.js"></script>
 
-        <script type="text/javascript">
-
-            head.js(
-
-
-            "../core/js/fp_scripts.001.js",
-            "../core/js/jquery.color.js",
-            "../core/js/jquery.isotope.min.js",
-
-
-            function() {
-
-            $('#arc').hover(function(){
-            $(this).animate({ backgroundColor:'#525359'}, "fast");
-            }, function() {
-            $(this).animate({ backgroundColor:'#1c1c1c'}, "fast");
-            });
-
-
-            isoVar = window.setTimeout(function(){
-
-            var $container = $('.container');
-            $container.toggle().isotope({transformsEnabled: false, masonry : {columnWidth : 99}});
-            $('.footer').toggle();
-            return false;
-
-            },64);
-
-
-            }); // end head
-
-        </script>
-        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/others/fp_scripts.001.js"></script>
-        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/others/jquery.color.js"></script>
-        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/isotope/jquery.isotope.min.js"></script>
 
         <!-- end scripts -->
 
@@ -563,6 +528,7 @@
             <div class="clear"></div>
 
             <div class="main">
+                <xsl:apply-templates select="systemNodeObjects/object/entry[key = 3]/value"/>
                 <!--Скролл-->
                 <div id="release-search-form">
 
