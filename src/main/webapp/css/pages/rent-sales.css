@@ -1,0 +1,344 @@
+@import "global.css";
+
+#block1.verMenu {
+    background: url("../../img/book.png") no-repeat scroll 18% 75px transparent;
+    float: left;
+    padding: 135px 0 0 3%;
+    width: 15%;
+}
+#block1.verMenu .menuItem a {
+    color: #F23B00;
+    display: block;
+    font-size: 15px;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+#block1.verMenu .menuItem .description {
+    color: #94969B;
+    font-size: 11px;
+}
+.geography {
+    padding-bottom: 40px;
+    text-align: center;
+}
+.info {
+    padding: 20px 60px;
+}
+.info h1 {
+    float: left;
+    padding-left: 190px;
+    padding-bottom: 10px;
+}
+.content .info .showItem {
+    float: right;
+    font-size: 14px;
+    padding-right: 50px;
+}
+.content .info .showItem a {
+    color: #F23B00;
+}
+.content.company .info {
+    width: 360px;
+}
+.info .description {
+    clear: both;
+    padding: 40px 20px;
+}
+.info #block3.horMenu {
+    float: right;
+    font-size: 14px;
+    padding-right: 50px;
+}
+.info #block3.horMenu a {
+    color: #F23B00;
+}
+.info #block2.verMenu {
+    clear: both;
+    font-size: 15px;
+    list-style: none outside none;
+    margin: 0;
+    padding: 30px 0 20px 5px;
+}
+.info #block2.verMenu li {
+    padding-bottom: 20px;
+}
+.info #block2.verMenu li a {
+    color: #598D00;
+    text-decoration: underline;
+}
+.info .banner {
+    background: url("../../img/arrow.gif") no-repeat scroll left top #515461;
+    text-align: right;
+}
+.info #data-disclosure.verMenu {
+    padding: 30px 30px 30px 10px;
+}
+.info #data-disclosure.verMenu h2 {
+    display: block;
+    color: #373E3F;
+}
+.info #data-disclosure.verMenu ul li {
+    font-size: 12px;
+    padding-top: 15px;
+}
+.info #data-disclosure.verMenu ul li a {
+    color: #006699;
+    text-decoration: underline;
+}
+h4 {
+    color: #F23900;
+    float: left;
+    font-family: Verdana,sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 0;
+    padding: 10px 10px 0 150px;
+}
+.main {
+    padding: 20px 40px 60px;
+    clear: both;
+}
+.main .news-block {
+    padding-top: 20px;
+}
+.main ul li a {
+    color: #4E4F5A;
+    display: block;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    padding: 10px 0;
+    text-decoration: underline;
+}
+.main .news-block .date {
+    color: #74778B;
+    font-size: 11px;
+    padding-bottom: 5px;
+}
+.main .news-block .title a {
+    color: #4C4E5B;
+    display: block;
+    font-size: 13px;
+    padding: 0 0 10px;
+    text-decoration: underline;
+}
+.main .news-block .text {
+    color: #545563;
+    font-size: 13px;
+}
+.main .instruments {
+    padding: 40px 0;
+}
+.main .instruments a {
+    color: #CC3300;
+    float: left;
+    font-size: 13px;
+    height: 26px;
+    padding-right: 20px;
+}
+.main .instruments a.rss {
+    background: url("../../img/rss.png") no-repeat scroll left top transparent;
+    padding-left: 30px;
+}
+.main .showLease h1 {
+    margin-left: 210px;
+    padding-bottom: 30px;
+}
+.main .showLease th {
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    color: #63940E;
+    font-weight: normal;
+    padding: 20px;
+}
+.main .showLease td {
+    border-top: 1px dotted #666666;
+    font-family: Verdana, sans-serif;
+    font-size: 11px;
+    color: #4B4C59;
+    font-weight: normal;
+    padding: 20px;
+}
+.main .showLease tr:first-child td {
+    border-top: 0;
+}
+.main .showLease td.object {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-decoration: underline;
+}
+.main .showLease td.area {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #000000;
+}
+.main .dropdown .selectbox-wrapper {
+    margin-left: 210px;
+}
+.extra {
+    background: url("../../img/subcontent-t.png") repeat-x scroll left top #F7F7F7;
+    clear: both;
+    padding-top: 40px;
+}
+.extra .showFiles h2 {
+    margin-left: 250px;
+    padding-bottom: 30px;
+}
+.extra .showFiles ul {
+    margin-left: 210px;
+}
+.extra .showFiles ul li {
+    clear: both;
+    padding: 15px 0;
+}
+.extra .showFiles ul li a.img {
+    float: left;
+    margin-left: 0;
+}
+.extra .showFiles ul li a {
+    margin-left: 15px;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #373E41;
+}
+.extra .showFiles ul li span {
+    margin-left: 38px;
+    display: block;
+    font-size: 11px;
+    color: #697379;
+    padding-top: 10px;
+}
+
+.extra #reports.verMenu {
+    float: left;
+    padding: 0 45px 60px;
+    width: 360px;
+}
+.extra #reports.verMenu h2 {
+    display: block;
+}
+.extra #reports.verMenu ul li {
+    font-size: 14px;
+    padding-top: 15px;
+}
+.extra #reports.verMenu ul li a {
+    color: #006699;
+    text-decoration: underline;
+}
+.extra #reports.verMenu .last {
+    clear: both;
+    padding-top: 40px;
+}
+.extra #reports.verMenu .last a {
+    color: #4C4E5B;
+    font-size: 12px;
+}
+.extra .showHierarchy {
+    margin: 0 60px 0 450px;
+}
+.extra .showHierarchy ul {
+    clear: right;
+}
+.extra .showHierarchy ul li {
+    display: block;
+}
+.extra .showHierarchy ul li a {
+    clear: right;
+    color: #4C4E5B;
+    float: left;
+    font-size: 14px;
+    padding: 20px 20px 20px 0;
+    width: 210px;
+}
+.extra .showHierarchy ul li a.img {
+    padding: 10px 20px 20px 0;
+    width: 30px;
+}
+.extra .showHierarchy ul li span {
+    color: #999999;
+    display: block;
+    font-size: 11px;
+    padding: 25px 20px 35px 0;
+}
+.extra .director {
+    border-right: 1px solid #E2E2E2;
+    float: left;
+    font-family: Aria,sans-serif;
+    margin: 40px 0;
+    padding: 10px 30px 10px 40px;
+}
+.extra .director .position {
+    color: #333333;
+    font-size: 12px;
+    padding: 10px 0;
+}
+.extra .director .name {
+    color: #598E00;
+    font-size: 14px;
+    padding: 10px 0;
+    text-decoration: underline;
+    width: 135px;
+}
+.extra .slave {
+    border-left: 1px solid #E2E2E2;
+    color: #0099FF;
+    float: right;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 40px 0;
+    padding: 10px 20px;
+    width: 216px;
+}
+.extra .representatives {
+    border-left: 1px solid #E2E2E2;
+    color: #0099FF;
+    float: right;
+    font-family: Arial,sans-serif;
+    font-size: 15px;
+    line-height: 26px;
+    margin: 40px 0;
+    padding: 10px 30px;
+    width: 156px;
+}
+.extra .representatives h3 {
+    color: #333333;
+    font-size: 14px;
+    padding-bottom: 10px;
+}
+.extra .representatives ul li {
+    display: block;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+.extra .representatives ul li a {
+    border-top: 1px solid #E2E2E2;
+    color: #598C00;
+    display: block;
+    font-size: 12px;
+    padding: 0;
+    text-decoration: underline;
+}
+.extra .representatives ul li:first-child a {
+    border-top: 0 none;
+}
+.extra .structure {
+    margin-left: 225px;
+}
+.extra .structure h1 {
+    padding-bottom: 30px;
+}
+.extra .structure ul li a {
+    color: #4E4F5A;
+    display: block;
+    font-family: Arial,sans-serif;
+    font-size: 16px;
+    padding: 10px 0;
+    text-decoration: underline;
+}
+
+
+
+.dropdown h2{
+    display: none;
+}
