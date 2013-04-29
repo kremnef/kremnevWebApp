@@ -23,7 +23,7 @@
     <xsl:template match="root">
         <xsl:variable name="serverName" select="/root/params/request/param[@name='serverName']"/>
         <xsl:variable name="serverPort" select="/root/params/request/param[@name='serverPort']"/>
-
+        <xsl:call-template name="header"/>
 
         <!--<div class="outer">
             <xsl:call-template name="header"/>

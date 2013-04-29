@@ -16,16 +16,18 @@
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
+        <xsl:variable name="documentType" select="typifiedObject/documentType"/>
 
         <!--<div id="{$systemName}" class="{$typeActionName}">-->
         <!--<xsl:variable name="childrenCount" select="typifiedObject/emsObject/childrenCount" />-->
 
-
+        <h1>$documentType:<xsl:value-of select="$documentType"/></h1>
         <xsl:call-template name="showContent">
             <xsl:with-param name="content" select="typifiedObject"/>
             <xsl:with-param name="objectURL" select="$objectURL"/>
             <xsl:with-param name="path" select="$baseURL"/>
             <xsl:with-param name="typeActionName" select="$typeActionName"/>
+            <xsl:with-param name="documentType" select="$documentType"/>
         </xsl:call-template>
 
         <!--<xsl:choose>-->
@@ -64,6 +66,7 @@
         <xsl:param name="objectURL"/>
         <xsl:param name="path"/>
         <xsl:param name="typeActionName"/>
+        <xsl:param name="documentType"/>
 
         <xsl:variable name="systemName" select="$content/emsObject/systemName"/>
         <xsl:variable name="name">
@@ -93,6 +96,8 @@
             </xsl:choose>
         </xsl:variable>
 
+
+        <h1>$documentType:<xsl:value-of select="$documentType"/></h1>
         <xsl:variable name="child"
                       select="/root/childrenMap/children/entry[key=$systemName]/value/item[emsObject/systemName = $objectURLPrefix]"/>
         <xsl:choose>
@@ -102,6 +107,7 @@
                     <xsl:with-param name="objectURL" select="$objectURLSuffix"/>
                     <xsl:with-param name="path" select="concat($path, $objectURLPrefix, '/')"/>
                     <xsl:with-param name="typeActionName" select="$typeActionName"/>
+                    <xsl:with-param name="documentType" select="$documentType"/>
                 </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
@@ -121,10 +127,10 @@
                         <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key=$doc/folders/emsObject/systemName]/value/item"/>
                         <xsl:variable name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
                         <h1><xsl:value-of select="$name"/></h1>
-                        <xsl:call-template name="yoxview">
+                        <!--<xsl:call-template name="yoxview">
                             <xsl:with-param name="fileObjects" select="$fileObjects"/>
                             <xsl:with-param name="systemName" select="$systemName"/>
-                        </xsl:call-template>
+                        </xsl:call-template>-->
 
                         <xsl:choose>
                             <xsl:when test="$childrenCount &gt; 0">
@@ -157,85 +163,6 @@
 
     </xsl:template>
 
-
-    <xsl:template name="yoxview">
-        <xsl:param name="fileObjects"/>
-        <xsl:param name="systemName"/>
-
-        <xsl:variable name="previewPath" select="substring-before($fileObjects/path, $fileObjects/name)"/>
-        <xsl:variable name="simpleName" select="substring-before($fileObjects/name,'.')"/>
-        <h1>2222</h1>
-        <xsl:choose>
-            <xsl:when test="count($fileObjects) &gt; 1">
-                <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/yoxview/yoxview-init.js"></script>
-                <script language="javascript">
-            $(document).ready(function() {
-                                       $("#<xsl:value-of select="$systemName"/>").yoxview({
-                                    backgroundColor: 'black',
-                                    playDelay: 5000
-                                    });
-                                    });
-                </script>
-                <div id="{$systemName}-yoxview" class="yoxview">
-                    <xsl:for-each select="$fileObjects">
-                        <xsl:if test="starts-with(contentType, 'image/')">
-                            <img alt="" src="{$prefix}{$previewPath}{$simpleName}-small.jpeg"/>
-                        </xsl:if>
-                    </xsl:for-each>
-                </div>
-            </xsl:when>
-            <xsl:when test="count($fileObjects) &gt; 0">
-                <xsl:if test="starts-with($fileObjects/contentType, 'image/')">
-                    <img alt="" src="{$prefix}{$fileObjects/path}"/>
-                </xsl:if>
-            </xsl:when>
-        </xsl:choose>
-    </xsl:template>
-
-    <xsl:template name="slideShow">
-        <xsl:param name="fileObjects"/>
-        <xsl:param name="systemName"/>
-        <xsl:choose>
-            <xsl:when test="count($fileObjects) &gt; 1">
-                <script type="text/javascript" src="{$prefix}js/jquery/jquery.cycle.lite.min.js"/>
-                <script language="javascript">
-                    $(document).ready(function() {
-                    var height = 0;
-                    $('#<xsl:value-of select="$systemName"/>-slide-show img').each(function() {
-                    if ($(this).height() > height) {
-                    height = $(this).height();
-                    }
-                    });
-                    $('#<xsl:value-of select="$systemName"/>-slide-show').height(height);
-                    $('#<xsl:value-of select="$systemName"/>-slide-show').cycle();
-                    });
-                </script>
-                <div id="{$systemName}-slide-show" class="slide-show">
-                    <xsl:for-each select="$fileObjects">
-                        <xsl:if test="starts-with(contentType, 'image/')">
-                            <img alt="" src="{$prefix}{path}"/>
-                        </xsl:if>
-                    </xsl:for-each>
-                </div>
-            </xsl:when>
-            <xsl:when test="count($fileObjects) &gt; 0">
-                <xsl:if test="starts-with($fileObjects/contentType, 'image/')">
-                    <img alt="" src="{$prefix}{$fileObjects/path}"/>
-                </xsl:if>
-            </xsl:when>
-        </xsl:choose>
-    </xsl:template>
-
-
-    <!--<xsl:template name="maxVersion">
-        <xsl:param name="obj"/>
-        <xsl:for-each select="$obj/documents[language/code=$locale]/version">
-            <xsl:sort data-type="number" order="descending"/>
-            <xsl:if test="position()=1">
-                <xsl:value-of select="."/>
-            </xsl:if>
-        </xsl:for-each>
-    </xsl:template>-->
 
 
     <xsl:template name="showContents">

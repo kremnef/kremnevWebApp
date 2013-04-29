@@ -2,14 +2,14 @@
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:ems="http://ems.strela.ru/"
+                xmlns:ems="http://freeCMS.kremnevatelier.ru/"
                 xmlns:date="http://exslt.org/dates-and-times"
                 exclude-result-prefixes="ems">
 
     <xsl:import href="../../ext/date.format-date.template.xsl"/>
     <xsl:import href="Content-templates.xsl"/>
     <xsl:import href="../functions.xsl"/>
-    <xsl:import href="../document-types.xsl"/>
+    <xsl:import href="../../documentType/document-types.xsl"/>
 
     <xsl:param name="servletPath"/>
     <xsl:param name="sitemapPath"/>

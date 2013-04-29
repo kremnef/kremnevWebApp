@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:ems="http://ems.strela.ru/"
+                xmlns:ems="http://freeCMS.kremnevatelier.ru/"
                 xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
                 exclude-result-prefixes="ems i18n">
 

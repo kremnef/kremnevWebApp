@@ -2,7 +2,7 @@
 
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-                xmlns:ems="http://ems.strela.ru/"
+                xmlns:ems="http://freeCMS.kremnevatelier.ru/"
                 xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
                 exclude-result-prefixes="ems i18n">
 
@@ -141,6 +141,7 @@
 
 
         <div class="widget-{$position}">
+            <xsl:comment>widget-list-render</xsl:comment>
             <!--Variables-->
             <xsl:variable name="child"
                           select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item[emsObject/systemName = $objectURLPrefix]"/>
