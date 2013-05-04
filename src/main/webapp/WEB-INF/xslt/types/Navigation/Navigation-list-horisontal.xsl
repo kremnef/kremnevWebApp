@@ -14,9 +14,9 @@
         <xsl:variable name="parentId" select="typifiedObject/id" />
 
         <xsl:variable name="position" select="../key"/>
-
-        <div class="widget-{$position}  navbar">
-            <ul id="{$systemName}" class="nav-list horisontal">
+        <xsl:comment><xsl:value-of select="typifiedObject/objectType/name"/>-<xsl:value-of select="typeAction/name"/></xsl:comment>
+        <div class="widget-{$position}">
+            <ul id="{$systemName}" class="nav nav-tabs horisontal">
                 <xsl:for-each select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item">
                     <xsl:variable name="name">
                         <xsl:call-template name="getLocalName">

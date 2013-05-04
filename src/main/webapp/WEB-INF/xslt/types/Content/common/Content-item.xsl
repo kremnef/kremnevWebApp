@@ -9,8 +9,8 @@
                 exclude-result-prefixes="ems">
 
     <xsl:import href="Content-templates.xsl"/>
-    <xsl:import href="../functions.xsl"/>
-    <xsl:import href="../../documentType/document-types.xsl"/>
+    <xsl:import href="../../functions.xsl"/>
+    <!--<xsl:import href="../../documentType/document-types.xsl"/>-->
 
     <ems:templ name="showContents-showHTML"/>
     <ems:templ name="showContentBriefly-showHTML"/>

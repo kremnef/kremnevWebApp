@@ -11,11 +11,11 @@
 
     <xsl:template name="footer">
         <div class="footer">
-            <div class="clear"></div>
-            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 18]/value"/>
+            <div class="container">
+                <xsl:apply-templates select="systemNodeObjects/object/entry[key = 18]/value"/>
+            </div>
 
-
-            <div class="instruments">
+            <div class="container">
                 <div class="contacts">
                     <xsl:apply-templates select="systemNodeObjects/object/entry[key = 19]/value"/>
                 </div>
@@ -26,7 +26,6 @@
                 </div>
 
             </div>
-            <div class="clear"></div>
 
         </div>
 

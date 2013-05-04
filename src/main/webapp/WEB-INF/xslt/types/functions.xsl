@@ -1,8 +1,7 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-    <!-- getLocalName -->
+ <!-- getLocalName -->
     <xsl:template name="getLocalName">
         <xsl:param name="typifiedObject"/>
-        <!--<xsl:variable name="label" select="$typifiedObject/labels[languageCode=$locale]/label"/>-->
         <xsl:variable name="label" select="$typifiedObject/objectLabel/label"/>
         <xsl:choose>
             <xsl:when test="$label != ''">
@@ -14,7 +13,7 @@
         </xsl:choose>
     </xsl:template>
 
-
+<!--Folder - Content-->
     <xsl:template name="formatSize">
         <xsl:param name="size"/>
         <xsl:choose>

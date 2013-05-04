@@ -231,31 +231,30 @@
         <!-- scripts -->
 
 
+        <!--<div class="content">-->
+        <div class="clear"></div>
 
-
-
-
-        <div class="content">
-            <div class="clear"></div>
-            <div class="main">
-                <xsl:apply-templates select="systemNodeObjects/object/entry[key = 4]/value"/>
-            </div>
-            <!--news-->
-
-
-
-            <!--brands-->
-            <div class="brands">
-                <xsl:apply-templates select="systemNodeObjects/object/entry[key = 2]/value"/>
-            </div>
-
-
-            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 19]/value"/>
-            <div class="news-block">
-                <xsl:apply-templates select="systemNodeObjects/object/entry[key = 3]/value"/>
-            </div>
-            <!--<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F20412712&amp;auto_play=false&amp;show_artwork=false&amp;color=b5ef5d"></iframe>-->
+        <!--<div class="main container">-->
+        <div class="container">
+            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 4]/value"/>
         </div>
+
+
+        <!--brands-->
+        <div class="brands container">
+            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 2]/value"/>
+        </div>
+
+        <div class="container">
+            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 19]/value"/>
+        </div>
+
+        <!--news-->
+        <div class="news-block container">
+            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 3]/value"/>
+        </div>
+        <!--<iframe width="100%" height="166" scrolling="no" frameborder="no" src="http://w.soundcloud.com/player/?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F20412712&amp;auto_play=false&amp;show_artwork=false&amp;color=b5ef5d"></iframe>-->
+        <!--</div>-->
 
         <xsl:call-template name="footer"/>
     </xsl:template>

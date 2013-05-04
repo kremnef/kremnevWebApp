@@ -8,76 +8,96 @@
     <xsl:param name="servletPath"/>
     <xsl:param name="sitemapPath"/>
 
-    <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-horisontal-2levels']">
+    <xsl:template
+            match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-horisontal-2levels']">
 
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName" />
-        <xsl:variable name="baseURL" select="typifiedObject/baseURL" />
-        <xsl:variable name="pathURL" select="typifiedObject/pathURL" />
-        <xsl:variable name="parentId" select="typifiedObject/id" />
+        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
+        <xsl:variable name="pathURL" select="typifiedObject/pathURL"/>
+        <xsl:variable name="parentId" select="typifiedObject/id"/>
 
         <xsl:variable name="position" select="../key"/>
+        <xsl:comment><xsl:value-of select="typifiedObject/objectType/name"/>-<xsl:value-of select="typeAction/name"/></xsl:comment>
+        <div class="widget-{$position}" id="{$systemName}-{$position}">
 
-        <div class="widget-{$position}">
-            <div id="{$systemName}-{$position}" class="navbar">
-                <ul class="nav level1">
-                    <xsl:for-each select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item">
-                        <xsl:variable name="name">
-                            <xsl:call-template name="getLocalName">
-                                <xsl:with-param name="typifiedObject" select="."/>
-                            </xsl:call-template>
-                        </xsl:variable>
+            <!--<ul class="nav nav-list submenu level1">-->
 
-                        <xsl:variable name="itemId" select="id"/>
-                        <xsl:variable name="itemSystemName" select="emsObject/systemName"/>
-                        <xsl:variable name="selected" select="$pathURL and starts-with($baseURL, $pathURL)"/>
+            <xsl:for-each
+                    select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item">
+
+                <!--Define Variables-->
+                <xsl:variable name="name">
+                    <xsl:call-template name="getLocalName">
+                        <xsl:with-param name="typifiedObject" select="."/>
+                    </xsl:call-template>
+                </xsl:variable>
+                <xsl:variable name="itemId" select="id"/>
+                <xsl:variable name="itemSystemName" select="emsObject/systemName"/>
+                <xsl:variable name="selected" select="$pathURL and starts-with($baseURL, $pathURL)"/>
+
+                <!--Columns-->
+                <div class="span level1">
+                    <ul class="nav nav-list submenu">
                         <xsl:choose>
                             <xsl:when test="$selected">
-                                <li class="parent selected">
-                                    <!--<h3 >-->
+                                <li class="parent selected nav-header">
 
-                                        <xsl:variable name="systemNodeId" select="systemNodeId"/>
-                                        <xsl:variable name="outerURL" select="outerURL"/>
+                                    <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                                    <xsl:variable name="outerURL" select="outerURL"/>
 
-                                        <xsl:choose>
-                                            <xsl:when test="$systemNodeId">
-                                                <a href="{$servletPath}/{$sitemapPath}{pathURL}" class="selected"><xsl:value-of select="$name" /></a>
-                                            </xsl:when>
-                                            <xsl:when test="$outerURL">
-                                                <a href="{$outerURL}" class="selected"><xsl:value-of select="$name" /></a>
-                                            </xsl:when>
-                                            <xsl:otherwise><xsl:value-of select="$name" /></xsl:otherwise>
-                                        </xsl:choose>
-                                    <!--</h3>-->
-                                    <ul class="nav level2">
-                                        <xsl:apply-templates select="/root/childrenMap/children/entry[key/parentId=$itemId and key/systemName=$itemSystemName]/value/item"/>
-                                    </ul>
+                                    <xsl:choose>
+                                        <xsl:when test="$systemNodeId">
+                                            <a href="{$servletPath}/{$sitemapPath}{pathURL}" class="selected">
+                                                <xsl:value-of select="$name"/>
+                                            </a>
+                                        </xsl:when>
+                                        <xsl:when test="$outerURL">
+                                            <a href="{$outerURL}" class="selected">
+                                                <xsl:value-of select="$name"/>
+                                            </a>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="$name"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                    <!--<ul class="nav level2">-->
+                                        <xsl:apply-templates
+                                                select="/root/childrenMap/children/entry[key/parentId=$itemId and key/systemName=$itemSystemName]/value/item"/>
+                                    <!--</ul>-->
                                 </li>
                             </xsl:when>
                             <xsl:otherwise>
-                                <li class="parent">
-                                    <!--<h3>-->
-                                        <xsl:variable name="systemNodeId" select="systemNodeId"/>
-                                        <xsl:variable name="outerURL" select="outerURL"/>
+                                <li class="parent nav-header">
+                                    <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                                    <xsl:variable name="outerURL" select="outerURL"/>
 
-                                        <xsl:choose>
-                                            <xsl:when test="$systemNodeId">
-                                                <a href="{$servletPath}/{$sitemapPath}{pathURL}"><xsl:value-of select="$name" /></a>
-                                            </xsl:when>
-                                            <xsl:when test="$outerURL">
-                                                <a href="{$outerURL}"><xsl:value-of select="$name" /></a>
-                                            </xsl:when>
-                                            <xsl:otherwise><xsl:value-of select="$name" /></xsl:otherwise>
-                                        </xsl:choose>
-                                    <!--</h3>-->
-                                    <ul class="level2">
-                                        <xsl:apply-templates select="/root/childrenMap/children/entry[key/parentId=$itemId and key/systemName=$itemSystemName]/value/item"/>
-                                    </ul>
+                                    <xsl:choose>
+                                        <xsl:when test="$systemNodeId">
+                                            <a href="{$servletPath}/{$sitemapPath}{pathURL}">
+                                                <xsl:value-of select="$name"/>
+                                            </a>
+                                        </xsl:when>
+                                        <xsl:when test="$outerURL">
+                                            <a href="{$outerURL}">
+                                                <xsl:value-of select="$name"/>
+                                            </a>
+                                        </xsl:when>
+                                        <xsl:otherwise>
+                                            <xsl:value-of select="$name"/>
+                                        </xsl:otherwise>
+                                    </xsl:choose>
+                                    <!--<ul class="level2">-->
+                                        <xsl:apply-templates
+                                                select="/root/childrenMap/children/entry[key/parentId=$itemId and key/systemName=$itemSystemName]/value/item"/>
+                                    <!--</ul>-->
                                 </li>
                             </xsl:otherwise>
                         </xsl:choose>
-                    </xsl:for-each>
-                </ul>
-            </div>
+                    </ul>
+                </div>
+            </xsl:for-each>
+            <!--</ul>-->
+
         </div>
     </xsl:template>
 
@@ -98,12 +118,18 @@
             <xsl:variable name="outerURL" select="outerURL"/>
             <xsl:choose>
                 <xsl:when test="$systemNodeId">
-                    <a href="{$servletPath}/{$sitemapPath}{pathURL}"><xsl:value-of select="$name" /></a>
+                    <a href="{$servletPath}/{$sitemapPath}{pathURL}">
+                        <xsl:value-of select="$name"/>
+                    </a>
                 </xsl:when>
                 <xsl:when test="$outerURL">
-                    <a href="{$outerURL}"><xsl:value-of select="$name" /></a>
+                    <a href="{$outerURL}">
+                        <xsl:value-of select="$name"/>
+                    </a>
                 </xsl:when>
-                <xsl:otherwise><xsl:value-of select="$name" /></xsl:otherwise>
+                <xsl:otherwise>
+                    <xsl:value-of select="$name"/>
+                </xsl:otherwise>
             </xsl:choose>
         </li>
     </xsl:template>
