@@ -14,15 +14,9 @@
     <xsl:import href="import/header.xsl"/>
     <xsl:import href="import/footer.xsl"/>
     <xsl:template name="scripts">
-        <link rel="stylesheet" href="{$servletPath}/{$sitemapPath}css/others/fp2.css" type="text/css" media="screen"/>
-        <!--<link rel="stylesheet" href="{$servletPath}/{$sitemapPath}js/isotope/isotope.css" type="text/css"-->
-        <link rel="alternate" type="application/rss+xml" title="Foster + Partners"
-              href="http://www.fosterandpartners.com/feed.xml"/>
-        <!--[if lte IE 7]>
-            <link rel="stylesheet" href="../core/css/ie7.css" type="text/css" media="screen" />
-        <![endif]-->
 
-        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>
+
+
 
         <!--<script type="text/javascript">
 
@@ -35,28 +29,38 @@
 
         <!--<script type="text/javascript" async="" src="{$servletPath}/{$sitemapPath}js/others/ga.js"></script>-->
         <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/others/bootstrap-collapse.js"></script>-->
-        <xsl:comment><![CDATA[[if IE 6]><script src="]]><xsl:value-of select="$servletPath"/><![CDATA[/js/DD_belatedPNG.js"/>
-			<script  type="text/javascript">
-				DD_belatedPNG.fix("img");
-			</script>
-		<![endif]]]>
-        </xsl:comment>
+       <!--
 
-        <script src="{$servletPath}/{$sitemapPath}js/jquery/jquery-ui.custom.min.js"
-                type="text/javascript"></script>
-        <script type="text/javascript"
-                src="{$servletPath}/{$sitemapPath}js/flowplayer/jquery.tools.min.js"/>
+-->
+
+        <xsl:comment><![CDATA[[if IE 6]><script src="]]><xsl:value-of select="$servletPath"/><![CDATA[/js/DD_belatedPNG.js"/>
+        			<script  type="text/javascript">
+        				DD_belatedPNG.fix("img");
+        			</script>
+        		<![endif]]]>
+                </xsl:comment>
+        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>
+        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/flowplayer/jquery.tools.min.js"/>
+        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery-ui.custom.min.js"/>
+
 
     </xsl:template>
 
     <xsl:template name="styles">
+        <!--<link rel="stylesheet" href="{$servletPath}/{$sitemapPath}css/others/fp2.css" type="text/css" media="screen"/>
+                &lt;!&ndash;<link rel="stylesheet" href="{$servletPath}/{$sitemapPath}js/isotope/isotope.css" type="text/css"&ndash;&gt;
+                <link rel="alternate" type="application/rss+xml" title="Foster + Partners"
+                      href="http://www.fosterandpartners.com/feed.xml"/>
+                &lt;!&ndash;[if lte IE 7]>
+                    <link rel="stylesheet" href="../core/css/ie7.css" type="text/css" media="screen" />
+                <![endif]&ndash;&gt;
         <style>
             .footer { display:none; } .container { display:none; }
             #accordionArchive { margin-top:3px; }
             #newsarchive { background: url(../../core/img/bakabaka_news.png) 0 3px; margin-top:3px; }
             .newsdate { position:absolute; left:200px; bottom:14px; }
             .main { left:395px; }
-        </style>
+        </style>-->
         <link media="screen"
               href="{$servletPath}/{$sitemapPath}js/flowplayer/css/form.css"
               type="text/css"
@@ -64,14 +68,15 @@
     </xsl:template>
 
     <xsl:template match="root">
-        <div class="outer">
-            <xsl:call-template name="header"/>
+        <xsl:call-template name="header"/>
+        <!--<div class="outer">
+
 
 
             <div class="accordion" id="accordion">
 
 
-                <!--  menu group -->
+                &lt;!&ndash;  menu group &ndash;&gt;
 
                 <div class="accordion-group">
 
@@ -82,11 +87,11 @@
                     </div>
                 </div>
 
-                <!-- .end menu group -->
-                <!-- .end nav -->
+                &lt;!&ndash; .end menu group &ndash;&gt;
+                &lt;!&ndash; .end nav &ndash;&gt;
 
 
-                <!--                <div class="accordion-group">
+                &lt;!&ndash;                <div class="accordion-group">
 
                                     <div class="accordion-heading">
                                         <a class="accordion-toggle clickable arrowheadup " data-toggle="collapse"
@@ -113,15 +118,15 @@
 
                                         </div>
                                     </div>
-                                </div>-->
-                <!-- .accordion-group -->
+                                </div>&ndash;&gt;
+                &lt;!&ndash; .accordion-group &ndash;&gt;
 
 
             </div>
-            <!-- .accordion -->
+            &lt;!&ndash; .accordion &ndash;&gt;
 
 
-            <!-- .container -->
+            &lt;!&ndash; .container &ndash;&gt;
 
             <div class="accordion" id="accordionArchive">
 
@@ -136,15 +141,15 @@
                     </div>
 
                 </div>
-                <!-- .accordion-group -->
+                &lt;!&ndash; .accordion-group &ndash;&gt;
 
             </div>
-            <!-- .accordion -->
+            &lt;!&ndash; .accordion &ndash;&gt;
 
 
-            <!-- end footer -->
+            &lt;!&ndash; end footer &ndash;&gt;
 
-        </div>
+        </div>-->
         <!-- end outer -->
 
 
@@ -154,7 +159,7 @@
         <!-- end scripts -->
 
 
-        <div class="content">
+        <div class="container">
 
 
             <!--<div class="info">
@@ -176,9 +181,8 @@
                 </div>-->
 
 
-                <!--
 
-                <script type="text/javascript">
+                <!--<script type="text/javascript">
 
                     // supply the language
                     $("ul.tabs").tabs("div.panes > div");
@@ -221,15 +225,15 @@
 
                     <table>
                         <tr>
-                            <td>
+                            <!--<td>
                                 <div class="description">
                                     Если вы не нашли свободной вакансии на которую вы могли бы
                                     претендовать,
                                     оставьте своё резюме, при необходимости мы с вами свяжемся.
                                 </div>
-                            </td>
+                            </td>-->
                             <td>
-                                <h1>Внешний резерв</h1>
+                                <h2>Внешний резерв</h2>
                                 <div class="form">
 
                                     <ul class="tabs">
@@ -359,61 +363,62 @@
                     <script type="text/javascript">
 
                         function is_array (a) {
-                        return (typeof a == "object") &amp;&amp; (a instanceof Array);
+                            return (typeof a == "object") &amp;&amp; (a instanceof Array);
                         }
 
 
-                        $(function() {
-                        $("ul.tabs").tabs("div.panes > div", {
-                        effect: 'slide'});
+                        jQuery(function() {
+                            jQuery("ul.tabs").tabs("div.panes > div", {effect: 'slide'});
 
-                        var validator1 = $("#send-letter-form1").validate();
-                        var validator2 = $("#send-letter-form2").validate();
-                        var formHTML = $('#form-div').html();
-                        $("#send-button1").click(function() {
-                        if ($("#send-letter-form1").valid()) {
-                        $.post("<xsl:value-of select="$blockPrefix"/>/service/sendletter",
-                        $("#send-letter-form1").serialize(),
-                        function(data){
-                        var ans = data['answer'];
-                        var answers = {};
-                        if (is_array(ans)) {
-                        for (var row in ans) {
-                        answers[ans[row]['name']] = ans[row]['value'];
-                        }
-                        }
-                        else {
-                        answers[ans['name']] = ans['value'];
-                        }
-                        var errors = 0;
-                        if(answers['success']) {
-                        alert(answers['success']);
-                        }
-                        else if(answers['form']) {
-                        $('#message-div1').html(answers['form']);
-                        }
-                        else {
-                        validator1.showErrors(answers);
-                        }
+                            var validator1 = jQuery("#send-letter-form1").validate();
+                            var validator2 = jQuery("#send-letter-form2").validate();
+                            var formHTML = jQuery('#form-div').html();
+                        <!--send button 1-->
+                            jQuery("#send-button1").click(function() {
+                                if (jQuery("#send-letter-form1").valid()) {
+                                jQuery.post("<xsl:value-of select="$blockPrefix"/>/service/sendletter",
+                                $("#send-letter-form1").serialize(),
+                                    function(data){
+                                        var ans = data['answer'];
+                                        var answers = {};
+                                        if (is_array(ans)) {
+                                            for (var row in ans) {
+                                               answers[ans[row]['name']] = ans[row]['value'];
+                                            }
+                                        }
+                                        else {
+                                            answers[ans['name']] = ans['value'];
+                                        }
 
-                        },"json");
-                        }
+
+                                        var errors = 0;
+                                        if(answers['success']) {
+                                            alert(answers['success']);
+                                        }
+                                        else if(answers['form']) {
+                                            $('#message-div1').html(answers['form']);
+                                        }
+                                        else {
+                                            validator1.showErrors(answers);
+                                        }
+
+                                },"json");
+                            }
                         });
+                        <!--send button-->
                         $("#send-button2").click(function() {
-                        if ($("#send-letter-form2").valid()) {
-                        document.getElementById('send-letter-form2').submit();
-                        }
+                            if ($("#send-letter-form2").valid()) {
+                                document.getElementById('send-letter-form2').submit();
+                            }
                         });
-
+                        <!--captcha-->
                         $('.captcha-img').each(function() {
-                        $(this).click(function() {
-                        var now = new Date();
-                        $('.captcha-img').each(function() {
-                        this.src = '<xsl:value-of
-                            select="$blockPrefix"/>/service/captcha?background=<xsl:value-of
-                            select="$backgroundColor"/>&amp;' + now.getTime();
-                        });
-                        });
+                            $(this).click(function() {
+                                var now = new Date();
+                                $('.captcha-img').each(function() {
+                                    this.src = '<xsl:value-of select="$blockPrefix"/>/service/captcha?background=<xsl:value-of select="$backgroundColor"/>&amp;' + now.getTime();
+                                });
+                            });
                         });
 
 

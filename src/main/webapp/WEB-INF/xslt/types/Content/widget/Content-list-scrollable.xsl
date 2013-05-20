@@ -7,9 +7,7 @@
 
 
 
-    <xsl:import href="../documentType/Work.xsl"/>
-    <xsl:import href="../../../types/functions.xsl"/>
-    <xsl:import href="../common/Content-ems-templates-documentTypeImport.xsl"/>
+
 
 
     <xsl:param name="servletPath"/>
@@ -24,7 +22,7 @@
         <xsl:variable name="documentType" select="typifiedObject/documentType/name"/>
         <!--<xsl:variable name="typeActionName" select="typeAction/name"/>-->
         <xsl:variable name="position" select="../key"/>
-
+        <xsl:variable name="parentId" select="typifiedObject/id"/>
         <!--Define JS-->
         <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/flowplayer/jquery.tools.min.js"/>
 
@@ -35,7 +33,7 @@
             <xsl:comment>widget-list-scrollable</xsl:comment>
             <div id="{$systemName}-{$position}" class="list-scrollable">
 
-                <xsl:variable name="parentId" select="typifiedObject/id"/>
+
 
                 <xsl:if test="$objectURL != ''">
                     <xsl:variable name="child"
@@ -119,7 +117,7 @@
 
     <xsl:template name="ScrollItems">
         <xsl:param name="contents"/>
-        <!--<xsl:param name="objectURL"/>-->
+        <xsl:param name="objectURL"/>
         <xsl:param name="path"/>
         <xsl:param name="documentType"/>
 
@@ -140,5 +138,4 @@
         <xsl:param name="item"/>
         <xsl:apply-templates select="$item/documents/xmlSource"/>
     </xsl:template>
-
 </xsl:stylesheet>

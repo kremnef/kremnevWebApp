@@ -115,4 +115,90 @@
         <xsl:value-of select="$substr"/>
     </xsl:template>
 
+    <xsl:template name="miniature">
+            <xsl:param name="contents"/>
+            <xsl:param name="path"/>
+            <xsl:param name="name"/>
+            <xsl:param name="imagePath"/>
+            <xsl:param name="miniatureSize"/>
+
+            <xsl:choose>
+                <xsl:when test="$miniatureSize ='none'">
+                    <xsl:comment>no miniature</xsl:comment>
+                </xsl:when>
+                <xsl:when test="$imagePath and $imagePath != ''">
+                    <xsl:variable name="slashLastIndex">
+                        <xsl:call-template name="getLastIndex">
+                            <xsl:with-param name="str" select="$imagePath"/>
+                            <xsl:with-param name="search" select="'/'"/>
+                        </xsl:call-template>
+                    </xsl:variable>
+                    <xsl:variable name="imageName">
+                        <xsl:choose>
+                            <xsl:when test="$slashLastIndex = 0">
+                                <xsl:value-of select="$imagePath"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of
+                                        select="substring($imagePath, $slashLastIndex + 1, string-length($imagePath) - $slashLastIndex)"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
+                    <xsl:variable name="folderPath">
+                        <xsl:choose>
+                            <xsl:when test="$slashLastIndex = 0">
+                                <xsl:value-of select="''"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of select="substring($imagePath, 1, $slashLastIndex)"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
+
+                    <xsl:variable name="dotLastIndex">
+                        <xsl:call-template name="getLastIndex">
+                            <xsl:with-param name="search" select="'.'"/>
+                            <xsl:with-param name="str" select="$imageName"/>
+                        </xsl:call-template>
+                    </xsl:variable>
+
+                    <xsl:variable name="smallImageName">
+                        <xsl:choose>
+                            <xsl:when test="$dotLastIndex = 0">
+                                <xsl:value-of select="concat($imageName, '-', $miniatureSize)"/>
+                            </xsl:when>
+                            <xsl:otherwise>
+                                <xsl:value-of
+                                        select="concat(substring($imageName, 1, $dotLastIndex - 1), '-', $miniatureSize, '.jpg')"/>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                    </xsl:variable>
+                    <div class="miniature">
+                        <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
+                            <img alt="{$name}"
+                                 src="{$servletPath}/{$sitemapPath}{$folderPath}thumbnails/{$smallImageName}"/>
+                        </a>
+                    </div>
+                </xsl:when>
+                <xsl:otherwise>
+                    <div class="miniature">
+                        <img alt="{$name}" border="0" src="{$servletPath}/img/spacer-{$miniatureSize}.gif"/>
+                    </div>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:template>
+
+    <xsl:template name="import-document-type-template">
+            <xsl:for-each select="//typifiedObject/documentType/name">
+                <xsl:variable name="documentTypeName"><xsl:value-of select="."/></xsl:variable>
+                <xsl:variable name="xslemplae"><xsl:value-of select="concat($documentTypeName, '.xsl')"/></xsl:variable>
+                <xsl:comment>###${documenTypeName}</xsl:comment>
+                <xsl:text>
+                    &lt;xsl:import href="${XSLT_DOCUMENT_TYPE_LOCATION}${documenTypeName}"/&gt;
+                </xsl:text>
+                <!--&lt;!&ndash;<xsl:import href="${XSLT_DOCUMENT_TYPE_LOCATION}${documenTypeName}"/>&ndash;&gt;
+                <xsl:import href="Content/documentType/Work.xsl"/>-->
+            </xsl:for-each>
+        </xsl:template>
+
 </xsl:stylesheet>

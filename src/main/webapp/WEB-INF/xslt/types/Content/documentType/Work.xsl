@@ -5,7 +5,7 @@
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 exclude-result-prefixes="ems date">
 
-    <xsl:import href="../../../ext/date.format-date.template.xsl"/>
+    <!--<xsl:import href="../../../ext/date.format-date.template.xsl"/>-->
 
     <ems:templ name="Work-item"/>
     <ems:templ name="Work-list"/>
@@ -64,7 +64,6 @@
         <xsl:param name="contents"/>
         <xsl:param name="path"/>
         <xsl:param name="miniatureSize"/>
-
         <!--Define Variables-->
         <xsl:variable name="name">
             <xsl:call-template name="getLocalName">
@@ -109,74 +108,6 @@
     </xsl:template>
 
 
-    <xsl:template name="miniature">
-        <xsl:param name="contents"/>
-        <xsl:param name="path"/>
-        <xsl:param name="name"/>
-        <xsl:param name="imagePath"/>
-        <xsl:param name="miniatureSize"/>
 
-        <xsl:choose>
-            <xsl:when test="$imagePath and $imagePath != ''">
-                <xsl:variable name="slashLastIndex">
-                    <xsl:call-template name="getLastIndex">
-                        <xsl:with-param name="str" select="$imagePath"/>
-                        <xsl:with-param name="search" select="'/'"/>
-                    </xsl:call-template>
-                </xsl:variable>
-                <xsl:variable name="imageName">
-                    <xsl:choose>
-                        <xsl:when test="$slashLastIndex = 0">
-                            <xsl:value-of select="$imagePath"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of
-                                    select="substring($imagePath, $slashLastIndex + 1, string-length($imagePath) - $slashLastIndex)"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:variable>
-                <xsl:variable name="folderPath">
-                    <xsl:choose>
-                        <xsl:when test="$slashLastIndex = 0">
-                            <xsl:value-of select="''"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of select="substring($imagePath, 1, $slashLastIndex)"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:variable>
-
-                <xsl:variable name="dotLastIndex">
-                    <xsl:call-template name="getLastIndex">
-                        <xsl:with-param name="search" select="'.'"/>
-                        <xsl:with-param name="str" select="$imageName"/>
-                    </xsl:call-template>
-                </xsl:variable>
-
-                <xsl:variable name="smallImageName">
-                    <xsl:choose>
-                        <xsl:when test="$dotLastIndex = 0">
-                            <xsl:value-of select="concat($imageName, '-', $miniatureSize)"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <xsl:value-of
-                                    select="concat(substring($imageName, 1, $dotLastIndex - 1), '-', $miniatureSize, '.jpg')"/>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:variable>
-                <div class="miniature">
-                    <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
-                        <img alt="{$name}"
-                             src="{$servletPath}/{$sitemapPath}{$folderPath}thumbnails/{$smallImageName}"/>
-                    </a>
-                </div>
-            </xsl:when>
-            <xsl:otherwise>
-                <div class="miniature">
-                    <img alt="{$name}" border="0" src="{$servletPath}/img/spacer-{$miniatureSize}.gif"/>
-                </div>
-            </xsl:otherwise>
-        </xsl:choose>
-    </xsl:template>
 
 </xsl:stylesheet>

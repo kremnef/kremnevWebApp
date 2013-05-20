@@ -1,4 +1,6 @@
-@import "global.css";
+/*defaul themee*/
+@import "../theme/default/css/default.css";
+/*
 
 .content #block1.verMenu {
     background: url("../../img/book.png") no-repeat scroll 18% 75px transparent;
@@ -190,12 +192,14 @@
     color: #697379;
     font-size: 14px;
 }
+*/
 /*
 .main .showHTML .custom-content {
     float: right;
     width: 55%;
 }
-*/
+*//*
+
 
 .size{
     font-family: verdana, sans-serif;
@@ -299,7 +303,9 @@
 }
 
 .extra .reserve h1 {
-    /*margin-left: 225px;*/
+    */
+/*margin-left: 225px;*//*
+
     padding: 0px;
 }
 .extra .reserve ul.tabs {
@@ -325,7 +331,9 @@
 }
 
 .extra .reserve .description {
-    /*float: left;*/
+    */
+/*float: left;*//*
+
     width: 160px;
     font-size: 13px;
     color: #697379;
@@ -413,6 +421,7 @@
     cursor: pointer;
     padding-bottom: 8px;
 }
+*/
 /*
 .extra .reserve .form ui-state-active a {
     color: #F23900;
@@ -422,8 +431,10 @@
 .extra .reserve .form  ui-state-default a {
     color: #000000;
     text-decoration: none;
-}*/
+}*//*
 
+
+*/
 /*
 * jQuery UI Tabs 1.8.6
 *
@@ -432,16 +443,23 @@
 * http://jquery.org/license
 *
 * http://docs.jquery.com/UI/Tabs#theming
-*/
+*//*
+
 .ui-tabs {
     position: relative;
     padding: .2em;
     zoom: 1;
 }
 
-/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
-/*.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }*/
-/*.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }*/
+*/
+/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") *//*
+
+*/
+/*.ui-tabs .ui-tabs-nav { margin: 0; padding: .2em .2em 0; }*//*
+
+*/
+/*.ui-tabs .ui-tabs-nav li { list-style: none; float: left; position: relative; top: 1px; margin: 0 .2em 1px 0; border-bottom: 0 !important; padding: 0; white-space: nowrap; }*//*
+
 .ui-tabs .ui-tabs-nav li a {
     float: left;
     padding-right: 7px;
@@ -449,14 +467,18 @@
     text-decoration: underline;
 }
 
-/*.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }*/
+*/
+/*.ui-tabs .ui-tabs-nav li.ui-tabs-selected { margin-bottom: 0; padding-bottom: 1px; }*//*
+
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a {
     cursor: text;
      text-decoration: none;
     color: #373E41;
 }
 
-/*.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; }  first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere...*/
+*/
+/*.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; }  first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere...*//*
+
 .ui-tabs .ui-tabs-panel {
     display: block;
     border-width: 0;
@@ -470,4 +492,4 @@
 
 #reception{
     border: 1px solid #006600;
-}
+}*/

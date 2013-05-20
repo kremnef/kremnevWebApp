@@ -66,6 +66,7 @@
     <message key="NewsAndEvents.edit">Редактировать Новость</message>
     <message key="NewsAndEvents.save">Сохранить Новость</message>
     <message key="NewsAndEvents.edit">Редактировать данные Новость</message>
+    <message key="NewsAndEvents.showAll">Все новости</message>
 
     <!--SMI-->
     <!--<message key="SMI">Публикация</message>-->

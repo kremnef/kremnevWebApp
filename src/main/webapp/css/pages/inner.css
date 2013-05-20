@@ -1,4 +1,5 @@
-@import "global.css";
+/*defaul themee*/
+@import "../theme/default/css/default.css";
 
 
 .content .main ol {

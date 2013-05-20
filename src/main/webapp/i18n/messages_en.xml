@@ -67,6 +67,7 @@
     <message key="NewsAndEvents.edit">Edit NewsAndEvents</message>
     <message key="NewsAndEvents.save">Save NewsAndEvents</message>
     <message key="NewsAndEvents.edit">Edit NewsAndEvents Data</message>
+    <message key="NewsAndEvents.showAll">All News</message>
 
     <!--SMI-->
     <!--<message key="SMI">SMI</message>-->

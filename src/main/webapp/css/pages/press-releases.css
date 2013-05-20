@@ -1,4 +1,7 @@
-@import "global.css";
+
+/*defaul themee*/
+@import "../theme/default/css/default.css";
+
 
 
 #release-search-form{

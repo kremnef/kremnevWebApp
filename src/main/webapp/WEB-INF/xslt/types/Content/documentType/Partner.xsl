@@ -15,7 +15,7 @@
             <h1>
                 <xsl:value-of select="heading"/>
             </h1>
-            <a href="{$requestURI}/{help/@url}">
+            <a href="/{help/@url}">
                 <xsl:value-of select="help"/>
             </a>
             <xsl:choose>
