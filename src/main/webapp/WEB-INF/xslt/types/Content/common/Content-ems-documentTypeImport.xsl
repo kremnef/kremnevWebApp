@@ -36,9 +36,13 @@
                 <xsl:apply-templates select="$documentTypeTemplate//ems:templ[@name=concat($documentType, '-item')]">
                     <xsl:with-param name="contents" select="$contents"/>
                     <xsl:with-param name="path" select="$path"/>
+                    <xsl:with-param name="miniatureSize" select="$miniatureSize"/>
                 </xsl:apply-templates>
             </xsl:otherwise>
         </xsl:choose>
+
+
+
         <!--<xsl:comment>
             <xsl:value-of select="$documentType"/>
         </xsl:comment>

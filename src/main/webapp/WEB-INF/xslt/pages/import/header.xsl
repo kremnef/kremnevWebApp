@@ -41,9 +41,7 @@
             </div>
 
             <!--Languages-->
-            <div class="languages">
-                    <xsl:apply-templates select="systemNodeObjects/object/entry[key = 0]/value"/>
-            </div>
+            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 0]/value"/>
 
             <!--Main menu-->
             <div class="main-menu">

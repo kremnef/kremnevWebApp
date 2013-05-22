@@ -14,7 +14,7 @@
     <xsl:template match="ems:templ[@name='Work-item']">
         <xsl:param name="contents"/>
         <xsl:param name="path"/>
-
+        <xsl:param name="miniatureSize"/>
 
         <xsl:variable name="name">
             <xsl:call-template name="getLocalName">
@@ -35,9 +35,9 @@
          <xsl:variable name="documentTypeName" select="$contents/documentType/name"/>-->
 
         <div class="item">
-            <h1>
+            <h3>
                 <xsl:value-of select="$name"/>
-            </h1>
+            </h3>
             <span class="date">
                 <xsl:call-template name="date:format-date">
                     <xsl:with-param name="date-time" select="$contents/publishDateTime"/>
@@ -49,10 +49,14 @@
                 <xsl:with-param name="contents" select="$contents"/>
                 <xsl:with-param name="imagePath" select="$imagePath"/>
                 <xsl:with-param name="path" select="$path"/>
+                <xsl:with-param name="miniatureSize" select="$miniatureSize"/>
             </xsl:call-template>
-            <p>
-                SOME TEXT
-            </p>
+            <span class="xmlSource">
+                <!--<div id="{$systemName}-{$position}" class="{$typeActionName}">-->
+                <xsl:variable name="doc" select="$contents/documents"/>
+                <xsl:value-of disable-output-escaping="yes" select="$doc/xmlSource"/>
+                <!--</div>-->
+            </span>
 
         </div>
 

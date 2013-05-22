@@ -15,6 +15,7 @@
     <xsl:import href="import/footer.xsl"/>
 
     <xsl:template name="scripts">
+        <!--<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>-->
     </xsl:template>
 
     <xsl:template name="styles">

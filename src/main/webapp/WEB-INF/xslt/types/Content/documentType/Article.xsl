@@ -7,6 +7,40 @@
                 exclude-result-prefixes="ems">
 
 
+    <xsl:param name="servletPath"/>
+    <xsl:param name="sitemapPath"/>
+
+    <xsl:template match="value[typeAction/name='Article' and typifiedObject/objectType/name='Content']">
+        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="typeActionName" select="typeAction/name"/>
+        <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
+        <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
+        <xsl:variable name="documentType" select="typifiedObject/documentType/name"/>
+        <xsl:variable name="position" select="../key"/>
+        <xsl:variable name="parentId" select="typifiedObject/id"/>
+        <div class="item">
+            <xsl:call-template name="documentTypeImport">
+                <xsl:with-param name="documentType" select="$documentType"/>
+                <xsl:with-param name="contents"
+                                select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item"/>
+                <xsl:with-param name="path" select="$baseURL"/>
+                <xsl:with-param name="mode" select="'item'"/>
+                <!--<xsl:with-param name="miniatureSize" select="'small'"/>-->
+                <xsl:with-param name="miniatureSize" select="'none'"/>
+            </xsl:call-template>
+
+
+        </div>
+
+
+    </xsl:template>
+
+    <xsl:template match="Article">
+        <!--<h2>
+            <xsl:value-of select="title" disable-output-escaping="yes"/>
+        </h2>-->
+        <xsl:value-of select="text" disable-output-escaping="yes"/>
+    </xsl:template>
 
     <ems:templ name="Article-item"/>
     <ems:templ name="Article-list"/>
@@ -15,7 +49,7 @@
     <xsl:template match="ems:templ[@name='Article-item']">
         <xsl:param name="contents"/>
         <xsl:param name="path"/>
-
+        <xsl:param name="miniatureSize"/>
 
         <xsl:variable name="name">
             <xsl:call-template name="getLocalName">
@@ -45,15 +79,27 @@
                     <xsl:with-param name="pattern" select="'dd MMMMM yyyy'"/>
                 </xsl:call-template>
             </span>
-            <xsl:call-template name="miniature">
-                <xsl:with-param name="name" select="$name"/>
-                <xsl:with-param name="contents" select="$contents"/>
-                <xsl:with-param name="imagePath" select="$imagePath"/>
-                <xsl:with-param name="path" select="$path"/>
-            </xsl:call-template>
-            <p>
-                SOME TEXT
-            </p>
+            <xsl:if test="$imagePath != ''">
+                <xsl:call-template name="miniature">
+                    <xsl:with-param name="name" select="$name"/>
+                    <xsl:with-param name="contents" select="$contents"/>
+                    <xsl:with-param name="imagePath" select="$imagePath"/>
+                    <xsl:with-param name="path" select="$path"/>
+                    <xsl:with-param name="miniatureSize" select="$miniatureSize"/>
+                </xsl:call-template>
+            </xsl:if>
+            <span class="xmlSource">
+                <!--<div id="{$systemName}-{$position}" class="{$typeActionName}">-->
+                <xsl:variable name="doc" select="$contents/documents"/>
+                <xsl:value-of disable-output-escaping="yes" select="$doc/xmlSource"/>
+                <!--</div>-->
+            </span>
+            <!--<xsl:variable name="doc" select="$contents/documents"/>-->
+            <!--<xsl:apply-templates
+                    select="$contents/documents/xmlSource">
+                &lt;!&ndash;<xsl:with-param name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>&ndash;&gt;
+            </xsl:apply-templates>-->
+            <!--<xsl:value-of disable-output-escaping="yes" select="$doc/xmlSource/Article/text"/>-->
 
         </div>
 
@@ -97,21 +143,20 @@
         </div>
 
         <div class="title">
-            <a  href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
+            <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
                 <xsl:value-of select="$name"/>
             </a>
         </div>
-
-        <xsl:call-template name="miniature">
-                  <xsl:with-param name="name" select="$name"/>
-                  <xsl:with-param name="contents" select="$contents"/>
-                  <xsl:with-param name="imagePath" select="$imagePath"/>
-                  <xsl:with-param name="path" select="$path"/>
-                  <xsl:with-param name="miniatureSize" select="$miniatureSize"/>
-              </xsl:call-template>
+        <xsl:if test="$imagePath != ''">
+            <xsl:call-template name="miniature">
+                <xsl:with-param name="name" select="$name"/>
+                <xsl:with-param name="contents" select="$contents"/>
+                <xsl:with-param name="imagePath" select="$imagePath"/>
+                <xsl:with-param name="path" select="$path"/>
+                <xsl:with-param name="miniatureSize" select="$miniatureSize"/>
+            </xsl:call-template>
+        </xsl:if>
     </xsl:template>
-
-
 
 
 </xsl:stylesheet>

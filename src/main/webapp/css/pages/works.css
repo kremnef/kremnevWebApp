@@ -1,11 +1,16 @@
-@import "global.css";
+/*defaul themee*/
+@import "../theme/default/css/default.css";
+
 
 
 /* widget-3 */
+/*
 
 .widget-3 {
     width: auto;
-    /*max-width: 650px;*/
+    */
+/*max-width: 650px;*//*
+
 }
 
 .widget-3 ul li {
@@ -28,9 +33,13 @@
     min-width: 300px;
     float:left;
     background: #efefef;
-    /*clear: both;*/
+    */
+/*clear: both;*//*
+
     height: auto;
-    /*padding: 30px;*/
+    */
+/*padding: 30px;*//*
+
 }
 #works-list ul li{
 
@@ -64,7 +73,9 @@
 
 #release-search-form{
     margin-bottom: 50px;
-    /*padding-bottom: 50px;*/
+    */
+/*padding-bottom: 50px;*//*
+
 
 }
 
@@ -79,11 +90,15 @@
 .info .showItem a {
     color: #F23B00;
 }
+*/
 /*.showNewsList  h1{
     display: none;
-}*/
+}*//*
+
 .content .verMenu {
-    /*background: url("../../img/book.png") no-repeat scroll 18% 75px transparent;*/
+    */
+/*background: url("../../img/book.png") no-repeat scroll 18% 75px transparent;*//*
+
     float: left;
     padding: 20px 0 0 3%;
     width: 15%;
@@ -106,9 +121,15 @@
 .main {
     padding: 20px 0  60px 0;
 }
-/*.main h1 {*/
-    /*margin-left: 220px;*/
-/*}*/
+*/
+/*.main h1 {*//*
+
+    */
+/*margin-left: 220px;*//*
+
+*/
+/*}*//*
+
 
 .main ul li a {
     color: #4E4F5A;
@@ -396,6 +417,7 @@ display: none
     background: url("../../img/email.png") no-repeat center left;
     padding: 20px 40px 20px 40px;
 }
+*/
 /*
 .main .showScrollable .scrollItem {
     width: 340px;
@@ -414,7 +436,8 @@ display: none
 }
 .main .showScrollable .scrollItem .title a {
     color: #4C4E5B;
-}*/
+}*//*
+
 .main .showNewsList .custom-content .image {
     float: left;
     padding: 20px 20px 20px 0;
@@ -450,3 +473,4 @@ display: none
     font-size: 12px;
 }
 
+*/

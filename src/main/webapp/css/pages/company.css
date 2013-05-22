@@ -1,6 +1,8 @@
-@import "global.css";
+/*defaul themee*/
+@import "../theme/default/css/default.css";
 
 
+/*
 .content .geography {
     padding-bottom: 40px;
     text-align: center;
@@ -54,44 +56,15 @@
     color:#697379;
     font-family: Arial, sans-serif;
     line-height: 23px;
-}
-/*
-#activiti.showHTML h1, #activiti.showHTML h2 {
-    display: none;
 }*/
 /*
-.content .info .banner {
-    background: url("../../img/arrow.gif") no-repeat scroll left top #515461;
-    text-align: right;
-}
-.content .info #data-disclosure.verMenu {
-    padding: 30px 30px 30px 10px;
-}
-.content .info #data-disclosure.verMenu h2 {
-    display: block;
-    color: #373E3F;
-}
-.content .info #data-disclosure.verMenu h2 a{
-    display: block;
-    color: #373E3F;
-    text-decoration: none;
-}
-.content .info #data-disclosure.verMenu ul li {
-    font-size: 12px;
-    padding-top: 15px;
-}
-.content .info #data-disclosure.verMenu ul li a {
-    color: #006699;
-    text-decoration: underline;
-}
-*/
 .content .main {
     margin: 0 0 0 20%;
     padding: 20px 20px 60px;
 }
-/*.content .main .news-block {
+*//*.content .main .news-block {
     padding-top: 20px;
-}*/
+}*//*
 .content .main .widget-9 .verMenu {
     padding: 20px 0 0 20px;
     background: url("../../img/company/company_activity_map.png") no-repeat 100px 17px;
@@ -222,7 +195,7 @@
 }
 .content .extra .general .showItem a {
     color: #0099FF;
-}
+}*/
 /*.content .extra .general .showHTML .position {
     clear: both;
     color: #333333;
@@ -236,6 +209,7 @@
     text-decoration: underline;
     width: 135px;
 }*/
+/*
 .content .extra .showHTMLSimple {
     border-left: 1px solid #E2E2E2;
     color: #0099FF;
@@ -290,4 +264,4 @@
 
 .widget-6 .verMenu .last{
     display: none;
-}
+}*/

@@ -32,33 +32,8 @@
                        <xsl:with-param name="miniatureSize" select="'none'"/>
                    </xsl:call-template>
 
-            <!--<xsl:for-each
-                    select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item">
-
-                <xsl:call-template name="listItems">
-                    <xsl:with-param name="contents" select="."/>
-                    <xsl:with-param name="objectURL" select="$objectURL"/>
-                    <xsl:with-param name="path" select="$baseURL"/>
-                    &lt;!&ndash;<xsl:with-param name="typeActionName" select="$typeActionName"/>&ndash;&gt;
-                    <xsl:with-param name="documentType" select="$documentType"/>
-                </xsl:call-template>
-
-            </xsl:for-each>-->
 
         </div>
-
-
-
-    </xsl:template>
-
-    <xsl:template name="listItems">
-        <xsl:param name="contents"/>
-        <xsl:param name="objectURL"/>
-        <xsl:param name="path"/>
-        <xsl:param name="documentType"/>
-
-        <!--<h3>path: <xsl:value-of select="$path"/></h3>
-        <h3>objectURL: <xsl:value-of select="$objectURL"/></h3>-->
 
 
 

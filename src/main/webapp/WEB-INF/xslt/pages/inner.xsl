@@ -13,7 +13,7 @@
     <!--<xsl:apply-templates select="systemNode/objects[position = 1]" />-->
 
     <xsl:template name="scripts">
-        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.js"/>
+        <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.js"/>-->
 
     </xsl:template>
 
@@ -27,15 +27,7 @@
     </xsl:template>
 
     <xsl:template match="root">
-        <div class="header">
-            <div class="logo">
-                <img alt="Logo" src="{$servletPath}/img/kremnevAtelier_logo.png"/>
-            </div>
-            <div class="instruments">
-                <xsl:apply-templates select="systemNodeObjects/object/entry[key = 1]/value"/>
-            </div>
 
-        </div>
         <xsl:apply-templates select="systemNodeObjects/object/entry[key = 4]/value"/>
         <!--<div class="breadcrumb">-->
             <!--<script src="/js/jquery/jquery.js" language="javascript"></script>-->

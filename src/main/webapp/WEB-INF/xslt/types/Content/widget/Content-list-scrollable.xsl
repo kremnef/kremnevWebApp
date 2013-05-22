@@ -24,7 +24,8 @@
         <xsl:variable name="position" select="../key"/>
         <xsl:variable name="parentId" select="typifiedObject/id"/>
         <!--Define JS-->
-        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/flowplayer/jquery.tools.min.js"/>
+        <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/flowplayer/jquery.tools.min.js"/>-->
+        <script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
 
 
         <xsl:comment><xsl:value-of select="typifiedObject/objectType/name"/>-<xsl:value-of select="typeAction/name"/></xsl:comment>
