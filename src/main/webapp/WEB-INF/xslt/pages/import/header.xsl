@@ -11,8 +11,7 @@
                 exclude-result-prefixes="date str func i18n">
 
     <xsl:template name="header">
-        <div class="container">
-
+        <div class="container head">
             <!--Search Form-->
             <div class="search collapse " id="accordionSearch">
                 <div class="soc">
@@ -43,25 +42,21 @@
             <!--Languages-->
             <xsl:apply-templates select="systemNodeObjects/object/entry[key = 0]/value"/>
 
-            <!--Main menu-->
-            <div class="main-menu">
-                    <xsl:apply-templates select="systemNodeObjects/object/entry[key = 1]/value"/>
+
+            <div class="hidebox">
+                <div class="srch " data-toggle="collapse" data-target="#accordionSearch">
+                    <span>Top</span>
+                </div>
+                <div class="mnubutton " data-toggle="collapse" data-target="#option">
+                    <span>Option</span>
+                </div>
             </div>
 
-            <!-- <div class="mainbar">
-                 <div class="srch " data-toggle="collapse" data-target="#accordionSearch">
-                     <h4>Top</h4>
-                 </div>
-                 <div class="mnubutton " data-toggle="collapse" data-target="#option">
-                     &lt;!&ndash;<div class="mnubutton " data-toggle="collapse" data-target="level2">&ndash;&gt;
-                     <h4>Option</h4>
-                 </div>
-             </div>
-
-             <div class="clear"></div>
-    -->
         </div>
-
+        <div class="container main-menu">
+            <!--Main menu-->
+            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 1]/value"/>
+        </div>
 
     </xsl:template>
 

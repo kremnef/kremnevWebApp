@@ -32,12 +32,6 @@
             <!--<xsl:if test="count($languages) &gt; 0">
                 <div class="languages">
                     <div class="dropdown" id="tagsDropDown">
-                        <script src="/js/jquery/jquery.selectbox-0.5.js" type="text/javascript"></script>
-                        <script type="text/javascript">
-                            $(document).ready(function() {
-                            $('#select-languagesDropDown').selectbox();
-                            });
-                        </script>
                         <select id="select-languagesDropDown">
                             <xsl:for-each select="$languages">
                                 <option value="{code}">

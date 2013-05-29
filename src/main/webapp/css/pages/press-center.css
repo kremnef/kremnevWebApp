@@ -1,6 +1,4 @@
-/*defaul themee*/
-@import "../theme/default/css/default.css";
-
+@import "global.css";
 
 .content .verMenu {
     background: url("../../img/book.png") no-repeat scroll 18% 75px transparent;

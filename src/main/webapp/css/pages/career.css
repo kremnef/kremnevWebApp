@@ -1,5 +1,4 @@
-/*defaul themee*/
-@import "../theme/default/css/default.css";
+@import "global.css";
 /*
 
 .content #block1.verMenu {

@@ -232,11 +232,12 @@
         <!-- scripts -->
 
 
-        <!--<div class="content">-->
-        <div class="clear"></div>
-
         <!--<div class="main container">-->
-        <div class="container">
+        <div class="scroll architecture container">
+            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 4]/value"/>
+        </div>
+
+        <div class="scroll design container">
             <xsl:apply-templates select="systemNodeObjects/object/entry[key = 4]/value"/>
         </div>
 
