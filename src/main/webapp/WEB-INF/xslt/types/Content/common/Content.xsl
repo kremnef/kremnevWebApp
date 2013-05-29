@@ -12,7 +12,7 @@
 
 
     <xsl:template match="value[typifiedObject/objectType/name='Content']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
@@ -68,7 +68,7 @@
         <xsl:param name="typeActionName"/>
         <xsl:param name="documentType"/>
 
-        <xsl:variable name="systemName" select="$content/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="$content/systemName"/>
         <xsl:variable name="name">
             <xsl:call-template name="getLocalName">
                 <xsl:with-param name="typifiedObject" select="$content"/>
@@ -99,7 +99,7 @@
 
         <h1>$documentType:<xsl:value-of select="$documentType"/></h1>
         <xsl:variable name="child"
-                      select="/root/childrenMap/children/entry[key=$systemName]/value/item[emsObject/systemName = $objectURLPrefix]"/>
+                      select="/root/childrenMap/children/entry[key=$systemName]/value/item[systemName = $objectURLPrefix]"/>
         <xsl:choose>
             <xsl:when test="$child">
                 <xsl:call-template name="showContent">
@@ -124,7 +124,7 @@
 
                         <!--<xsl:variable name="doc" select="$content/documents[language/code=$locale and version=$maxVersion]"/>-->
                         <xsl:variable name="doc" select="$content/documents"/>
-                        <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key=$doc/folders/emsObject/systemName]/value/item"/>
+                        <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key=$doc/folders/systemName]/value/item"/>
                         <xsl:variable name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
                         <h1><xsl:value-of select="$name"/></h1>
                         <!--<xsl:call-template name="yoxview">
@@ -173,7 +173,7 @@
                 <xsl:sort select="position" data-type="number" order="ascending"/>
                 <li>
                     <xsl:variable name="childrenCount" select="emsObject/childrenCount"/>
-                    <!--<xsl:variable name="sName" select="emsObject/systemName" />
+                    <!--<xsl:variable name="sName" select="systemName" />
                     <xsl:if test="$childrenCount &gt; 0">
 
                     </xsl:if>-->
@@ -182,7 +182,7 @@
                         <xsl:with-param name="path" select="$path"/>
                     </xsl:call-template>
 
-                    <xsl:variable name="sName" select="emsObject/systemName"/>
+                    <xsl:variable name="sName" select="systemName"/>
                     <xsl:if test="$childrenCount &gt; 0">
                         <ol>
                             <xsl:call-template name="showContents">
@@ -216,7 +216,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <h3>
-                    <a href="{$servletPath}/{$sitemapPath}{concat($path,'/',$content/emsObject/systemName)}">
+                    <a href="{$servletPath}/{$sitemapPath}{concat($path,'/',$content/systemName)}">
                         <xsl:value-of select="$name"/>
                     </a>
                 </h3>

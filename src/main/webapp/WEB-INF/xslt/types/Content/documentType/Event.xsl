@@ -87,7 +87,7 @@
                                     <xsl:with-param name="subj" select="'/'"/>
                                 </xsl:call-template>
                             </xsl:variable>
-                            <a class="zoom" href="{$servletPath}{$path}" title="{name}"><img src="{$servletPath}{$lastSubstringBefore}/{emsObject/systemName}.png" alt=""/></a>
+                            <a class="zoom" href="{$servletPath}{$path}" title="{name}"><img src="{$servletPath}{$lastSubstringBefore}/{systemName}.png" alt=""/></a>
                         </xsl:if>
                     </xsl:for-each>
                 </div>
@@ -121,7 +121,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <h3>
-                    <a href="{$servletPath}/{$sitemapPath}{concat($path, '/', $content/emsObject/systemName)}">
+                    <a href="{$servletPath}/{$sitemapPath}{concat($path, '/', $content/systemName)}">
                         <xsl:value-of select="$name"/>
                     </a>
                 </h3>

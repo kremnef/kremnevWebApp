@@ -13,7 +13,7 @@
 
     <xsl:template match="value[typifiedObject/objectType/name='Folder' and typeAction/name = 'showFiles']">
 
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName" />
+        <xsl:variable name="systemName" select="typifiedObject/systemName" />
         <xsl:variable name="position" select="../key"/>
 
         <div class="widget-{$position}">
@@ -40,7 +40,7 @@
         <xsl:param name="obj"/>
         <xsl:param name="position"/>
 
-        <xsl:variable name="systemName" select="$obj/emsObject/systemName" />
+        <xsl:variable name="systemName" select="$obj/systemName" />
         <xsl:variable name="parentId" select="$obj/id" />
 
         <xsl:variable name="items" select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber = $position]/value/item[objectType/name='FileObject']" />

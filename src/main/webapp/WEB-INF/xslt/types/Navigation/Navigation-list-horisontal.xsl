@@ -10,7 +10,7 @@
 
     <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-horisontal']">
 
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName" />
+        <xsl:variable name="systemName" select="typifiedObject/systemName" />
         <xsl:variable name="parentId" select="typifiedObject/@id" />
 
         <xsl:variable name="position" select="../key"/>

@@ -13,7 +13,7 @@
     <xsl:param name="sitemapPath"/>
 
     <xsl:template match="value[typeAction/name='Vacancy' and typifiedObject/objectType/name='Content']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
@@ -71,15 +71,15 @@
                             <xsl:with-param name="typifiedObject" select="."/>
                         </xsl:call-template>
                     </xsl:variable>
-                    <a href="{$servletPath}/{$sitemapPath}{concat($baseURL,emsObject/systemName)}">
+                    <a href="{$servletPath}/{$sitemapPath}{concat($baseURL,systemName)}">
                         <xsl:value-of select="$name"/>
                     </a>
                     <xsl:variable name="id" select="id"/>
-                    <xsl:variable name="systemName" select="emsObject/systemName"/>
+                    <xsl:variable name="systemName" select="systemName"/>
                     <xsl:variable name="children" select="/root/childrenMap/children/entry[key/parentId=$id and key/systemName=$systemName]/value/item"/>
                     <xsl:call-template name="showChildren">
                         <xsl:with-param name="children" select="$children"/>
-                        <xsl:with-param name="baseURL" select="concat($baseURL,emsObject/systemName,'/')"/>
+                        <xsl:with-param name="baseURL" select="concat($baseURL,systemName,'/')"/>
                     </xsl:call-template>
                 </td>
             </xsl:if>
@@ -100,7 +100,7 @@
                                     <xsl:with-param name="typifiedObject" select="."/>
                                 </xsl:call-template>
                             </xsl:variable>
-                            <a href="{$servletPath}/{$sitemapPath}{concat($baseURL,emsObject/systemName)}">
+                            <a href="{$servletPath}/{$sitemapPath}{concat($baseURL,systemName)}">
                                 <xsl:value-of select="$name"/>
                             </a>
                         </li>

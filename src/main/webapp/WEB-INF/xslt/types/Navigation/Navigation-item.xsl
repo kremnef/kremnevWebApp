@@ -9,7 +9,7 @@
     <xsl:param name="sitemapPath"/>
 
     <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'item']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="position" select="../key"/>
 
         <div class="widget-{$position}">

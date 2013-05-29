@@ -102,7 +102,7 @@
         </div>
 
         <div class="title">
-            <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
+            <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/systemName)}">
                 <xsl:value-of select="$name"/>
             </a>
         </div>

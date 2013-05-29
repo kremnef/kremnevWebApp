@@ -29,7 +29,7 @@
         <xsl:param name="position"/>
 
         <!--variables-->
-        <xsl:variable name="systemName" select="$content/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="$content/systemName"/>
         <xsl:variable name="parentId" select="$content/id"/>
         <xsl:variable name="objectURLPrefix">
             <xsl:choose>
@@ -63,7 +63,7 @@
             </xsl:variable>
 
             <xsl:variable name="filesInFolders"
-                          select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/emsObject/systemName and key/blockNumber=$position]/value/item"/>
+                          select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/systemName and key/blockNumber=$position]/value/item"/>
             <xsl:variable name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
             <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
 

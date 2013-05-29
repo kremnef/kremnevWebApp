@@ -40,7 +40,7 @@
 
 
     <xsl:template match="value[typeAction/name='showHTML' and typifiedObject/objectType/name='Content']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>

@@ -11,7 +11,7 @@
         <xsl:variable name="doc" select="typifiedObject/documents"/>
         <xsl:if test="$doc">
             <xsl:variable name="backgroundColor" select="'0x323A3F'"/>
-            <div id="{typifiedObject/emsObject/systemName}" class="{typeAction/name}">
+            <div id="{typifiedObject/systemName}" class="{typeAction/name}">
                 <div class="html-content">
                     <xsl:value-of select="$doc/xmlSource/HtmlCode/html" disable-output-escaping="yes"/>
                 </div>

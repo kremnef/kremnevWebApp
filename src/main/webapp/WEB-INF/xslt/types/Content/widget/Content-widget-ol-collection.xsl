@@ -32,7 +32,7 @@
                     <xsl:with-param name="pos" select="position()"/>
                 </xsl:call-template>
 
-                <xsl:variable name="sName" select="emsObject/systemName"/>
+                <xsl:variable name="sName" select="systemName"/>
                 <xsl:if test="$childrenCount &gt; 0">
                     <ol>
                         <xsl:call-template name="showContents">
@@ -61,7 +61,7 @@
                 <xsl:with-param name="obj" select="$content"/>
             </xsl:call-template>
         </xsl:variable>-->
-        <xsl:variable name="systemName" select="$content/emsObject/systemName" />
+        <xsl:variable name="systemName" select="$content/systemName" />
         <script language="javascript" type="text/javascript">
             $(document).ready(function(){
                 $("#<xsl:value-of select="$systemName"/>-item").mouseenter(function(event){

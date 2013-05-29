@@ -19,7 +19,7 @@
         <xsl:param name="objectURL"/>
         <xsl:param name="position"/>
 
-        <xsl:variable name="systemName" select="$obj/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="$obj/systemName"/>
         <xsl:variable name="parentId" select="$obj/id"/>
 
         <xsl:variable name="items"
@@ -47,7 +47,7 @@
                     <li>
                         <xsl:attribute name="class">
                             <xsl:text>menuItem</xsl:text>
-                            <xsl:if test="emsObject/systemName = $objectURLPrefix">selected</xsl:if>
+                            <xsl:if test="systemName = $objectURLPrefix">selected</xsl:if>
                         </xsl:attribute>
                         <xsl:variable name="path">
                             <xsl:choose>

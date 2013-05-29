@@ -16,7 +16,7 @@
     <xsl:template match="value[typeAction/name='scrollable' and typifiedObject/objectType/name='Content']">
 
         <!--Define Variables-->
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
         <xsl:variable name="documentType" select="typifiedObject/documentType/name"/>
@@ -38,7 +38,7 @@
 
                 <xsl:if test="$objectURL != ''">
                     <xsl:variable name="child"
-                                  select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item[emsObject/systemName = $objectURL]"/>
+                                  select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item[systemName = $objectURL]"/>
                     <xsl:if test="$child">
                         <div class="item-content">
                             <xsl:call-template name="showItem">

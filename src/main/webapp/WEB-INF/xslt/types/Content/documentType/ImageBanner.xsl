@@ -6,7 +6,7 @@
     <xsl:import href="../types/Content/Content.xsl"/>
 
     <xsl:template match="value[typifiedObject/objectType/name='Content' and typeAction/name='showImageBanner']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseUrl" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectUrl" select="typifiedObject/objectURL"/>

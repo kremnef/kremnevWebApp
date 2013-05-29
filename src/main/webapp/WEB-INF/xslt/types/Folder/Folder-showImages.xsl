@@ -14,7 +14,7 @@
 
     <xsl:template match="value[typifiedObject/objectType/name='Folder' and typeAction/name = 'showImages']">
 
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName" />
+        <xsl:variable name="systemName" select="typifiedObject/systemName" />
         <xsl:variable name="objectURL" select="typifiedObject/objectURL" />
         <xsl:variable name="objectURLSuffix">
             <xsl:choose>
@@ -64,7 +64,7 @@
                                     <xsl:with-param name="subj" select="'/'"/>
                                 </xsl:call-template>
                             </xsl:variable>
-                            <a class="zoom" href="{$prefix}{$path}" title="{name}"><img src="{$prefix}{$lastSubstringBefore}/{emsObject/systemName}.png" alt=""/></a>
+                            <a class="zoom" href="{$prefix}{$path}" title="{name}"><img src="{$prefix}{$lastSubstringBefore}/{systemName}.png" alt=""/></a>
                         </xsl:if>
                     </xsl:for-each>
                 </div>

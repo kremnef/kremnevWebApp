@@ -32,7 +32,7 @@
         <xsl:param name="path"/>
         <xsl:param name="typeActionName"/>
 
-        <xsl:variable name="systemName" select="$content/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="$content/systemName"/>
         <xsl:variable name="parentId" select="$content/id"/>
 
         <xsl:variable name="objectURLPrefix">
@@ -58,7 +58,7 @@
         </xsl:variable>
 
         <xsl:variable name="child"
-                      select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item[emsObject/systemName = $objectURLPrefix]"/>
+                      select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item[systemName = $objectURLPrefix]"/>
         <xsl:choose>
             <xsl:when test="$child">
                 <xsl:call-template name="showContent-showProducts">
@@ -76,7 +76,7 @@
                         <xsl:when test="$childrenCount &gt; 0">
 
                             <xsl:variable name="pId" select="$content/id"/>
-                            <xsl:variable name="sName" select="$content/emsObject/systemName"/>
+                            <xsl:variable name="sName" select="$content/systemName"/>
                             <ul id="{$sName}" class="parent">
                                 <xsl:for-each select="/root/childrenMap/children/entry[key/parentId=$pId and key/systemName=$sName]/value/item">
                                     <li>
@@ -91,7 +91,7 @@
                                             </xsl:call-template>
                                         </xsl:variable>-->
                                         <xsl:variable name="doc" select="documents"/>
-                                        <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/emsObject/systemName]/value/item"/>
+                                        <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/systemName]/value/item"/>
                                         <xsl:variable name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
                                         <xsl:call-template name="slideShow-showProducts">
                                             <xsl:with-param name="fileObjects" select="$fileObjects"/>
@@ -99,7 +99,7 @@
                                             <xsl:with-param name="typeActionName" select="$typeActionName"/>
                                         </xsl:call-template>
                                         <xsl:variable name="p1Id" select="id"/>
-                                        <xsl:variable name="s1Name" select="emsObject/systemName"/>
+                                        <xsl:variable name="s1Name" select="systemName"/>
                                         <h3><a href="{$prefix}{$path}/{$s1Name}"><xsl:value-of select="$name"/></a></h3>
                                         <ul id="{$s1Name}" class="child">
                                             <xsl:for-each select="/root/childrenMap/children/entry[key/parentId=$p1Id and key/systemName=$s1Name]/value/item">
@@ -110,7 +110,7 @@
                                                 </xsl:variable>
 
                                                 <li>
-                                                    <xsl:variable name="s2Name" select="emsObject/systemName"/>
+                                                    <xsl:variable name="s2Name" select="systemName"/>
                                                     <a href="{$prefix}{$path}/{$s1Name}/{$s2Name}"><xsl:value-of select="$childName"/></a>
                                                 </li>
                                             </xsl:for-each>
@@ -184,7 +184,7 @@
                                         <xsl:value-of select="$doc/xmlSource/Product/description" disable-output-escaping="yes"/>
                                     </div>
                                     <div id="product-info-right" class="product-info-right">
-                                        <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/emsObject/systemName]/value/item"/>
+                                        <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/systemName]/value/item"/>
                                         <xsl:variable name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
                                         <xsl:call-template name="slideShow-showProducts">
                                             <xsl:with-param name="fileObjects" select="$fileObjects"/>

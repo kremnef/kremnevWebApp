@@ -15,7 +15,7 @@
 
     <xsl:template match="value[typeAction/name='list-autoscroll' and typifiedObject/objectType/name='Content']">
         <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/flowplayer/jquery.tools.min.js"/>
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
@@ -156,7 +156,7 @@
                 </xsl:choose>
             </xsl:variable>
             <div class="miniature">
-                <a width="{$width}" href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
+                <a width="{$width}" href="{$servletPath}/{$sitemapPath}{concat($path,$contents/systemName)}">
                     <img width="{$width}" alt="{$name}"
                          src="{$servletPath}/{$sitemapPath}{$folderPath}thumbnails/{$smallImageName}"/>
                 </a>
@@ -177,7 +177,7 @@
         </div>
 
         <div class="title" width="{$width}">
-            <a width="{$width}" href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
+            <a width="{$width}" href="{$servletPath}/{$sitemapPath}{concat($path,$contents/systemName)}">
                 <xsl:value-of select="$name"/>
             </a>
         </div>

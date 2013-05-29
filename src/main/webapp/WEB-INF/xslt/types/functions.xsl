@@ -174,7 +174,7 @@
                         </xsl:choose>
                     </xsl:variable>
                     <div class="miniature">
-                        <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
+                        <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/systemName)}">
                             <img alt="{$name}"
                                  src="{$servletPath}/{$sitemapPath}{$folderPath}thumbnails/{$smallImageName}"/>
                         </a>

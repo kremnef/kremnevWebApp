@@ -20,7 +20,7 @@
         <xsl:variable name="levels" select="@levels"/>
 
         <div class="widget-{$position}">
-            <div id="{typifiedObject/emsObject/systemName}-{$position}" position="{$position}" class="breadcrumb">
+            <div id="{typifiedObject/systemName}-{$position}" position="{$position}" class="breadcrumb">
                 <xsl:variable name="name">
                     <xsl:call-template name="getLocalName">
                         <xsl:with-param name="typifiedObject" select="typifiedObject"/>
@@ -56,7 +56,7 @@
         <xsl:param name="levels"/>
 
         <xsl:variable name="parentId" select="$parent/@id"/>
-        <xsl:variable name="parentSystemName" select="$parent/emsObject/systemName"/>
+        <xsl:variable name="parentSystemName" select="$parent/systemName"/>
 
         <xsl:if test="$level &lt;= $levels">
             <xsl:for-each select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$parentSystemName and key/blockNumber = $position]/value/item">
@@ -67,7 +67,7 @@
                         </xsl:call-template>
                     </xsl:variable>
                     <div class="separator"/>
-                    <div id="{emsObject/systemName}-{$level}-{$position}" class="item">
+                    <div id="{systemName}-{$level}-{$position}" class="item">
                         <div class="left"/>
                         <a href="{$prefix}{pathURL}"><xsl:value-of select="$name"/></a>
                         <div class="right"/>

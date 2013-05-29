@@ -10,7 +10,7 @@
 
 
     <xsl:template match="value[typifiedObject/objectType/name='Content' and typeAction/name='list-cycle']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName" />
+        <xsl:variable name="systemName" select="typifiedObject/systemName" />
         <xsl:variable name="typeActionName" select="typeAction/name" />
 
         <xsl:variable name="position" select="../key"/>
@@ -31,7 +31,7 @@
                     <xsl:variable name="parentId" select="typifiedObject/@id"/>
                     <xsl:for-each select="/root/childrenMap/children/entry[key/systemName=$systemName and key/parentId=$parentId]/value/item">
                         <xsl:variable name="doc" select="documents/xmlSource"/>
-                        <div id="{emsObject/systemName}">
+                        <div id="{systemName}">
                             <xsl:value-of select="$doc/HtmlCode/html" disable-output-escaping="yes"/>
                         </div>
                     </xsl:for-each>

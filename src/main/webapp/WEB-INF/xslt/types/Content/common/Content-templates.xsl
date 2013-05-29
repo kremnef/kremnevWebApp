@@ -30,7 +30,7 @@
         <xsl:param name="position"/>
 
         <!--variables-->
-        <xsl:variable name="systemName" select="$content/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="$content/systemName"/>
         <xsl:variable name="parentId" select="$content/id"/>
         <xsl:variable name="objectURLPrefix">
             <xsl:choose>
@@ -53,7 +53,7 @@
             </xsl:choose>
         </xsl:variable>
         <xsl:variable name="child"
-                      select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item[emsObject/systemName = $objectURLPrefix]"/>
+                      select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item[systemName = $objectURLPrefix]"/>
 
         <xsl:choose>
             <xsl:when test="$child and $initialContent != ''">
@@ -79,7 +79,7 @@
                     </xsl:variable>
 
                     <xsl:variable name="filesInFolders"
-                                  select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/emsObject/systemName and key/blockNumber=$position]/value/item"/>
+                                  select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/systemName and key/blockNumber=$position]/value/item"/>
                     <xsl:variable name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
                     <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
 
@@ -182,7 +182,7 @@
             </xsl:when>
             <xsl:otherwise>
                 <h3>
-                    <a href="{$servletPath}/{$sitemapPath}{concat($path,'/',$content/emsObject/systemName)}">
+                    <a href="{$servletPath}/{$sitemapPath}{concat($path,'/',$content/systemName)}">
                         <xsl:value-of select="$name"/>
                     </a>
                 </h3>
@@ -215,7 +215,7 @@
                 <xsl:sort select="documents/createdDateTime" data-type="number" order="descending"/>
                 <li>
                     <xsl:variable name="childrenCount" select="emsObject/childrenCount"/>
-                    <!--<xsl:variable name="sName" select="emsObject/systemName" />
+                    <!--<xsl:variable name="sName" select="systemName" />
                     <xsl:if test="$childrenCount &gt; 0">
 
                     </xsl:if>-->
@@ -233,7 +233,7 @@
                     <!--</xsl:call-template>-->
 
                     <xsl:variable name="pId" select="id"/>
-                    <xsl:variable name="sName" select="emsObject/systemName"/>
+                    <xsl:variable name="sName" select="systemName"/>
                     <xsl:if test="$childrenCount &gt; 0">
                         <ol>
                             <xsl:call-template name="showContents">

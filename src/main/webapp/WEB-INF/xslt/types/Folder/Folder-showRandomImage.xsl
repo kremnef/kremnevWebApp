@@ -8,7 +8,7 @@
     <xsl:param name="sitemapPath"/>
 
     <xsl:template match="value[typifiedObject/objectType/name='Folder' and typeAction/name = 'showRandomImage']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName" />
+        <xsl:variable name="systemName" select="typifiedObject/systemName" />
         <xsl:variable name="parentId" select="typifiedObject/id" />
         <xsl:variable name="fileObjects" select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item"/>
         <xsl:variable name="imageObjects" select="$fileObjects[starts-with(contentType, 'image/')]"/>

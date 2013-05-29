@@ -11,7 +11,7 @@
     <xsl:template
             match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-horisontal-2levels']">
 
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="pathURL" select="typifiedObject/pathURL"/>
         <xsl:variable name="parentId" select="typifiedObject/@id"/>
@@ -32,7 +32,7 @@
                     </xsl:call-template>
                 </xsl:variable>
                 <xsl:variable name="itemId" select="@id"/>
-                <xsl:variable name="itemSystemName" select="emsObject/systemName"/>
+                <xsl:variable name="itemSystemName" select="systemName"/>
                 <xsl:variable name="selected" select="$pathURL and starts-with($baseURL, $pathURL)"/>
 
                 <!--Columns-->

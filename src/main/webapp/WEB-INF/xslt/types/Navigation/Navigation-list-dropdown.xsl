@@ -23,7 +23,7 @@
             <xsl:variable name="position" select="../key"/>
 
             <div class="widget-{$position}">
-                <div id="{typifiedObject/emsObject/systemName}-{$position}" class="dropdown">
+                <div id="{typifiedObject/systemName}-{$position}" class="dropdown">
                     <xsl:variable name="name">
                         <xsl:call-template name="getLocalName">
                             <xsl:with-param name="typifiedObject" select="typifiedObject"/>
@@ -56,7 +56,7 @@
         <xsl:param name="obj"/>
         <xsl:param name="position"/>
 
-        <xsl:variable name="systemName" select="$obj/emsObject/systemName" />
+        <xsl:variable name="systemName" select="$obj/systemName" />
         <xsl:variable name="parentId" select="$obj/id" />
 
         <xsl:variable name="items" select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item" />
@@ -76,7 +76,7 @@
                         </xsl:call-template>
                     </xsl:variable>
 
-                    <!--<option value="{emsObject/systemName}">-->
+                    <!--<option value="{systemName}">-->
                     <option >
 
                         <xsl:variable name="systemNodeId" select="@systemNodeId"/>

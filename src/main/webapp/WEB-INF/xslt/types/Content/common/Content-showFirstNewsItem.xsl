@@ -12,7 +12,7 @@
     <xsl:param name="sitemapPath"/>
 
     <xsl:template match="value[typeAction/name='showFirstNewsItem' and typifiedObject/objectType/name='Content']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
@@ -52,7 +52,7 @@
                                 <!--<xsl:value-of select="$sortBy2"/>-->
                                 <!--<xsl:value-of select="//News/date"/>-->
                                 <xsl:variable name="childrenCount" select="emsObject/childrenCount"/>
-                                <!--<xsl:variable name="sName" select="emsObject/systemName" />
+                                <!--<xsl:variable name="sName" select="systemName" />
                                 <xsl:if test="$childrenCount &gt; 0">
 
                                 </xsl:if>-->
@@ -69,7 +69,7 @@
                                     <!--<xsl:with-param name="typeActionName" select="$typeActionName"/>-->
                                 <!--</xsl:call-template>-->
 
-                                <xsl:variable name="sName" select="emsObject/systemName"/>
+                                <xsl:variable name="sName" select="systemName"/>
                                 <xsl:if test="$childrenCount &gt; 0">
                                     <ol>
                                         <xsl:call-template name="showContents">
@@ -107,7 +107,7 @@
                         <!--<xsl:if test="position() = 1">-->
                             <!--<li>-->
                                 <!--<xsl:variable name="childrenCount" select="emsObject/childrenCount"/>-->
-                                <!--&lt;!&ndash;<xsl:variable name="sName" select="emsObject/systemName" />-->
+                                <!--&lt;!&ndash;<xsl:variable name="sName" select="systemName" />-->
                                 <!--<xsl:if test="$childrenCount &gt; 0">-->
 
                                 <!--</xsl:if>&ndash;&gt;-->
@@ -117,7 +117,7 @@
                                     <!--<xsl:with-param name="typeActionName" select="$typeActionName"/>-->
                                 <!--</xsl:call-template>-->
 
-                                <!--<xsl:variable name="sName" select="emsObject/systemName"/>-->
+                                <!--<xsl:variable name="sName" select="systemName"/>-->
                                 <!--<xsl:if test="$childrenCount &gt; 0">-->
                                     <!--<ol>-->
                                         <!--<xsl:call-template name="showContents">-->
@@ -165,7 +165,7 @@
                 </div>
             </xsl:if>
 
-            <div class="title"><a href="{$servletPath}/{$sitemapPath}{concat($path,'/',$contents/emsObject/systemName)}">
+            <div class="title"><a href="{$servletPath}/{$sitemapPath}{concat($path,'/',$contents/systemName)}">
                 <xsl:value-of select="$name"/>
             </a></div>
         </div>

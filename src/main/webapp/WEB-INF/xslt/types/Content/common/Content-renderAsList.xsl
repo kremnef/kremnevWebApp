@@ -17,7 +17,7 @@
     <xsl:param name="sitemapPath"/>
 
     <xsl:template match="value[typeAction/name='renderAsList' and typifiedObject/objectType/name='Content']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
@@ -45,7 +45,7 @@
         <xsl:param name="position"/>
 
         <!--variables-->
-        <xsl:variable name="systemName" select="$content/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="$content/systemName"/>
         <xsl:variable name="parentId" select="$content/id"/>
         <xsl:variable name="objectURLPrefix">
             <xsl:choose>
@@ -73,7 +73,7 @@
             <xsl:comment>widget-list-render</xsl:comment>
             <!--Variables-->
             <xsl:variable name="child"
-                          select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item[emsObject/systemName = $objectURLPrefix]"/>
+                          select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item[systemName = $objectURLPrefix]"/>
 
             <xsl:variable name="childrenCount"
                           select="count(/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item)"/>
@@ -133,7 +133,7 @@
                                          <xsl:value-of select="emsObjectChildrenCount"/> = emsObjectChildrenCount;
                                     </xsl:if>-->
                                     <xsl:variable name="pId" select="id"/>
-                                    <xsl:variable name="sName" select="emsObject/systemName"/>
+                                    <xsl:variable name="sName" select="systemName"/>
                                     <a href="{$servletPath}/{$sitemapPath}{concat($path,$sName)}">
                                         <xsl:value-of select="$item-name"/>
                                     </a>

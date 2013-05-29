@@ -16,7 +16,7 @@
     <xsl:param name="sitemapPath"/>
 
     <xsl:template match="value[typeAction/name='showTariff' and typifiedObject/objectType/name='Content']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <!--<xsl:variable name="content" select="."/>-->
         <xsl:variable name="name">
@@ -67,7 +67,7 @@
                         </xsl:call-template>
                     </xsl:variable>
 
-                    &lt;!&ndash;<option value="{emsObject/systemName}">&ndash;&gt;
+                    &lt;!&ndash;<option value="{systemName}">&ndash;&gt;
                     <option>
                         <xsl:attribute name="index">
                             <xsl:value-of select="position()"/>

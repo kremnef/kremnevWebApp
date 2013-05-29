@@ -11,7 +11,7 @@
     <xsl:param name="sitemapPath"/>
 
     <xsl:template match="value[typeAction/name='Article' and typifiedObject/objectType/name='Content']">
-        <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
+        <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="typeActionName" select="typeAction/name"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
@@ -143,7 +143,7 @@
         </div>
 
         <div class="title">
-            <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/emsObject/systemName)}">
+            <a href="{$servletPath}/{$sitemapPath}{concat($path,$contents/systemName)}">
                 <xsl:value-of select="$name"/>
             </a>
         </div>
