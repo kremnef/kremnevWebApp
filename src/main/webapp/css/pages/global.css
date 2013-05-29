@@ -1,3 +1,11 @@
+
+/*defaul themee*/
+@import "../theme/kremnevatelier/kremnevatelier.css";
+
+
+
+
+
 @media only screen and (max-device-width: 1024px)
 and (orientation:landscape) {
     #ulArticles li {
@@ -13,6 +21,7 @@ and (orientation:portrait) {
     }
 }
 
+/*
 p, h2, h3 {
     margin: 0;
     padding: 0;
@@ -50,19 +59,25 @@ body {
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 13px;
     text-align: center;
-    /*background: #FFFFFF;*/
+    */
+/*background: #FFFFFF;*//*
+
     background-color: #FBC725;
 
-    /*background: #55586F url("../../img/bg-main.png") repeat-x scroll left top;*/
+    */
+/*background: #55586F url("../../img/bg-main.png") repeat-x scroll left top;*//*
+
     margin: 0;
 }
+*/
 /*.header{
     background-color: #FBC725;
 }.content {
     background-color: #FBC725;
 }.footer {
     background-color: #FBC725;
-}*/
+}*//*
+
 
 #ems-search {
     float: left;
@@ -86,11 +101,13 @@ body {
     max-width: 1100px;
     text-align: left;
 }
+*/
 /*.main-menu .horMenu2Levels ul{
      height: 140px;
     background: #f7f7f7;
 
-}*/
+}*//*
+
 .main-menu .horMenu2Levels ul.level1 li.parent {
     float: left;
     width: 20%;
@@ -115,7 +132,9 @@ body {
     text-transform: uppercase;
     font-weight: normal;
 
-    /*text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;*/
+    */
+/*text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;*//*
+
 }
 
 .main-menu .horMenu2Levels ul.level2 {
@@ -141,7 +160,9 @@ body {
 .main-menu .horMenu2Levels ul.level2 li a {
     display: block;
     font-size: 12px;
-    /*color: #9AC050;*/
+    */
+/*color: #9AC050;*//*
+
     color: #888888;
     text-decoration: none;
 
@@ -150,7 +171,9 @@ body {
 
 .label {
     color: #999999;
-    /*font-style: italic;*/
+    */
+/*font-style: italic;*//*
+
     margin: 10px 0 10px 0px;
 }
 
@@ -218,7 +241,9 @@ ul.files li.doc {
 .navigation .horMenu li a {
     color: #000000;
     white-space: nowrap;
-    /*text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;*/
+    */
+/*text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;*//*
+
 }
 
 .navigation .horMenu li.selected a {
@@ -248,7 +273,9 @@ ul.files li.doc {
 .brands .horMenu li a {
     color: #000000;
     white-space: nowrap;
-    /*text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;*/
+    */
+/*text-shadow: rgba(0, 0, 0, 0.3) 0 -1px 0;*//*
+
 }
 
 .brands .horMenu li.selected a {
@@ -291,7 +318,9 @@ ul.files li.doc {
 
 .header .instruments a {
     color: #000;
-    /*text-decoration: none;*/
+    */
+/*text-decoration: none;*//*
+
 }
 
 .header .contacts {
@@ -300,13 +329,15 @@ ul.files li.doc {
     text-transform: uppercase;
 }
 
+*/
 /*.header .instruments .showHTML {
     font-family: Verdana,Tahoma,sans-serif;
     font-size: 8px;
     text-transform: uppercase;
     float: right;
     padding-left: 35px;
-}*/
+}*//*
+
 .header .instruments .showHTMLSimple {
     font-family: Verdana, Tahoma, sans-serif;
     font-size: 8px;
@@ -532,9 +563,13 @@ ul.files li.doc {
 }
 
 .content .middle .center {
-    /*width: 90%;*/
+    */
+/*width: 90%;*//*
+
     background-color: white;
-    /*display: inline-block;*/
+    */
+/*display: inline-block;*//*
+
     display: block;
     margin: 0 6px;
 }
@@ -599,3 +634,4 @@ a.share-stumble:hover {
 a.share-email:hover {
     background-position: 0 -121px;
 }
+*/
