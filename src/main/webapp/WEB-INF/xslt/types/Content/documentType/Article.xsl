@@ -17,7 +17,7 @@
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
         <xsl:variable name="documentType" select="typifiedObject/documentType/name"/>
         <xsl:variable name="position" select="../key"/>
-        <xsl:variable name="parentId" select="typifiedObject/id"/>
+        <xsl:variable name="parentId" select="typifiedObject/@id"/>
         <div class="item">
             <xsl:call-template name="documentTypeImport">
                 <xsl:with-param name="documentType" select="$documentType"/>
@@ -75,7 +75,7 @@
             </h1>
             <span class="date">
                 <xsl:call-template name="date:format-date">
-                    <xsl:with-param name="date-time" select="$contents/publishDateTime"/>
+                    <xsl:with-param name="date-time" select="$contents/@publishDateTime"/>
                     <xsl:with-param name="pattern" select="'dd MMMMM yyyy'"/>
                 </xsl:call-template>
             </span>

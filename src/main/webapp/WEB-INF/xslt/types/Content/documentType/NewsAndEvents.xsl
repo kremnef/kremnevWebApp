@@ -40,7 +40,7 @@
             </h3>
             <span class="date">
                 <xsl:call-template name="date:format-date">
-                    <xsl:with-param name="date-time" select="$contents/publishDateTime"/>
+                    <xsl:with-param name="date-time" select="$contents/@publishDateTime"/>
                     <xsl:with-param name="pattern" select="'dd MMMMM yyyy'"/>
                 </xsl:call-template>
             </span>
@@ -96,7 +96,7 @@
 
         <div class="date">
             <xsl:call-template name="date:format-date">
-                <xsl:with-param name="date-time" select="$contents/publishDateTime"/>
+                <xsl:with-param name="date-time" select="$contents/@publishDateTime"/>
                 <xsl:with-param name="pattern" select="'dd MMMMM yyyy'"/>
             </xsl:call-template>
         </div>

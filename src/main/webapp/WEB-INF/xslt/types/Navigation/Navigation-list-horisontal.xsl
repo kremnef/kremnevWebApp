@@ -11,7 +11,7 @@
     <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-horisontal']">
 
         <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName" />
-        <xsl:variable name="parentId" select="typifiedObject/id" />
+        <xsl:variable name="parentId" select="typifiedObject/@id" />
 
         <xsl:variable name="position" select="../key"/>
         <xsl:comment><xsl:value-of select="typifiedObject/objectType/name"/>-<xsl:value-of select="typeAction/name"/></xsl:comment>
@@ -33,7 +33,7 @@
                                     <xsl:if test="position() = 1"> first</xsl:if>
                                     <xsl:if test="position() = last()"> last</xsl:if>
                                 </xsl:attribute>
-                                <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                                <xsl:variable name="systemNodeId" select="@systemNodeId"/>
                                 <xsl:variable name="outerURL" select="outerURL"/>
 
                                 <xsl:choose>
@@ -55,7 +55,7 @@
                                 <xsl:if test="position() = last()">
                                     <xsl:attribute name="class">last</xsl:attribute>
                                 </xsl:if>
-                                <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                                <xsl:variable name="systemNodeId" select="@systemNodeId"/>
                                 <xsl:variable name="outerURL" select="outerURL"/>
 
                                 <xsl:choose>

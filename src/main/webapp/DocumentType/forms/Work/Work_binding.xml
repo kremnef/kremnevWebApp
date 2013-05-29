@@ -3,14 +3,14 @@
 
     <fb:group id="Work" path="Work">
         <fb:value id="text" path="text"/>
-        <fb:repeater id="authors" parent-path="authors" row-path="item">
+        <!--<fb:repeater id="authors" parent-path="authors" row-path="item">
             <fb:identity>
             </fb:identity>
             <fb:on-bind>
                 <fb:value id="author" path="author"/>
                 <fb:value id="email" path="email"/>
             </fb:on-bind>
-        </fb:repeater>
+        </fb:repeater>-->
     </fb:group>
 
 </fb:context>

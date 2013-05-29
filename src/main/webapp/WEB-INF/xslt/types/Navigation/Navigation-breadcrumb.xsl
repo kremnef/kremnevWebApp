@@ -17,7 +17,7 @@
     <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'breadcrumb']">
 
         <xsl:variable name="position" select="../key"/>
-        <xsl:variable name="levels" select="levels"/>
+        <xsl:variable name="levels" select="@levels"/>
 
         <div class="widget-{$position}">
             <div id="{typifiedObject/emsObject/systemName}-{$position}" position="{$position}" class="breadcrumb">
@@ -55,7 +55,7 @@
         <xsl:param name="level"/>
         <xsl:param name="levels"/>
 
-        <xsl:variable name="parentId" select="$parent/id"/>
+        <xsl:variable name="parentId" select="$parent/@id"/>
         <xsl:variable name="parentSystemName" select="$parent/emsObject/systemName"/>
 
         <xsl:if test="$level &lt;= $levels">

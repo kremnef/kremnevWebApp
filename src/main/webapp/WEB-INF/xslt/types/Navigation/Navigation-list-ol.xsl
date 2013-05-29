@@ -13,7 +13,7 @@
 
     <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-ol']">
 
-        <xsl:variable name="parentId" select="typifiedObject/id" />
+        <xsl:variable name="parentId" select="typifiedObject/@id" />
         <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName" />
 
         <xsl:variable name="position" select="../key"/>
@@ -38,7 +38,7 @@
                                     <li class="menu-item menu-item-right"><img alt="" src="{$prefix}img/bg-menu-item-right.png" /></li>
                                 </xsl:when>
                                 <xsl:otherwise>
-                                    <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                                    <xsl:variable name="systemNodeId" select="@systemNodeId"/>
                                     <xsl:variable name="outerURL" select="outerURL"/>
 
                                     <li class="menu-item menu-item-left" />

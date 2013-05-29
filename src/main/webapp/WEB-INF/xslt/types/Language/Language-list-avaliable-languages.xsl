@@ -7,12 +7,14 @@
     <xsl:template match="value[objectType/name='Language' and typeAction/name = 'list-avaliable-languages']">
         <!--Define Variables-->
         <xsl:variable name="systemName" select="objectType/name"/>
-        <xsl:variable name="id" select="objectType/id"/>
+        <xsl:variable name="id" select="objectType/@id"/>
         <xsl:variable name="position" select="../key"/>
 
         <div class="widget-{$position}" id="{$systemName}-{$position}">
             <xsl:variable name="languages"
-                          select="/root/childrenMap/children/entry[key/parentId=$id and key/systemName=$systemName]/value/item[isPublished='true']"/>
+                          select="/root/childrenMap/children/entry[key/parentId=$id]"/>
+            <!--<xsl:variable name="languages"
+                          select="/root/childrenMap/children/entry[key/parentId=$id and key/systemName=$systemName]/value/item[@isPublished='true']"/>-->
               <xsl:if test="count($languages) &gt; 0">
                   <ul class="nav dropbox" id=" ul-{$systemName}-{$position}" name="ul-{$systemName}">
                       <xsl:for-each select="$languages">

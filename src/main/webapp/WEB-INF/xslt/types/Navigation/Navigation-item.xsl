@@ -21,7 +21,7 @@
                 </xsl:variable>
 
                 <xsl:variable name="selected" select="typifiedObject/pathURL and starts-with(typifiedObject/baseURL, typifiedObject/pathURL)"/>
-                <xsl:variable name="systemNodeId" select="typifiedObject/systemNodeId"/>
+                <xsl:variable name="systemNodeId" select="typifiedObject/@systemNodeId"/>
                 <xsl:variable name="outerURL" select="typifiedObject/outerURL"/>
 
                 <xsl:choose>

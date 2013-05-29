@@ -28,15 +28,8 @@
 
     <xsl:template match="root">
         <xsl:call-template name="header"/>
-
-
-        <div class="container">
-            <div class="clear"></div>
-            <div class="main">
+        <div class="container works">
                 <xsl:apply-templates select="systemNodeObjects/object/entry[key = 3]/value"/>
-            </div>
-
-
         </div>
 
         <xsl:call-template name="footer"/>

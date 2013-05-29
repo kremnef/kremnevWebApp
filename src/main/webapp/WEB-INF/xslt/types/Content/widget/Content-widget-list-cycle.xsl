@@ -28,7 +28,7 @@
                     });
                 </script>
                 <div class="slideshow">
-                    <xsl:variable name="parentId" select="typifiedObject/id"/>
+                    <xsl:variable name="parentId" select="typifiedObject/@id"/>
                     <xsl:for-each select="/root/childrenMap/children/entry[key/systemName=$systemName and key/parentId=$parentId]/value/item">
                         <xsl:variable name="doc" select="documents/xmlSource"/>
                         <div id="{emsObject/systemName}">

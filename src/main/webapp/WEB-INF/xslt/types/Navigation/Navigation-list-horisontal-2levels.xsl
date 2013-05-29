@@ -14,7 +14,7 @@
         <xsl:variable name="systemName" select="typifiedObject/emsObject/systemName"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
         <xsl:variable name="pathURL" select="typifiedObject/pathURL"/>
-        <xsl:variable name="parentId" select="typifiedObject/id"/>
+        <xsl:variable name="parentId" select="typifiedObject/@id"/>
 
         <xsl:variable name="position" select="../key"/>
         <xsl:comment><xsl:value-of select="typifiedObject/objectType/name"/>-<xsl:value-of select="typeAction/name"/></xsl:comment>
@@ -31,7 +31,7 @@
                         <xsl:with-param name="typifiedObject" select="."/>
                     </xsl:call-template>
                 </xsl:variable>
-                <xsl:variable name="itemId" select="id"/>
+                <xsl:variable name="itemId" select="@id"/>
                 <xsl:variable name="itemSystemName" select="emsObject/systemName"/>
                 <xsl:variable name="selected" select="$pathURL and starts-with($baseURL, $pathURL)"/>
 
@@ -42,7 +42,7 @@
                             <xsl:when test="$selected">
                                 <li class="parent selected nav-header">
 
-                                    <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                                    <xsl:variable name="systemNodeId" select="@systemNodeId"/>
                                     <xsl:variable name="outerURL" select="outerURL"/>
 
                                     <xsl:choose>
@@ -68,7 +68,7 @@
                             </xsl:when>
                             <xsl:otherwise>
                                 <li class="parent nav-header">
-                                    <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                                    <xsl:variable name="systemNodeId" select="@systemNodeId"/>
                                     <xsl:variable name="outerURL" select="outerURL"/>
 
                                     <xsl:choose>
@@ -114,7 +114,7 @@
             <xsl:if test="$selected">
                 <xsl:attribute name="class">selected</xsl:attribute>
             </xsl:if>
-            <xsl:variable name="systemNodeId" select="systemNodeId"/>
+            <xsl:variable name="systemNodeId" select="@systemNodeId"/>
             <xsl:variable name="outerURL" select="outerURL"/>
             <xsl:choose>
                 <xsl:when test="$systemNodeId">

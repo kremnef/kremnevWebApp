@@ -31,7 +31,7 @@
                     </xsl:variable>
 
                     <h2>
-                        <xsl:variable name="systemNodeId" select="typifiedObject/systemNodeId"/>
+                        <xsl:variable name="systemNodeId" select="typifiedObject/@systemNodeId"/>
                         <xsl:variable name="outerURL" select="typifiedObject/outerURL"/>
                         <xsl:choose>
                             <xsl:when test="$systemNodeId">
@@ -79,7 +79,7 @@
                     <!--<option value="{emsObject/systemName}">-->
                     <option >
 
-                        <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                        <xsl:variable name="systemNodeId" select="@systemNodeId"/>
                         <xsl:variable name="outerURL" select="outerURL"/>
                         <xsl:variable name="path">
                             <xsl:choose>

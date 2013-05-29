@@ -47,7 +47,7 @@
 
                     <!-- root element for the items -->
                     <div class="items" style="left: 0px; ">
-                        <xsl:variable name="parentId" select="typifiedObject/id"/>
+                        <xsl:variable name="parentId" select="typifiedObject/@id"/>
                         <xsl:for-each
                                 select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item">
                             <div class="scrollItem">
@@ -171,7 +171,7 @@
 
         <div class="date">
             <xsl:call-template name="date:format-date">
-                <xsl:with-param name="date-time" select="$contents/publishDateTime"/>
+                <xsl:with-param name="date-time" select="$contents/@publishDateTime"/>
                 <xsl:with-param name="pattern" select="'dd MMMMM yyyy'"/>
             </xsl:call-template>
         </div>

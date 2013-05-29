@@ -22,7 +22,7 @@
         <xsl:variable name="objectURL" select="typifiedObject/objectURL"/>
         <xsl:variable name="documentType" select="typifiedObject/documentType/name"/>
         <xsl:variable name="position" select="../key"/>
-        <xsl:variable name="parentId" select="typifiedObject/id"/>
+        <xsl:variable name="parentId" select="typifiedObject/@id"/>
 
 
         <xsl:variable name="name">
@@ -56,6 +56,7 @@
 
         <h3>
             <xsl:value-of select="$name"/>
+            <xsl:value-of select="$typeActionName"/>
         </h3>
         <div class="list-items">
             <xsl:for-each

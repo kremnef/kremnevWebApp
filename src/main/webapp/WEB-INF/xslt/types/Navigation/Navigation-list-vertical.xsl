@@ -21,7 +21,7 @@
     <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-vertical']">
 
         <xsl:variable name="position" select="../key"/>
-        <xsl:variable name="levels" select="levels"/>
+        <xsl:variable name="levels" select="@levels"/>
 
         <div class="widget-{$position}">
             <div id="{typifiedObject/emsObject/systemName}-{$position}" position="{$position}" class="verMenu">
@@ -33,7 +33,7 @@
 
 
                 <h2>
-                    <xsl:variable name="systemNodeId" select="typifiedObject/systemNodeId"/>
+                    <xsl:variable name="systemNodeId" select="typifiedObject/@systemNodeId"/>
                     <xsl:variable name="outerURL" select="typifiedObject/outerURL"/>
                     <xsl:choose>
                         <xsl:when test="$systemNodeId">
@@ -63,7 +63,7 @@
         <xsl:param name="levels"/>
 
         <xsl:variable name="systemName" select="$obj/emsObject/systemName" />
-        <xsl:variable name="parentId" select="$obj/id" />
+        <xsl:variable name="parentId" select="$obj/@id" />
 
         <xsl:variable name="items" select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber = $position]/value/item" />
         <xsl:if test="count($items) &gt; 0 and $level &lt;= $levels">
@@ -89,7 +89,7 @@
                             </xsl:choose>
                         </xsl:attribute>
                         <div class="img"/>
-                        <xsl:variable name="systemNodeId" select="systemNodeId"/>
+                        <xsl:variable name="systemNodeId" select="@systemNodeId"/>
                         <xsl:variable name="outerURL" select="outerURL"/>
                         <xsl:choose>
                             <xsl:when test="$systemNodeId">

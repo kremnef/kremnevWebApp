@@ -16,7 +16,7 @@
                 </fd:field>
             </fd:widgets>
 
-            <fd:repeater id="authors" initial-size="1" orderable="true">
+            <!--<fd:repeater id="authors" initial-size="1" orderable="true">
 
                 <fd:widgets>
 
@@ -42,8 +42,8 @@
                         </fd:validation>
                     </fd:field>
 
-                    <!--<fd:row-action id="up" command="move-up"/>-->
-                    <!--<fd:row-action id="down" command="move-down"/>-->
+                    &lt;!&ndash;<fd:row-action id="up" command="move-up"/>&ndash;&gt;
+                    &lt;!&ndash;<fd:row-action id="down" command="move-down"/>&ndash;&gt;
 
                     <fd:booleanfield id="select">
                         <fd:label>Select</fd:label>
@@ -55,7 +55,7 @@
                         print("repeater!! = " + repeater.getSize());
                     </fd:javascript>
                 </fd:on-create>
-            </fd:repeater>
+            </fd:repeater>-->
 
             <!--<fd:repeater-action id="remove" command="delete-rows" repeater="authors" select="select">
                 <fd:label><i18n:text i18n:catalogue="documenttypes" key="Work.removeSelected"/></fd:label>
