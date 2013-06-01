@@ -12,7 +12,6 @@
 
         <xsl:variable name="previewPath" select="substring-before($fileObjects/path, $fileObjects/name)"/>
         <xsl:variable name="simpleName" select="substring-before($fileObjects/name,'.')"/>
-        <h1>2222</h1>
         <xsl:choose>
             <xsl:when test="count($fileObjects) &gt; 1">
                 <script type="text/javascript"

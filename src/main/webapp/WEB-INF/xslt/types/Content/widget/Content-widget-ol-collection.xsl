@@ -112,8 +112,8 @@
             </xsl:choose>
         </xsl:variable>
         <div id="{$systemName}-item-open" class="collections-description {$sideClass}">
-            <xsl:variable name="document" select="$content/documents"/>
-            <!--<xsl:variable name="document" select="$content/documents[language/code=$locale and version=$maxVersion]"/>-->
+            <xsl:variable name="document" select="$content/document"/>
+            <!--<xsl:variable name="document" select="$content/document[language/code=$locale and version=$maxVersion]"/>-->
             <xsl:if test="$document">
                 <h3><xsl:value-of select="$name"/></h3>
                 <p><xsl:value-of select="$document/description"/></p>

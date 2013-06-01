@@ -102,8 +102,8 @@
         <xsl:variable name="previewPath" select="substring-before($contents/path, $contents/name)"/>
         <xsl:variable name="simpleName" select="substring-before($contents/name,'.')"/>
 
-        <!--<xsl:variable name="document" select="$contents/documents[language/code=$locale and version=$maxVersion]"/>-->
-        <xsl:variable name="document" select="$contents/documents"/>
+        <!--<xsl:variable name="document" select="$contents/document[language/code=$locale and version=$maxVersion]"/>-->
+        <xsl:variable name="document" select="$contents/document"/>
 
         <xsl:variable name="documentTypeName" select="$contents/documentType/name"/>
         <xsl:variable name="imagePath" select="$contents/thumbnail/path"/>

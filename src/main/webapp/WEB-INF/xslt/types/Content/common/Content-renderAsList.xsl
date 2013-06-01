@@ -77,7 +77,7 @@
 
             <xsl:variable name="childrenCount"
                           select="count(/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item)"/>
-            <xsl:variable name="doc" select="$content/documents"/>
+            <xsl:variable name="doc" select="$content/document"/>
             <xsl:variable name="name">
                 <xsl:call-template name="getLocalName">
                     <xsl:with-param name="typifiedObject" select="$content"/>
@@ -126,7 +126,7 @@
                                     </xsl:call-template>
                                 </xsl:variable>
                                 <!--<xsl:sort select="position" data-type="number" order="ascending"/>-->
-                                <!--<xsl:sort select="documents/createdDateTime" data-type="number" order="descending"/>-->
+                                <!--<xsl:sort select="document/createdDateTime" data-type="number" order="descending"/>-->
                                 <li>
                                     <!--<xsl:variable name="emsObjectChildrenCount" select="emsObject/childrenCount"/>
                                     <xsl:if test="emsObjectChildrenCount >0">

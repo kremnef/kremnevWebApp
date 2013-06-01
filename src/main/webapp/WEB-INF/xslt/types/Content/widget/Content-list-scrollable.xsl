@@ -137,6 +137,6 @@
 
     <xsl:template name="showItem">
         <xsl:param name="item"/>
-        <xsl:apply-templates select="$item/documents/xmlSource"/>
+        <xsl:apply-templates select="$item/document/xmlSource"/>
     </xsl:template>
 </xsl:stylesheet>

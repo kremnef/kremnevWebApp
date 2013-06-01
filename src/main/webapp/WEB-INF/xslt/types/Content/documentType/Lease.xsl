@@ -62,8 +62,8 @@
                         <xsl:with-param name="obj" select="typifiedObject"/>
                     </xsl:call-template>
                 </xsl:variable>-->
-                <!--<xsl:variable name="document" select="typifiedObject/documents[language/code=$locale and version=$maxVersion]"/>-->
-                <xsl:variable name="document" select="typifiedObject/documents"/>
+                <!--<xsl:variable name="document" select="typifiedObject/document[language/code=$locale and version=$maxVersion]"/>-->
+                <xsl:variable name="document" select="typifiedObject/document"/>
                 <xsl:call-template name="rents">
                     <xsl:with-param name="items" select="$document/xmlSource/Rent/Rent-table/item"/>
                 </xsl:call-template>

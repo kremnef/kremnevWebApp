@@ -10,6 +10,7 @@
                 xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
                 exclude-result-prefixes="date str func i18n">
 
+
     <xsl:template name="header">
         <div class="container head">
             <!--Search Form-->
@@ -35,7 +36,8 @@
             <!--Logo-->
             <div class="logo">
                 <a href="{$servletPath}/{$sitemapPath}">
-                    <img alt="Logo" src="{$servletPath}/img/kremnevAtelier_logo.png"/>
+                    <img alt="Logo" src="{$servletPath}/img/kremnevAtelier_logo_onWhite.png"/>
+                    <!--<img alt="Logo" src="{$servletPath}/img/kremnevAtelier_logo_onWhite_big.png"/>-->
                 </a>
             </div>
 

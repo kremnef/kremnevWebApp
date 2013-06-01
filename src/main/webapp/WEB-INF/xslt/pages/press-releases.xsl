@@ -14,7 +14,7 @@
     <xsl:import href="import/header.xsl"/>
     <xsl:import href="import/footer.xsl"/>
     <xsl:template name="scripts">
-        <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>-->
+        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>
 
         <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery-ui-1.8.11.custom.min.js" />-->
         <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/flowplayer/jquery.tools.min.js"/>-->

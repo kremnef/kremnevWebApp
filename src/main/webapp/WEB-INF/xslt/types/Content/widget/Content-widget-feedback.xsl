@@ -8,7 +8,7 @@
 
     <xsl:template match="value[typeAction/name='feedback']">
 
-        <xsl:variable name="doc" select="typifiedObject/documents"/>
+        <xsl:variable name="doc" select="typifiedObject/document"/>
         <xsl:if test="$doc">
             <xsl:variable name="backgroundColor" select="'0x323A3F'"/>
             <div id="{typifiedObject/systemName}" class="{typeAction/name}">

@@ -35,15 +35,6 @@
                 select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item">
             <xsl:if test="objectURL = systemName">
 
-                <!-- <h4>$systemName:
-                        <xsl:value-of select="systemName"/>
-                    </h4>
-                    <h4>$objectURL:
-                        <xsl:value-of select="objectURL"/>
-                    </h4>-->
-                <!--<h4>$baseURL:
-                    <xsl:value-of select="$baseURL"/>
-                </h4>-->
                 <xsl:call-template name="documentTypeImport">
                     <xsl:with-param name="documentType" select="$documentType"/>
                     <xsl:with-param name="contents" select="."/>
@@ -56,7 +47,6 @@
 
         <h3>
             <xsl:value-of select="$name"/>
-            <xsl:value-of select="$typeActionName"/>
         </h3>
         <div class="list-items">
             <xsl:for-each

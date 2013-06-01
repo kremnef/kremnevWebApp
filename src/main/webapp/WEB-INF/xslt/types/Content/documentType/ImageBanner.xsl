@@ -40,8 +40,8 @@
                 <xsl:with-param name="obj" select="$obj"/>
             </xsl:call-template>
         </xsl:variable>-->
-        <!--<xsl:apply-templates select="$obj/documents[language/code=$locale and version=$maxVersion]/xmlSource"/>-->
-        <xsl:apply-templates select="$obj/documents/xmlSource"/>
+        <!--<xsl:apply-templates select="$obj/document[language/code=$locale and version=$maxVersion]/xmlSource"/>-->
+        <xsl:apply-templates select="$obj/document/xmlSource"/>
     </xsl:template>
 
 
@@ -93,7 +93,7 @@
 
     <!--<xsl:template name="maxVersion">
         <xsl:param name="obj"/>
-        <xsl:for-each select="$obj/documents[language/code=$locale]/version">
+        <xsl:for-each select="$obj/document[language/code=$locale]/version">
             <xsl:sort data-type="number" order="descending"/>
             <xsl:if test="position()=1">
                 <xsl:value-of select="."/>

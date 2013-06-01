@@ -15,7 +15,15 @@
     <xsl:import href="import/footer.xsl"/>
 
     <xsl:template name="scripts">
+        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>
+        <xsl:comment><![CDATA[[if IE 6]><script src="]]><xsl:value-of select="$servletPath"/><![CDATA[/js/DD_belatedPNG.js"/>
+        			<script  type="text/javascript">
+        				DD_belatedPNG.fix("img");
+        			</script>
+        		<![endif]]]>
+        </xsl:comment>
         <!--<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>-->
+
     </xsl:template>
 
     <xsl:template name="styles">
@@ -238,7 +246,7 @@
         </div>
 
         <div class="scroll design container">
-            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 4]/value"/>
+            <xsl:apply-templates select="systemNodeObjects/object/entry[key = 5]/value"/>
         </div>
 
 

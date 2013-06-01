@@ -130,7 +130,7 @@
 
 
 
-        <xsl:variable name="doc" select="$content/documents"/>
+        <xsl:variable name="doc" select="$content/document"/>
         <xsl:if test="$doc/description !=''">
             <div class="description">
                 <xsl:value-of select="$doc/description"/>

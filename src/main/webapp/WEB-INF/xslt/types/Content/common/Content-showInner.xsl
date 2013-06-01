@@ -81,8 +81,8 @@
                         </xsl:call-template>
                     </xsl:variable>-->
 
-                    <!--<xsl:variable name="doc" select="$content/documents[language/code=$locale and version=$maxVersion]"/>-->
-                    <xsl:variable name="doc" select="$content/documents"/>
+                    <!--<xsl:variable name="doc" select="$content/document[language/code=$locale and version=$maxVersion]"/>-->
+                    <xsl:variable name="doc" select="$content/document"/>
                     <xsl:variable name="contentName">
                         <xsl:call-template name="getLocalName">
                             <xsl:with-param name="typifiedObject" select="$content"/>
@@ -284,7 +284,7 @@
 
     <!--<xsl:template name="maxVersion">
         <xsl:param name="obj"/>
-        <xsl:for-each select="$obj/documents[language/code=$locale]/version">
+        <xsl:for-each select="$obj/document[language/code=$locale]/version">
             <xsl:sort data-type="number" order="descending"/>
             <xsl:if test="position()=1">
                 <xsl:value-of select="."/>
@@ -301,7 +301,7 @@
         <ul>
             <xsl:for-each select="$contents">
                 <!--<xsl:sort select="position" data-type="number" order="ascending"/>-->
-                <xsl:sort select="documents/createdDateTime" data-type="number" order="descending"/>
+                <xsl:sort select="document/createdDateTime" data-type="number" order="descending"/>
                 <li>
                     <xsl:variable name="childrenCount" select="emsObject/childrenCount"/>
                     <!--<xsl:variable name="sName" select="systemName" />
@@ -376,10 +376,10 @@
                 <xsl:with-param name="obj" select="$content"/>
             </xsl:call-template>
         </xsl:variable>-->
-        <!--<xsl:if test="$content/documents[language/code=$locale and version=$maxVersion]/description !=''">-->
-        <xsl:if test="$content/documents/description !=''">
+        <!--<xsl:if test="$content/document[language/code=$locale and version=$maxVersion]/description !=''">-->
+        <xsl:if test="$content/document/description !=''">
             <span class="description">
-                <xsl:value-of select="$content/documents/description"/>
+                <xsl:value-of select="$content/document/description"/>
             </span>
         </xsl:if>
     </xsl:template>

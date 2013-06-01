@@ -3,19 +3,12 @@
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:import href="../functions.xsl"/>
 
     <xsl:param name="servletPath"/>
     <xsl:param name="sitemapPath"/>
 
     <xsl:variable name="prefix">
-        <!--<xsl:choose>-->
-            <!--<xsl:when test="$servletPath = '' and $sitemapPath = ''"><xsl:value-of-->
-                    <!--select="''"/></xsl:when>-->
-            <!--<xsl:otherwise>-->
                 <xsl:value-of select="concat($servletPath, '/', $sitemapPath)"/>
-            <!--</xsl:otherwise>-->
-        <!--</xsl:choose>-->
     </xsl:variable>
 
         <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-dropdown']">

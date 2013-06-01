@@ -6,11 +6,6 @@
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
-    <xsl:import href="../types/Content/Content-templates.xsl"/>
-    <xsl:import href="../types/functions.xsl"/>
-    <xsl:import href="document-types.xsl"/>
-
-
 
     <xsl:param name="servletPath"/>
     <xsl:param name="sitemapPath"/>
@@ -26,7 +21,7 @@
         </xsl:variable>
 
         <xsl:variable name="position" select="../key"/>
-        <xsl:variable name="document" select="typifiedObject/documents"/>
+        <xsl:variable name="document" select="typifiedObject/document"/>
 
         <div class="widget-{$position}">
             <h2><xsl:value-of select="$name"/></h2>
@@ -109,7 +104,7 @@
 
                             <xsl:call-template name="tariffs">
                                 <xsl:with-param name="items"
-                                                select="./documents/xmlSource/Tariffs/Tariffs-termal/item"/>
+                                                select="./document/xmlSource/Tariffs/Tariffs-termal/item"/>
                             </xsl:call-template>
                         </div>
                     </xsl:for-each>

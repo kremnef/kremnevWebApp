@@ -43,9 +43,9 @@
                 <ul>
 
                     <xsl:for-each select="$contents">
-                        <!--<xsl:variable name="sortBy" select="documents/createdDateTime/xmlSource/News/date"/>-->
-                        <!--<xsl:variable name="sortBy2" select="documents/createdDateTime"/>-->
-                        <!--<xsl:sort select="documents/createdDateTime" data-type="number" order="descending"/>-->
+                        <!--<xsl:variable name="sortBy" select="document/createdDateTime/xmlSource/News/date"/>-->
+                        <!--<xsl:variable name="sortBy2" select="document/createdDateTime"/>-->
+                        <!--<xsl:sort select="document/createdDateTime" data-type="number" order="descending"/>-->
                         <!--<xsl:sort select="position" data-type="number" order="ascending"/>-->
                         <xsl:if test="position() = 1">
                             <li>
@@ -157,8 +157,8 @@
             </xsl:call-template>
         </xsl:variable>-->
         <div class="news-block">
-            <!--<xsl:variable name="document" select="$contents/documents[language/code=$locale and version=$maxVersion]"/>-->
-            <xsl:variable name="document" select="$contents/documents"/>
+            <!--<xsl:variable name="document" select="$contents/document[language/code=$locale and version=$maxVersion]"/>-->
+            <xsl:variable name="document" select="$contents/document"/>
             <xsl:if test="$document">
                 <div class="date">
                     <xsl:value-of select="$document/xmlSource/SMI/publications/item[@position=0]/date"/>

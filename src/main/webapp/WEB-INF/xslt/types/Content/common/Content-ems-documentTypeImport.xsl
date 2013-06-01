@@ -19,6 +19,8 @@
         <xsl:param name="path"/>
         <xsl:param name="contents"/>
         <xsl:param name="miniatureSize"/>
+
+
         <xsl:variable name="documentTypeTemplate"
                               select="document(concat('../documentType/', $documentType, '.xsl'))"/>
         <xsl:comment>
@@ -42,26 +44,28 @@
         </xsl:choose>
 
 
-
-        <!--<xsl:comment>
+<!--
+        <xsl:variable name="dt-item" select="concat($documentType, '-item')"/>
+        <xsl:variable name="dt-list" select="concat($documentType, '-list')"/>
+        <xsl:comment>
             <xsl:value-of select="$documentType"/>
         </xsl:comment>
         <xsl:choose>
             <xsl:when test="$mode ='list'">
-                <xsl:apply-templates select="ems:templ[@name=concat($documentType, '-item')]">
+                <xsl:call-template name="Work-list">
                     <xsl:with-param name="contents" select="$contents"/>
                     <xsl:with-param name="path" select="$path"/>
                     <xsl:with-param name="miniatureSize" select="$miniatureSize"/>
-                </xsl:apply-templates>
+                </xsl:call-template>
             </xsl:when>
             <xsl:otherwise>
-                <xsl:apply-templates select="ems:templ[@name=concat($documentType, '-item')]">
+                <xsl:call-template name="Work-item">
                     <xsl:with-param name="contents" select="$contents"/>
                     <xsl:with-param name="path" select="$path"/>
-                </xsl:apply-templates>
+                    <xsl:with-param name="miniatureSize" select="$miniatureSize"/>
+                </xsl:call-template>
             </xsl:otherwise>
         </xsl:choose>-->
-
 
     </xsl:template>
 

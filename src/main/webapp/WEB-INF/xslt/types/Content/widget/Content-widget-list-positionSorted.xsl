@@ -64,8 +64,8 @@
             <xsl:variable name="post-link" select="date"/>
             <xsl:variable name="post-title" select="$name"/>
 
-            <!--<xsl:variable name="document" select="$contents/documents[language/code=$locale and version=$maxVersion]"/>-->
-            <xsl:variable name="document" select="$contents/documents"/>
+            <!--<xsl:variable name="document" select="$contents/document[language/code=$locale and version=$maxVersion]"/>-->
+            <xsl:variable name="document" select="$contents/document"/>
             <!--
             <xsl:if test="$document">
                 <div class="date">

@@ -15,6 +15,7 @@
     <xsl:import href="import/footer.xsl"/>
     <xsl:template name="scripts">
 
+
         <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/others/bootstrap-collapse.js"></script>
         <xsl:comment><![CDATA[[if IE 6]><script src="]]><xsl:value-of select="$servletPath"/><![CDATA[/js/DD_belatedPNG.js"/>
 			<script  type="text/javascript">

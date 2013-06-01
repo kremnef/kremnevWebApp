@@ -54,7 +54,7 @@
         <!--</xsl:call-template>-->
         <!--</xsl:variable>-->
 
-        <!--<xsl:apply-templates select="typifiedObject/documents[language/code=$locale and version=$maxVersion]/xmlSource" />-->
+        <!--<xsl:apply-templates select="typifiedObject/document[language/code=$locale and version=$maxVersion]/xmlSource" />-->
         <!--</xsl:otherwise>-->
         <!--</xsl:choose>-->
         <!--</div>-->
@@ -122,8 +122,8 @@
                             </xsl:call-template>
                         </xsl:variable>-->
 
-                        <!--<xsl:variable name="doc" select="$content/documents[language/code=$locale and version=$maxVersion]"/>-->
-                        <xsl:variable name="doc" select="$content/documents"/>
+                        <!--<xsl:variable name="doc" select="$content/document[language/code=$locale and version=$maxVersion]"/>-->
+                        <xsl:variable name="doc" select="$content/document"/>
                         <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key=$doc/folders/systemName]/value/item"/>
                         <xsl:variable name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
                         <h1><xsl:value-of select="$name"/></h1>
@@ -229,10 +229,10 @@
                 <xsl:with-param name="obj" select="$content"/>
             </xsl:call-template>
         </xsl:variable>-->
-        <!--<xsl:if test="$content/documents[language/code=$locale and version=$maxVersion]/description !=''">-->
-        <xsl:if test="$content/documents/description !=''">
+        <!--<xsl:if test="$content/document[language/code=$locale and version=$maxVersion]/description !=''">-->
+        <xsl:if test="$content/document/description !=''">
             <span class="description">
-                <xsl:value-of select="$content/documents/description"/>
+                <xsl:value-of select="$content/document/description"/>
             </span>
         </xsl:if>
     </xsl:template>

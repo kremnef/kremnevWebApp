@@ -14,7 +14,7 @@
         <xsl:variable name="position" select="../key"/>
         <div class="widget-{$position}">
             <div id="{$systemName}-{$position}" class="{$typeActionName}">
-                <xsl:variable name="doc" select="$content/documents"/>
+                <xsl:variable name="doc" select="$content/document"/>
                 <xsl:value-of disable-output-escaping="yes" select="$doc/xmlSource"/>
             </div>
         </div>

@@ -30,7 +30,7 @@
          <xsl:variable name="previewPath" select="substring-before($contents/path, $contents/name)"/>
          <xsl:variable name="simpleName" select="substring-before($contents/name,'.')"/>
 
-         <xsl:variable name="document" select="$contents/documents"/>
+         <xsl:variable name="document" select="$contents/document"/>
 
          <xsl:variable name="documentTypeName" select="$contents/documentType/name"/>-->
         <xsl:variable name="position" select="../key"/>
@@ -55,7 +55,7 @@
             </xsl:if>
             <span class="xmlSource">
                 <!--<div id="{$systemName}-{$position}" class="{$typeActionName}">-->
-                <xsl:variable name="doc" select="$contents/documents"/>
+                <xsl:variable name="doc" select="$contents/document"/>
                 <xsl:value-of disable-output-escaping="yes" select="$doc/xmlSource/NewsAndEvents/text"/>
                 <!--</div>-->
             </span>
@@ -87,8 +87,8 @@
                 <xsl:variable name="simpleName" select="substring-before($contents/name,'.')"/>
 
         -->
-        <!--<xsl:variable name="document" select="$contents/documents[language/code=$locale and version=$maxVersion]"/>-->
-        <xsl:variable name="document" select="$contents/documents"/>
+        <!--<xsl:variable name="document" select="$contents/document[language/code=$locale and version=$maxVersion]"/>-->
+        <xsl:variable name="document" select="$contents/document"/>
 
         <xsl:variable name="documentTypeName" select="$contents/documentType/name"/>
         <xsl:variable name="imagePath" select="$contents/thumbnail/path"/>

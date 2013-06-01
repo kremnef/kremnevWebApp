@@ -55,7 +55,7 @@
             <!--Variables-->
             <xsl:variable name="childrenCount"
                           select="count(/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item)"/>
-            <xsl:variable name="doc" select="$content/documents"/>
+            <xsl:variable name="doc" select="$content/document"/>
             <xsl:variable name="name">
                 <xsl:call-template name="getLocalName">
                     <xsl:with-param name="typifiedObject" select="$content"/>

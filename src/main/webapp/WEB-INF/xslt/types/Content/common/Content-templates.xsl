@@ -71,7 +71,7 @@
                     <!--Variables-->
                     <xsl:variable name="childrenCount"
                                   select="count(/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName and key/blockNumber=$position]/value/item)"/>
-                    <xsl:variable name="doc" select="$content/documents"/>
+                    <xsl:variable name="doc" select="$content/document"/>
                     <xsl:variable name="name">
                         <xsl:call-template name="getLocalName">
                             <xsl:with-param name="typifiedObject" select="$content"/>
@@ -195,10 +195,10 @@
                 <xsl:with-param name="obj" select="$content"/>
             </xsl:call-template>
         </xsl:variable>-->
-        <!--<xsl:if test="$content/documents[language/code=$locale and version=$maxVersion]/description !=''">-->
-        <xsl:if test="$content/documents/description !=''">
+        <!--<xsl:if test="$content/document[language/code=$locale and version=$maxVersion]/description !=''">-->
+        <xsl:if test="$content/document/description !=''">
             <span class="description">
-                <xsl:value-of select="$content/documents/description"/>
+                <xsl:value-of select="$content/document/description"/>
             </span>
         </xsl:if>
     </xsl:template>
@@ -212,7 +212,7 @@
         <ul>
             <xsl:for-each select="$contents">
                 <!--<xsl:sort select="position" data-type="number" order="ascending"/>-->
-                <xsl:sort select="documents/createdDateTime" data-type="number" order="descending"/>
+                <xsl:sort select="document/createdDateTime" data-type="number" order="descending"/>
                 <li>
                     <xsl:variable name="childrenCount" select="emsObject/childrenCount"/>
                     <!--<xsl:variable name="sName" select="systemName" />

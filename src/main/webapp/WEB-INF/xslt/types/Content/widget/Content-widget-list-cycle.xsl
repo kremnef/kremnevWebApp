@@ -30,7 +30,7 @@
                 <div class="slideshow">
                     <xsl:variable name="parentId" select="typifiedObject/@id"/>
                     <xsl:for-each select="/root/childrenMap/children/entry[key/systemName=$systemName and key/parentId=$parentId]/value/item">
-                        <xsl:variable name="doc" select="documents/xmlSource"/>
+                        <xsl:variable name="doc" select="document/xmlSource"/>
                         <div id="{systemName}">
                             <xsl:value-of select="$doc/HtmlCode/html" disable-output-escaping="yes"/>
                         </div>

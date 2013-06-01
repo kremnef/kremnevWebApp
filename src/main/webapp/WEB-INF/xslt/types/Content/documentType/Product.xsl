@@ -90,7 +90,7 @@
                                                 <xsl:with-param name="obj" select="."/>
                                             </xsl:call-template>
                                         </xsl:variable>-->
-                                        <xsl:variable name="doc" select="documents"/>
+                                        <xsl:variable name="doc" select="document"/>
                                         <xsl:variable name="filesInFolders" select="/root/childrenMap/children/entry[key/parentId=$doc/folders/id and key/systemName=$doc/folders/systemName]/value/item"/>
                                         <xsl:variable name="fileObjects" select="$filesInFolders | $doc/fileObjects"/>
                                         <xsl:call-template name="slideShow-showProducts">
@@ -176,8 +176,8 @@
                                         <xsl:with-param name="obj" select="$content"/>
                                     </xsl:call-template>
                                 </xsl:variable>-->
-                                <!--<xsl:variable name="doc" select="$content/documents[language/code=$locale and version=$maxVersion]"/>-->
-                                <xsl:variable name="doc" select="$content/documents"/>
+                                <!--<xsl:variable name="doc" select="$content/document[language/code=$locale and version=$maxVersion]"/>-->
+                                <xsl:variable name="doc" select="$content/document"/>
                                 <div class="product-info">
                                     <div id="product-info-left" class="product-info-left">
                                         <h1><xsl:value-of select="$name"/></h1>
@@ -252,7 +252,7 @@
 <!--
     <xsl:template name="maxVersion">
         <xsl:param name="obj"/>
-        <xsl:for-each select="$obj/documents[language/code=$locale]/version">
+        <xsl:for-each select="$obj/document[language/code=$locale]/version">
             <xsl:sort data-type="number" order="descending"/>
             <xsl:if test="position()=1">
                 <xsl:value-of select="."/>

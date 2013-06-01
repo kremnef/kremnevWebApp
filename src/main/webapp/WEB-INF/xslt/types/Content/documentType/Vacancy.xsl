@@ -6,8 +6,6 @@
                 xmlns:date="http://exslt.org/dates-and-times"
                 exclude-result-prefixes="ems">
 
-    <xsl:import href="../types/Content/Content-templates.xsl"/>
-    <xsl:import href="../types/functions.xsl"/>
 
     <xsl:param name="servletPath"/>
     <xsl:param name="sitemapPath"/>
