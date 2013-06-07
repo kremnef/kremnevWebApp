@@ -50,7 +50,7 @@
         <xsl:param name="position"/>
 
         <xsl:variable name="systemName" select="$obj/systemName" />
-        <xsl:variable name="parentId" select="$obj/id" />
+        <xsl:variable name="parentId" select="$obj/@id" />
 
         <xsl:variable name="items" select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item" />
         <xsl:if test="count($items) &gt; 0">

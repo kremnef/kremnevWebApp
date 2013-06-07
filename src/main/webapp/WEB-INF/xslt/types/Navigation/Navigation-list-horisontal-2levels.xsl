@@ -13,12 +13,11 @@
 
         <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
-        <xsl:variable name="pathURL" select="typifiedObject/pathURL"/>
-        <xsl:variable name="parentId" select="typifiedObject/@id"/>
 
-        <xsl:variable name="position" select="../key"/>
+        <xsl:variable name="parentId" select="typifiedObject/@id"/>
+        <xsl:variable name="widgetPosition" select="../key"/>
         <xsl:comment><xsl:value-of select="typifiedObject/objectType/name"/>-<xsl:value-of select="typeAction/name"/></xsl:comment>
-        <div class="widget-{$position}" id="{$systemName}-{$position}">
+        <div class="widget-{$widgetPosition}" id="{$systemName}-{$widgetPosition}">
 
             <!--<ul class="nav nav-list submenu level1">-->
 
@@ -26,6 +25,7 @@
                     select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item">
 
                 <!--Define Variables-->
+                <xsl:variable name="pathURL" select="typifiedObject/pathURL"/>
                 <xsl:variable name="name">
                     <xsl:call-template name="getLocalName">
                         <xsl:with-param name="typifiedObject" select="."/>
