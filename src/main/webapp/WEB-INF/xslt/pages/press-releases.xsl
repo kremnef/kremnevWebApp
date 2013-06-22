@@ -15,11 +15,18 @@
     <xsl:import href="import/footer.xsl"/>
     <xsl:template name="scripts">
         <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>
-
+        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>
+                <xsl:comment><![CDATA[[if IE 6]><script src="]]><xsl:value-of select="$servletPath"/><![CDATA[/js/DD_belatedPNG.js"/>
+        			<script  type="text/javascript">
+        				DD_belatedPNG.fix("img");
+        			</script>
+        		<![endif]]]>
+                </xsl:comment>
+        <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>-->
         <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery-ui-1.8.11.custom.min.js" />-->
         <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/flowplayer/jquery.tools.min.js"/>-->
 
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
 
     </xsl:template>
 
@@ -38,7 +45,7 @@
         <div class="container">
             <h1><xsl:value-of select="/root/systemNode/objectLabel/label"/></h1>
             <!--Скролл-->
-            <div id="release-search-form">
+           <!-- <div id="release-search-form">
 
 
                 <form method="get" action="/ems/service/search" id="searchNews">
@@ -50,7 +57,7 @@
                                    type="text"/>
 
                         </label>
-                        <!--<label>
+                        &lt;!&ndash;<label>
                             Tag
                             <br/>
                             <div class="dropdown" id="tagsDropDown">
@@ -70,7 +77,7 @@
                                     <option value="5">Архангельский</option>
                                 </select>
                             </div>
-                        </label>-->
+                        </label>&ndash;&gt;
                     </div>
                     <div id="flight">
                         <label>
@@ -100,8 +107,8 @@
                     days: 'dimanche,lundi,mardi,mercredi,jeudi,vendredi,samedi',
                     shortDays: 'dim,lun,mar,mer,jeu,ven,sam'
                     });
-                    <!--$(document).ready(function(){-->
-                    <!--$(function() {
+                    &lt;!&ndash;$(document).ready(function(){&ndash;&gt;
+                    &lt;!&ndash;$(function() {
                     var dates = $( "#date-from, #date-to" ).datepicker({
                     defaultDate: "+1w",
                     changeMonth: true,
@@ -115,8 +122,8 @@
                     selectedDate, instance.settings );
                     dates.not( this ).datepicker( "option", option, date );
                     }
-                    });-->
-                    <!--});-->
+                    });&ndash;&gt;
+                    &lt;!&ndash;});&ndash;&gt;
 
                     $(".date").dateinput({ trigger: true, format: 'dd mmmm yyyy', min: -1 });
 
@@ -133,10 +140,10 @@
                     // we use it's value for the seconds input min option
                     $(".date:last").data("dateinput").setMin(this.getValue(), true);
                     });
-                    <!--});-->
+                    &lt;!&ndash;});&ndash;&gt;
 
                 </script>
-            </div>
+            </div>-->
 
             <xsl:apply-templates select="systemNodeObjects/object/entry[key = 3]/value"/>
         </div>

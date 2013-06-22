@@ -13,6 +13,52 @@
 
     <xsl:template name="header">
         <div class="container head">
+            <!-- START of fixed header -->
+           <!-- <div id="header">
+                <div id="headerwrapper">
+                    <div id="headertop">
+
+                        <ul id="languages">
+                            <li>
+                                <a href="/ru">Russian</a>
+                            </li>
+                            <li>
+                                <a href="/en">English</a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+
+
+                    &lt;!&ndash;<ul class="mainmenu float-wrap">
+                        <li>
+                            <a href="/ru/blog">Блог</a>
+                        </li>
+                        <li>
+                            <a href="/ru/festival">Фестиваль</a>
+                        </li>
+                        <li>
+                            <a href="/ru/program">Программа</a>
+                        </li>
+                        <li>
+                            <a href="/ru/media">Медиа</a>
+                        </li>
+                    </ul>&ndash;&gt;
+
+                    <a href="#" class="dashboardlink dashboardlink-active">Change language</a>
+                    <a href="#" class="dashboardlink dashboardlink-active" id="dashboard-label">Войти /
+                        Зарегистрироваться
+                    </a>
+
+                    &lt;!&ndash;<div id="headerbottom">
+
+                    </div>&ndash;&gt;
+                </div>
+            </div>-->
+            <!-- END of fixed header -->
+
+
             <!--Search Form-->
             <div class="search collapse " id="accordionSearch">
                 <div class="soc">

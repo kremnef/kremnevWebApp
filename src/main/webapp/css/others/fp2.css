@@ -33,70 +33,13 @@ body {
 }
 
 body {
-    color: #ccc;
+    /*color: #ccc;*/
     background-color: #34353a;
 }
 
 .smallscale { display: none }
 .container { width: 1188px }
 
-h3 {
-    color: #fff;
-    font-size: 1.05em;
-}
-
-	/*img {
-		background-: pink;
-	}*/
-
-@-moz-document url-prefix() { 
-	h3 { font-size: 1.1em }
-}
-h4 { font-size: .9em }
-
-p,
-.column ul {
-    color: #babbbc;
-    font-size: .85em;
-    line-height: 1.45em;
-    margin-bottom: 1.45em;
-    padding-right: 24px;
-}
-
-.smltext { font-size:0.8em !important; }
-
-
-#sort-by, #gview, #lview {
-	font-size: 0.95em;
-}
-.column li {
-	list-style-position: inside;
-	list-style-type: square;
-	margin-bottom: 12px;
-}
-
-p.continued { text-indent: 0 }
-
-@-moz-document url-prefix() { 
-	p {
-	    font-size: .85em;
-	    line-height: 1.3em;
-	}
-}
-
-a { color: #ededed }
-
-a,
-a:hover,
-a:focus,
-a:active { 
-	text-decoration: none 
-}
-
-a:active,
-a:focus { 
-	outline: 0 
-}
 
 .date { color: #dfdfdf!important }
 

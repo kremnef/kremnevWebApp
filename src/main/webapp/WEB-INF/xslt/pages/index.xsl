@@ -27,20 +27,24 @@
     </xsl:template>
 
     <xsl:template name="styles">
+        <link rel="stylesheet" type="text/css" href="{$servletPath}/css/others/header-over-top.css"/>
+        <link rel="stylesheet" type="text/css" href="{$servletPath}/css/others/fp2.css"/>
+
     </xsl:template>
 
     <xsl:template match="root">
         <xsl:variable name="serverName" select="/root/params/request/param[@name='serverName']"/>
         <xsl:variable name="serverPort" select="/root/params/request/param[@name='serverPort']"/>
-        <xsl:call-template name="header"/>
+        <!--<xsl:call-template name="header"/>-->
 
-        <!--<div class="outer">
+
+        <div class="outer">
             <xsl:call-template name="header"/>
 
 
             <div class="accordion" id="accordion">
 
-                &lt;!&ndash;  menu group &ndash;&gt;
+                <!--  menu group -->
 
                 <div class="accordion-group">
 
@@ -186,10 +190,10 @@
                                     <li>
                                         <a href="http://www.fosterandpartners.com/news/pressroom/">Pressroom</a>
                                     </li>
-                                    &lt;!&ndash;<li id="smenu"></li>&ndash;&gt;
-                                    &lt;!&ndash;<li id="smenu"></li>&ndash;&gt;
-                                    &lt;!&ndash;<li id="smenu"></li>&ndash;&gt;
-                                    &lt;!&ndash;<li id="smenu"></li>&ndash;&gt;
+                                    <!--<li id="smenu"></li>-->
+                                    <!--<li id="smenu"></li>-->
+                                    <!--<li id="smenu"></li>-->
+                                    <!--<li id="smenu"></li>-->
                                     <li>
                                         <div class="tw16 soc"></div>
                                         <div class="fb16 soc"></div>
@@ -206,11 +210,11 @@
                 </div>
 
             </div>
-            &lt;!&ndash; .accordion &ndash;&gt;
+            <!-- .accordion -->
 
 
 
-            &lt;!&ndash; .container &ndash;&gt;
+            <!-- .container -->
 
             <div class="accordion" id="accordionArchive">
 
@@ -225,15 +229,15 @@
                     </div>
 
                 </div>
-                &lt;!&ndash; .accordion-group &ndash;&gt;
+                <!-- .accordion-group -->
 
             </div>
-            &lt;!&ndash; .accordion &ndash;&gt;
+            <!-- .accordion -->
 
 
-            &lt;!&ndash; end footer &ndash;&gt;
+            <!-- end footer -->
 
-        </div>-->
+        </div>
         <!-- end outer -->
 
 
