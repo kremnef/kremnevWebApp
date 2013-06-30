@@ -93,7 +93,7 @@
         <xsl:variable name="documentTypeName" select="$contents/documentType/name"/>
         <xsl:variable name="imagePath" select="$contents/thumbnail/path"/>
         <!--<xsl:variable name="imagePath" select="$document/xmlSource/*[name()=$documentTypeName]/image"/>-->
-
+        <div class="list-item">
         <div class="date">
             <xsl:call-template name="date:format-date">
                 <xsl:with-param name="date-time" select="$contents/@publishDateTime"/>
@@ -124,7 +124,7 @@
                 <!--</div>-->
             </span>
         </xsl:if>
-
+        </div>
 
     </xsl:template>
 

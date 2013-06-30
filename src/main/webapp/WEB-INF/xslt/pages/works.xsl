@@ -13,7 +13,7 @@
     <xsl:import href="import/footer.xsl"/>
     <!--!!!requirement-->
     <xsl:template name="scripts">
-        <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>
+        <!--<script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>-->
         <xsl:comment><![CDATA[[if IE 6]><script src="]]><xsl:value-of select="$servletPath"/><![CDATA[/js/DD_belatedPNG.js"/>
 			<script  type="text/javascript">
 				DD_belatedPNG.fix("img");

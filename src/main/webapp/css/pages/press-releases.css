@@ -1,9 +1,21 @@
 @import "global.css";
 
 
+.news-block .list-items .list-item .title a{
+    font-size: 14px;
+}
+.news-block .list-items .list-item .date{
+    font-size: 12px;
+}
+/*
+
+
+
 #release-search-form{
     margin-bottom: 50px;
-    /*padding-bottom: 50px;*/
+    */
+/*padding-bottom: 50px;*//*
+
 
 }
 
@@ -15,11 +27,15 @@
 .info .showItem a {
     color: #F23B00;
 }
+*/
 /*.showNewsList  h1{
     display: none;
-}*/
+}*//*
+
 .content .verMenu {
-    /*background: url("../../img/book.png") no-repeat scroll 18% 75px transparent;*/
+    */
+/*background: url("../../img/book.png") no-repeat scroll 18% 75px transparent;*//*
+
     float: left;
     padding: 20px 0 0 3%;
     width: 15%;
@@ -334,6 +350,7 @@ display: none
     background: url("../../img/email.png") no-repeat center left;
     padding: 20px 40px 20px 40px;
 }
+*/
 /*
 .main .showScrollable .scrollItem {
     width: 340px;
@@ -352,7 +369,8 @@ display: none
 }
 .main .showScrollable .scrollItem .title a {
     color: #4C4E5B;
-}*/
+}*//*
+
 .main .showNewsList .custom-content .image {
     float: left;
     padding: 20px 20px 20px 0;
@@ -388,3 +406,4 @@ display: none
     font-size: 12px;
 }
 
+*/

@@ -11,9 +11,9 @@
 
     <xsl:template name="footer">
         <div class="footer">
-            <div class="container">
+            <!--<div class="container">
                 <xsl:apply-templates select="systemNodeObjects/object/entry[key = 18]/value"/>
-            </div>
+            </div>-->
 
             <div class="container">
                 <div class="contacts">

@@ -5,7 +5,7 @@
                 xmlns:ems="http://freeCMS.kremnevatelier.ru/"
                 xmlns:i18n="http://apache.org/cocoon/i18n/2.1"
                 xmlns:date="http://exslt.org/dates-and-times"
-                exclude-result-prefixes="ems">
+                exclude-result-prefixes="ems date">
 
 
     <!--<xsl:import href="../../../types/functions.xsl"/>
@@ -45,9 +45,9 @@
             </xsl:if>
         </xsl:for-each>
 
-        <h3>
+        <!--<h3>
             <xsl:value-of select="$name"/>
-        </h3>
+        </h3>-->
         <div class="list-items">
             <xsl:for-each
                     select="/root/childrenMap/children/entry[key/parentId=$parentId and key/systemName=$systemName]/value/item">
@@ -66,11 +66,35 @@
             </xsl:for-each>
 
         </div>
+        <!--<xsl:choose>
+            <xsl:when test=""></xsl:when>
+        </xsl:choose>
         <xsl:variable name="showAll" select="concat($documentType, '.showAll')"/>
         <div class="all">
             <a href="{$baseURL}">
                 <i18n:text key="{$showAll}"/>
             </a>
+        </div>-->
+        <div class="pagination">
+            <xsl:comment>текущая страница</xsl:comment>
+            <xsl:choose>
+                <xsl:when test="//parameters/param[@name='page']">
+                    <xsl:call-template name="Paging">
+                        <xsl:with-param name="currentPage" select="//parameters/param[@name='page']"/>
+                        <xsl:with-param name="rowsPerPage" select="@itemsOnPage"/>
+                        <xsl:with-param name="totPages" select="@totalPages"/>
+                    </xsl:call-template>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:call-template name="Paging">
+                        <xsl:with-param name="currentPage" select="1"/>
+                        <xsl:with-param name="rowsPerPage" select="@itemsOnPage"/>
+                        <xsl:with-param name="totPages" select="@totalPages"/>
+                    </xsl:call-template>
+
+                </xsl:otherwise>
+            </xsl:choose>
+
         </div>
 
 

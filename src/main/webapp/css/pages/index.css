@@ -2,4 +2,51 @@
 @import "global.css";
 
 
+.architecture .scrollItem .date{
+    display: none;
+    font-size: 10px;
+}
+.architecture .scrollItem .title a{
+    font-size: 14px;
+}
 
+.design .scrollItem .date{
+    display: none;
+    font-size: 10px;
+}
+.design .scrollItem .title a{
+    font-size: 14px;
+}
+
+/*.news-block h3{
+    color: rgb(102, 102, 102);
+
+}*/
+/*.list .horisontal  {*/
+#brands {
+    float: right;
+    display: inline-block;
+    margin: 0 20px 8px 0;
+    list-style: none outside none;
+}
+#brands  > li > a  {
+    font-size: 23px;
+}
+#brands > .active > a:hover,
+#brands > .active > a:focus {
+    color: #ffffff;
+    background-color: #0088cc;
+}
+#brands > li > a {
+    /*padding-right: 12px;
+    padding-left: 12px;
+    margin-right: 2px;*/
+    line-height: 100%;
+}
+
+#brands > li > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top:0;
+    margin-bottom: 0;
+}

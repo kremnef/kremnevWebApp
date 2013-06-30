@@ -41,9 +41,8 @@
     </appender>
 <!--//chenged-->
     <root>
-
-        <priority value="OFF"/>
-        <appender-ref ref="stdout"/>
+        <priority value="off"/>
+        <!--<appender-ref ref="stdout"/>-->
         <!--<appender-ref ref="COCOON_DEFAULT"/>-->
     </root>
 

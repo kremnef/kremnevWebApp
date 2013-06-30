@@ -91,14 +91,14 @@
             <xsl:apply-templates select="systemNodeObjects/object/entry[key = 0]/value"/>
 
 
-            <div class="hidebox">
+            <!--<div class="hidebox">
                 <div class="srch " data-toggle="collapse" data-target="#accordionSearch">
                     <span>Top</span>
                 </div>
                 <div class="mnubutton " data-toggle="collapse" data-target="#option">
                     <span>Option</span>
                 </div>
-            </div>
+            </div>-->
 
         </div>
         <div class="container main-menu">
