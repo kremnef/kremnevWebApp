@@ -1,0 +1,26 @@
+.nav .horisontal {
+    float: right;
+    display: inline-block;
+    margin: 0 20px 8px 0;
+    list-style: none outside none;
+}
+
+.nav .horisontal > li {
+    float: left;
+    padding-left: 10px;
+    height: 20px;
+}
+.nav .horisontal > li > a {
+    font-size: 12px;
+    text-decoration: none;
+}
+/*.avaliable-languages > li > a:hover {
+    font-size: 12px;
+    text-decoration: none;
+    color: black;
+}*/
+
+.nav .horisontal > li > a.selected {
+    color: ActiveCaption;
+    opacity: 20;
+}

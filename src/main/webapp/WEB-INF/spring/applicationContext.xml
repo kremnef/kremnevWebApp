@@ -33,7 +33,8 @@
 ">
 
     <!-- Activate Cocoon Spring Configurator -->
-    <configurator:settings/>
+    <!--<configurator:settings/>-->
+    <configurator:settings runningMode="prod"/>
 
     <configurator:bean-map
             id="org.apache.cocoon.servletservice.spring.BlockServletMap"

@@ -226,6 +226,209 @@
                     </div>
                 </div>
 
+            </div>
+            <!-- .accordion -->
+
+
+
+            <!-- .container -->
+
+            <div class="accordion" id="accordionArchive">
+
+                <div class="accordion-group ">
+
+                    <div class="accordion-heading" id="arc">
+
+                        <a href="http://www.fosterandpartners.com/news/archive/" class="accordion-toggle">
+                            <h3>Archive 2012</h3>
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- .accordion-group -->
+
+            </div>
+            <!-- .accordion -->
+
+
+            <!-- end footer -->
+
+        </div>
+        <!-- end outer -->
+
+
+        <div class="outer">
+            <xsl:call-template name="header"/>
+
+
+            <div class="accordion" id="accordion">
+
+                <!--  menu group -->
+
+                <div class="accordion-group">
+
+                    <div id="option" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <div class="subcol idcol ">
+                                <ul class="smenu">
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/profile/the-way-we-work/">The Way we
+                                            Work
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/profile/integrated-design/">Integrated
+                                            Design
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/profile/research-+-development/">
+                                            Research + Development
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/profile/sustainability/">
+                                            Sustainability
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="subcol ">
+                                <ul class="smenu">
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/projects/type/">Type</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/projects/map/">Map</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/projects/on-site/">On Site</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/projects/list/">List</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/projects/stored/">Stored Projects</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="subcol tmenu">
+                                <ul class="smenu">
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/team/senior-partners/">Senior
+                                            Partners
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/team/partners/">Partners</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/team/associate-partners/">Associate
+                                            Partners
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/team/associates/">Associates</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="subcol dmenu">
+                                <ul class="smenu">
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/practice-data/awards/">Awards</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/practice-data/competitions/">
+                                            Competitions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/practice-data/exhibitions/">
+                                            Exhibitions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/practice-data/publications/">
+                                            Publications
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/practice-data/essays/">Essays</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/practice-data/videos/">Videos</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/practice-data/cser/">CSER</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="subcol carmenu">
+                                <ul class="smenu">
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/careers/graduate-show/">Graduate
+                                            Show
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/careers/scholarship/">Scholarship</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="subcol conmenu">
+                                <ul class="smenu">
+                                    <li class="smenu">
+                                        <a href="http://www.fosterandpartners.com/contact/london/">London</a>
+                                    </li>
+                                    <li class="smenu">
+                                        <a href="http://www.fosterandpartners.com/contact/new-york/">New York</a>
+                                    </li>
+                                    <li class="smenu">
+                                        <a href="http://www.fosterandpartners.com/contact/madrid/">Madrid</a>
+                                    </li>
+                                    <li class="smenu">
+                                        <a href="http://www.fosterandpartners.com/contact/hong-kong/">Hong Kong</a>
+                                    </li>
+                                    <li class="smenu">
+                                        <a href="http://www.fosterandpartners.com/contact/beijing/">Beijing</a>
+                                    </li>
+                                    <li class="smenu">
+                                        <a href="http://www.fosterandpartners.com/contact/abu-dhabi/">Abu Dhabi</a>
+                                    </li>
+                                    <li class="smenu">
+                                        <a href="http://www.fosterandpartners.com/contact/shanghai/">Shanghai</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="subcol newscol ">
+                                <ul class="smenu">
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/news/archive/">Archive</a>
+                                    </li>
+                                    <li>
+                                        <a href="http://www.fosterandpartners.com/news/pressroom/">Pressroom</a>
+                                    </li>
+                                    <!--<li id="smenu"></li>-->
+                                    <!--<li id="smenu"></li>-->
+                                    <!--<li id="smenu"></li>-->
+                                    <!--<li id="smenu"></li>-->
+                                    <li>
+                                        <div class="tw16 soc"></div>
+                                        <div class="fb16 soc"></div>
+                                        <div class="li16 soc"></div>
+                                        <div class="yt16 soc"></div>
+                                        <div class="we16 soc"></div>
+                                        <div class="rss16 soc"></div>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
                 <!-- .end menu group -->
                 <!-- .end nav -->
 

@@ -3,7 +3,6 @@
 <xsl:stylesheet version="1.0"
                 xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
                 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-
                 xmlns:date="http://exslt.org/dates-and-times"
                 xmlns:str="http://exslt.org/strings"
                 xmlns:func="http://exslt.org/functions"
@@ -32,7 +31,7 @@
 
     <xsl:template name="styles">
         <link rel="stylesheet" type="text/css" href="/js/flowplayer/css/form.css"/>
-        <link rel="stylesheet" type="text/css" href="{$servletPath}/{$sitemapPath}js/flowplayer/css/flight.css"/>
+        <!--<link rel="stylesheet" type="text/css" href="{$servletPath}/{$sitemapPath}js/flowplayer/css/flight.css"/>-->
 
         <!-- calendar styling -->
         <link rel="stylesheet" type="text/css"
