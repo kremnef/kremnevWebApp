@@ -144,7 +144,7 @@
 
     <!--** uncomment to secure database at startup-->
 
-
+<!--
     <bean id="userService" class="ru.strela.ems.security.service.UserServiceImpl">
         <security:intercept-methods>
             <security:protect access="ROLE_USER" method="changePassword"/>
@@ -170,14 +170,14 @@
 
     <bean id="successHandler"
           class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
-        <!--<property name="defaultTargetUrl" value="/ems/core/Content-list"/>-->
+        &lt;!&ndash;<property name="defaultTargetUrl" value="/ems/core/Content-list"/>&ndash;&gt;
         <property name="defaultTargetUrl" value="/ems/core/desktop"/>
     </bean>
 
     <bean id="failureHandler"
           class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
         <property name="defaultFailureUrl" value="/ems/security/login"/>
-    </bean>
+    </bean>-->
 
 
     <!--<bean class="ru.strela.ems.security.DatabasePasswordSecurerBean"

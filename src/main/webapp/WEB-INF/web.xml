@@ -33,11 +33,11 @@
         <param-value>
             /WEB-INF/spring/applicationContext.xml
             /WEB-INF/spring/applicationContext-jdbc.xml
-            /WEB-INF/spring/application-security.xml
+            <!--/WEB-INF/spring/application-security.xml-->
         </param-value>
     </context-param>
 
-    <!--SPRING SECURITY-->
+
     <!--
     - Declare a filter for multipart MIME handling
     -->
@@ -47,19 +47,22 @@
         <filter-name>CocoonMultipartFilter</filter-name>
         <filter-class>org.apache.cocoon.servlet.multipart.MultipartFilter</filter-class>
     </filter>
-
+    <filter-mapping>
+        <filter-name>CocoonMultipartFilter</filter-name>
+        <servlet-name>DispatcherServlet</servlet-name>
+    </filter-mapping>
     <!--
     - Declare a filter for debugging incoming request
     -->
     <!--<filter>-->
-        <!--<description>Log debug information about each request</description>-->
-        <!--<display-name>Cocoon debug filter</display-name>-->
-        <!--<filter-name>CocoonDebugFilter</filter-name>-->
-        <!--<filter-class>org.apache.cocoon.servlet.DebugFilter</filter-class>-->
+    <!--<description>Log debug information about each request</description>-->
+    <!--<display-name>Cocoon debug filter</display-name>-->
+    <!--<filter-name>CocoonDebugFilter</filter-name>-->
+    <!--<filter-class>org.apache.cocoon.servlet.DebugFilter</filter-class>-->
     <!--</filter>-->
 
 
-    <filter>
+    <!--<filter>
         <filter-name>Set Character Encoding</filter-name>
         <filter-class>ru.strela.ems.filters.SetCharacterEncodingFilter</filter-class>
         <init-param>
@@ -67,33 +70,44 @@
             <param-value>UTF-8</param-value>
         </init-param>
     </filter>
+    <filter-mapping>
+        <filter-name>Set Character Encoding</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>-->
 
+    <!--1-->
+    <!--
     <filter>
             <filter-name>HibernateFilter</filter-name>
             <filter-class>ru.strela.ems.filters.HibernateFilter</filter-class>
     </filter>
-
+    <filter-mapping>
+            <filter-name>HibernateFilter</filter-name>
+            <url-pattern>/*</url-pattern>
+        </filter-mapping>
+    -->
+    <!--SPRING SECURITY-->
 
     <!--
        - This is useful because current browsers typically do not
        - set a character encoding even if specified in the HTML page or form
     -->
     <!--<filter>-->
-        <!--<filter-name>encodingFilter</filter-name>-->
-        <!--<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>-->
-        <!--<init-param>-->
-            <!--<param-name>encoding</param-name>-->
-            <!--<param-value>UTF-8</param-value>-->
-        <!--</init-param>-->
-        <!--<init-param>-->
-            <!--<param-name>forceEncoding</param-name>-->
-            <!--<param-value>true</param-value>-->
-        <!--</init-param>-->
+    <!--<filter-name>encodingFilter</filter-name>-->
+    <!--<filter-class>org.springframework.web.filter.CharacterEncodingFilter</filter-class>-->
+    <!--<init-param>-->
+    <!--<param-name>encoding</param-name>-->
+    <!--<param-value>UTF-8</param-value>-->
+    <!--</init-param>-->
+    <!--<init-param>-->
+    <!--<param-name>forceEncoding</param-name>-->
+    <!--<param-value>true</param-value>-->
+    <!--</init-param>-->
     <!--</filter>-->
 
     <!--<filter-mapping>-->
-        <!--<filter-name>encodingFilter</filter-name>-->
-        <!--<url-pattern>/*</url-pattern>-->
+    <!--<filter-name>encodingFilter</filter-name>-->
+    <!--<url-pattern>/*</url-pattern>-->
     <!--</filter-mapping>-->
 
     <!-- Filter mappings ================================================ -->
@@ -105,18 +119,9 @@
         <filter-name>CocoonMultipartFilter</filter-name>
         <servlet-name>Cocoon</servlet-name>
     </filter-mapping>-->
-    <filter-mapping>
-        <filter-name>CocoonMultipartFilter</filter-name>
-        <servlet-name>DispatcherServlet</servlet-name>
-    </filter-mapping>
-    <filter-mapping>
-        <filter-name>Set Character Encoding</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
-    <filter-mapping>
-        <filter-name>HibernateFilter</filter-name>
-        <url-pattern>/*</url-pattern>
-    </filter-mapping>
+
+
+
     <!--
     - Use the Cocoon debug filter together with the Cocoon demo webapp
   <filter-mapping>
@@ -152,10 +157,10 @@
     <listener>
         <listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>
-   <!-- <listener>
-        <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
-    </listener>
--->
+    <!-- <listener>
+         <listener-class>org.springframework.security.web.session.HttpSessionEventPublisher</listener-class>
+     </listener>
+ -->
 
     <!-- Servlet Configuration ========================================== -->
 
@@ -208,13 +213,13 @@
     - to change this parameter.
     -->
 
-    <filter>
+    <!--<filter>
         <filter-name>springSecurityFilterChain</filter-name>
         <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
     </filter>
     <filter-mapping>
         <filter-name>springSecurityFilterChain</filter-name>
         <url-pattern>/*</url-pattern>
-    </filter-mapping>
+    </filter-mapping>-->
 </web-app>
         
