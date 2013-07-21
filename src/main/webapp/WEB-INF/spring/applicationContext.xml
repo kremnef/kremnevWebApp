@@ -74,7 +74,7 @@
 
     <!--Spring-->
 
-    <!-- <bean id="jdbcUserService" class="org.springframework.security.provisioning.JdbcUserDetailsManager">
+    <!--<bean id="jdbcUserService" class="org.springframework.security.provisioning.JdbcUserDetailsManager">
         <property name="dataSource" ref="dataSource"/>
         <property name="authenticationManager"
                   ref="authenticationManager"/>
@@ -99,16 +99,64 @@
         <property name="userDetailsService" ref="jdbcUserService"/>
         <property name="saltSource" ref="saltSource"/>
         <property name="passwordEncoder" ref="passwordEncoder"/>
+    </bean>
+
+
+
+
+
+    <bean id="userService" class="ru.strela.ems.security.service.UserServiceImpl">
+        <security:intercept-methods>
+            <security:protect access="ROLE_USER" method="changePassword"/>
+        </security:intercept-methods>
+    </bean>
+
+    <bean class="org.springframework.security.authentication.encoding.ShaPasswordEncoder" id="passwordEncoder"/>
+    <bean class="org.springframework.security.authentication.dao.ReflectionSaltSource" id="saltSource">
+        <property name="userPropertyToUse" value="username"/>
+    </bean>
+
+
+    <bean id="loginUrlAuthenticationEntryPoint"
+          class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
+        <property name="loginFormUrl" value="/ems/security/login"/>
+    </bean>
+
+    <bean id="emsLoginFilter" class="ru.strela.ems.security.filter.EmsLoginFilter">
+        <property name="authenticationManager" ref="authenticationManager"/>
+        <property name="authenticationFailureHandler" ref="failureHandler"/>
+        <property name="authenticationSuccessHandler" ref="successHandler"/>
+    </bean>
+
+    <bean id="successHandler"
+          class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
+        <property name="defaultTargetUrl" value="/ems/core/desktop"/>
+    </bean>
+
+    <bean id="failureHandler"
+          class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
+        <property name="defaultFailureUrl" value="/ems/security/login"/>
     </bean>-->
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!--<bean class="ru.strela.ems.security.IPTokenBasedRememberMeServices"
-          id="ipTokenBasedRememberMeServicesBean">
-        <property name="key"><value>jbcpPetStore</value>    </property>
-        <property name="userDetailsService" ref="userService"/>
-        <property name="parameter" value="_remember_me"/>
-        <property name="cookieName" value="REMEMBER_ME"/>
-    </bean>-->
+         id="ipTokenBasedRememberMeServicesBean">
+       <property name="key"><value>jbcpPetStore</value>    </property>
+       <property name="userDetailsService" ref="userService"/>
+       <property name="parameter" value="_remember_me"/>
+       <property name="cookieName" value="REMEMBER_ME"/>
+   </bean>-->
 
     <!--<bean id="rememberMeFilter" class=
             "org.springframework.security.web.authentication.rememberme.RememberMeAuthenticationFilter">
@@ -144,43 +192,6 @@
 
 
     <!--** uncomment to secure database at startup-->
-
-<!--
-    <bean id="userService" class="ru.strela.ems.security.service.UserServiceImpl">
-        <security:intercept-methods>
-            <security:protect access="ROLE_USER" method="changePassword"/>
-        </security:intercept-methods>
-    </bean>
-
-    <bean class="org.springframework.security.authentication.encoding.ShaPasswordEncoder" id="passwordEncoder"/>
-    <bean class="org.springframework.security.authentication.dao.ReflectionSaltSource" id="saltSource">
-        <property name="userPropertyToUse" value="username"/>
-    </bean>
-
-
-    <bean id="loginUrlAuthenticationEntryPoint"
-          class="org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint">
-        <property name="loginFormUrl" value="/ems/security/login"/>
-    </bean>
-
-    <bean id="emsLoginFilter" class="ru.strela.ems.security.filter.EmsLoginFilter">
-        <property name="authenticationManager" ref="authenticationManager"/>
-        <property name="authenticationFailureHandler" ref="failureHandler"/>
-        <property name="authenticationSuccessHandler" ref="successHandler"/>
-    </bean>
-
-    <bean id="successHandler"
-          class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
-        &lt;!&ndash;<property name="defaultTargetUrl" value="/ems/core/Content-list"/>&ndash;&gt;
-        <property name="defaultTargetUrl" value="/ems/core/desktop"/>
-    </bean>
-
-    <bean id="failureHandler"
-          class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
-        <property name="defaultFailureUrl" value="/ems/security/login"/>
-    </bean>-->
-
-
     <!--<bean class="ru.strela.ems.security.DatabasePasswordSecurerBean"
           init-method="secureDatabase" depends-on="dataSource">
         <property name="dataSource" ref="dataSource"/>

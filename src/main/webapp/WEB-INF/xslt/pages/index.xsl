@@ -16,12 +16,12 @@
 
     <xsl:template name="scripts">
         <script type="text/javascript" src="{$servletPath}/{$sitemapPath}js/jquery/jquery.min.js"/>
-        <xsl:comment><![CDATA[[if IE 6]><script src="]]><xsl:value-of select="$servletPath"/><![CDATA[/js/DD_belatedPNG.js"/>
+        <!--<xsl:comment><![CDATA[[if IE 6]><script src="]]><xsl:value-of select="$servletPath"/><![CDATA[/js/DD_belatedPNG.js"/>
 			<script  type="text/javascript">
 				DD_belatedPNG.fix("img");
 			</script>
 		<![endif]]]>
-        </xsl:comment>
+        </xsl:comment>-->
     </xsl:template>
 
     <xsl:template name="styles">
