@@ -78,9 +78,11 @@
         <div class="pagination">
             <xsl:comment>текущая страница</xsl:comment>
             <xsl:choose>
-                <xsl:when test="//parameters/param[@name='page']">
+                <!--<xsl:when test="//parameters/param[@name='page'] or $page !=''">-->
+                <xsl:when test="$page !=''">
                     <xsl:call-template name="Paging">
-                        <xsl:with-param name="currentPage" select="//parameters/param[@name='page']"/>
+                        <!--<xsl:with-param name="currentPage" select="//parameters/param[@name='page']"/>-->
+                        <xsl:with-param name="currentPage" select="$page"/>
                         <xsl:with-param name="rowsPerPage" select="@itemsOnPage"/>
                         <xsl:with-param name="totPages" select="@totalPages"/>
                     </xsl:call-template>
