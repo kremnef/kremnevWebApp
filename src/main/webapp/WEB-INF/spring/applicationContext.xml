@@ -198,13 +198,12 @@
     </bean>-->
 
 
-    <!-- <bean id="userService" class="ru.strela.ems.security.service.UserServiceImpl">
+     <bean id="userService" class="ru.strela.ems.security.service.UserServiceImpl">
             <security:intercept-methods>
                 <security:protect access="ROLE_USER" method="changePassword"/>
             </security:intercept-methods>
         </bean>
-    -->
-    <!--<bean class="org.springframework.security.authentication.encoding.ShaPasswordEncoder" id="passwordEncoder"/>
+    <bean class="org.springframework.security.authentication.encoding.ShaPasswordEncoder" id="passwordEncoder"/>
     <bean class="org.springframework.security.authentication.dao.ReflectionSaltSource" id="saltSource">
         <property name="userPropertyToUse" value="username"/>
     </bean>
@@ -223,14 +222,13 @@
 
     <bean id="successHandler"
           class="org.springframework.security.web.authentication.SavedRequestAwareAuthenticationSuccessHandler">
-        &lt;!&ndash;<property name="defaultTargetUrl" value="/ems/core/Content-list"/>&ndash;&gt;
         <property name="defaultTargetUrl" value="/ems/core/desktop"/>
     </bean>
 
     <bean id="failureHandler"
           class="org.springframework.security.web.authentication.SimpleUrlAuthenticationFailureHandler">
         <property name="defaultFailureUrl" value="/ems/security/login"/>
-    </bean>-->
+    </bean>
 
 
     <!--<bean id="authenticationManager"

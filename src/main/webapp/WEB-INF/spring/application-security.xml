@@ -12,8 +12,8 @@ http://www.springframework.org/schema/security/spring-security-3.1.xsd http://co
 
 
     <!--<global-method-security pre-post-annotations="enabled">-->
-        <!--<expression-handler ref = "methodSecurityExpressionHandler" />-->
-        <!--<protect-pointcut expression="execution(* ru.strela.ems.core.service.spring.*ServiceImpl.*(..))" access="ROLE_USER"/>-->
+    <!--<expression-handler ref = "methodSecurityExpressionHandler" />-->
+    <!--<protect-pointcut expression="execution(* ru.strela.ems.core.service.spring.*ServiceImpl.*(..))" access="ROLE_USER"/>-->
     <!--</global-method-security>-->
 
     <!--<global-method-security secured-annotations="enabled">
@@ -26,8 +26,6 @@ http://www.springframework.org/schema/security/spring-security-3.1.xsd http://co
     <!--<http use-expressions="true" access-denied-page="/error403" entry-point-ref="loginUrlAuthenticationEntryPoint">-->
 
 
-
-    <!--<http pattern="**" security="none"/>-->
     <http pattern="/ems/site/**" security="none"/>
     <http pattern="/ems/service/**" security="none"/>
     <http pattern="/ems/security/login" security="none"/>
@@ -40,7 +38,6 @@ http://www.springframework.org/schema/security/spring-security-3.1.xsd http://co
     <http pattern="/resource/**" security="none"/>
     <http pattern="/cocoon-ajax-impl/**" security="none"/>
     <http pattern="/cocoon-forms-impl/**" security="none"/>
-
 
 
     <http use-expressions="true" access-denied-page="/ems/security/login"
@@ -67,10 +64,13 @@ http://www.springframework.org/schema/security/spring-security-3.1.xsd http://co
         <!--<form-login login-page="/pass" default-target-url="/my/changePassword" authentication-failure-url="/pass"/>-->
 
 
-        <!--<intercept-url pattern="/ems/security/login" access="permitAll"/>-->
-        <intercept-url pattern="/ems/core/**" access="hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')"/>
-        <intercept-url pattern="/ems/security/**" access="hasRole('ROLE_ADMIN')"/>
-        <intercept-url pattern="**" access="permitAll"/>
+        <intercept-url pattern="/ems/security/login" access="permitAll"/>
+        <!--<intercept-url pattern="/ems/core/**" access="hasRole('ROLE_USER') or hasRole('ROLE_ADMIN')"/>-->
+        <intercept-url pattern="/ems/core/**" access="isAuthenticated()"/>
+        <!--<intercept-url pattern="/ems/security/**" access="hasRole('ROLE_ADMIN')"/>-->
+        <intercept-url pattern="/ems/security/**" access="isAuthenticated()"/>
+        <!--<intercept-url pattern="/**" access="permitAll"/>-->
+        <!--<form-login />-->
 
 
         <!--<intercept-url pattern="/ems/core/*-list" access="hasRole('ROLE_USER') and fullyAuthenticated" />-->
@@ -93,6 +93,7 @@ http://www.springframework.org/schema/security/spring-security-3.1.xsd http://co
         <!--<session-management invalid-session-url="/" session-fixation-protection="migrateSession">
             <concurrency-control max-sessions="1" error-if-maximum-exceeded="true"/>
         </session-management>-->
+
         <session-management session-authentication-strategy-ref="sas"/>
 
 

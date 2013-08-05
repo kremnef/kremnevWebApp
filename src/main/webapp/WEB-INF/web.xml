@@ -33,7 +33,7 @@
         <param-value>
             /WEB-INF/spring/applicationContext.xml
             /WEB-INF/spring/applicationContext-jdbc.xml
-            <!--/WEB-INF/spring/application-security.xml-->
+            /WEB-INF/spring/application-security.xml
         </param-value>
     </context-param>
 
@@ -59,6 +59,16 @@
     - Declare a filter for multipart MIME handling
     -->
     <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
         <description>Multipart MIME handling filter for Cocoon</description>
         <display-name>Cocoon multipart filter</display-name>
         <filter-name>CocoonMultipartFilter</filter-name>
@@ -68,6 +78,9 @@
         <filter-name>CocoonMultipartFilter</filter-name>
         <servlet-name>DispatcherServlet</servlet-name>
     </filter-mapping>
+
+
+
     <!--
     - Declare a filter for debugging incoming request
     -->
