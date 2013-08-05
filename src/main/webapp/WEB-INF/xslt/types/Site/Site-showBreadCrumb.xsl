@@ -63,7 +63,8 @@
                 <a href="{$pathPrefix}">Главная</a>
                 <div class="right"/>
             </div>
-            <xsl:variable name="requestURI" select="/root/params/src/param[@name='src']"/>
+            <xsl:variable name="requestURI" select="/root/params/request/param[@name='requestURI']"/>
+            <!--<xsl:variable name="requestURI" select="/root/params/src/param[@name='src']"/>-->
             <!--<xsl:variable name="tempRequestURI" select="substring($requestURI, string-length($pathPrefix) + 1, string-length($requestURI) - string-length($pathPrefix))"/>-->
             <xsl:variable name="clearRequestURI">
                 <xsl:choose>

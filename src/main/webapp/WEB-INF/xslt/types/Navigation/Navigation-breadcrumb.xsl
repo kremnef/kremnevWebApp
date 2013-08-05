@@ -33,7 +33,8 @@
                     <div class="right"/>
                 </div>
 
-                <xsl:variable name="requestURI" select="/root/params/src/param[@name='src']"/>
+                <xsl:variable name="requestURI" select="/root/params/request/param[@name='requestURI']"/>
+                <!--<xsl:variable name="requestURI" select="/root/params/src/param[@name='src']"/>-->
 
                 <xsl:call-template name="breadcrumb-items">
                     <xsl:with-param name="requestURI" select="$requestURI"/>
