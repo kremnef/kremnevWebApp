@@ -11,6 +11,7 @@
     <xsl:template match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-horisontal']">
 
         <xsl:variable name="systemName" select="typifiedObject/systemName" />
+        <xsl:variable name="languageCodePrefix" select="//request/param[@name='languageCodePrefix']" />
         <xsl:variable name="parentId" select="typifiedObject/@id" />
 
         <xsl:variable name="position" select="../key"/>
@@ -38,7 +39,7 @@
 
                                 <xsl:choose>
                                     <xsl:when test="$systemNodeId">
-                                        <a href="{$servletPath}/{$sitemapPath}{pathURL}"><xsl:value-of select="$name" /></a>
+                                        <a href="{$servletPath}/{$sitemapPath}/{$languageCodePrefix}/{pathURL}"><xsl:value-of select="$name" /></a>
                                     </xsl:when>
                                     <xsl:when test="$outerURL">
                                         <a href="{$outerURL}"><xsl:value-of select="$name" /></a>
@@ -60,7 +61,7 @@
 
                                 <xsl:choose>
                                     <xsl:when test="$systemNodeId">
-                                        <a href="{$servletPath}/{$sitemapPath}{pathURL}"><xsl:value-of select="$name" /></a>
+                                        <a href="{$servletPath}/{$sitemapPath}{$languageCodePrefix}/{pathURL}"><xsl:value-of select="$name" /></a>
                                     </xsl:when>
                                     <xsl:when test="$outerURL">
                                         <a href="{$outerURL}"><xsl:value-of select="$name" /></a>

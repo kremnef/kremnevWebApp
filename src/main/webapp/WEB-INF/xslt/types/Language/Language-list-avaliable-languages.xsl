@@ -10,6 +10,7 @@
 
     <xsl:template match="value[objectType/name='Language' and typeAction/name = 'list-avaliable-languages']">
         <!--Define Variables-->
+        <xsl:variable name="languageCodePrefix" select="//request/param[@name='languageCodePrefix']" />
         <xsl:variable name="systemName" select="objectType/name"/>
         <xsl:variable name="id" select="objectType/@id"/>
         <xsl:variable name="position" select="../key"/>
@@ -23,8 +24,10 @@
                   <ul class="avaliable-languages" id="ul-{$systemName}-{$position}" name="ul-{$systemName}">
                       <xsl:for-each select="$languages">
                           <li>
-                              <a href="?lang={code}">
-                                  <xsl:if test="code=$locale">
+                              <!--<a href="?lang={code}">-->
+                              languageCodePrefix
+                              <a href="{//request/param[@name='servletPath']}/{//request/param[@name='sitemapPath']}{code}/{//src/param[@name='src']}">
+                                  <xsl:if test="code=$languageCodePrefix">
                                       <xsl:attribute name="class">selected</xsl:attribute>
                                   </xsl:if>
                                   <xsl:value-of select="name"/>

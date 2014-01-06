@@ -27,7 +27,7 @@
                                <maxIdleTime>30000</maxIdleTime>
                            </connector>
                        </connectors>
-                       <webAppSourceDirectory>${project.build.directory}/${pom.artifactId}-${pom.version}</webAppSourceDirectory>
+                       <webAppSourceDirectory>${project.build.directory}/${project.artifactId}-${project.version}</webAppSourceDirectory>
                        <contextPath>/</contextPath>
                        <!--<webAppConfig>-->
                              <!--<contextPath>/</contextPath>-->

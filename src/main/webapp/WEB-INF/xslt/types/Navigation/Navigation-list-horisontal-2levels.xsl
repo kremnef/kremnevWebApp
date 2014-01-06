@@ -11,6 +11,7 @@
     <xsl:template
             match="value[typifiedObject/objectType/name='Navigation' and typeAction/name = 'list-horisontal-2levels']">
 
+        <xsl:variable name="languageCodePrefix" select="//request/param[@name='languageCodePrefix']"/>
         <xsl:variable name="systemName" select="typifiedObject/systemName"/>
         <xsl:variable name="baseURL" select="typifiedObject/baseURL"/>
 
@@ -47,7 +48,7 @@
 
                                     <xsl:choose>
                                         <xsl:when test="$systemNodeId">
-                                            <a href="{$servletPath}/{$sitemapPath}{pathURL}" class="selected">
+                                            <a href="{$servletPath}/{$sitemapPath}{$languageCodePrefix}/{pathURL}" class="selected">
                                                 <xsl:value-of select="$name"/>
                                             </a>
                                         </xsl:when>
@@ -73,7 +74,7 @@
 
                                     <xsl:choose>
                                         <xsl:when test="$systemNodeId">
-                                            <a href="{$servletPath}/{$sitemapPath}{pathURL}">
+                                            <a href="{$servletPath}/{$sitemapPath}{$languageCodePrefix}/{pathURL}">
                                                 <xsl:value-of select="$name"/>
                                             </a>
                                         </xsl:when>
@@ -103,6 +104,7 @@
 
 
     <xsl:template match="item">
+        <xsl:variable name="languageCodePrefix" select="//request/param[@name='languageCodePrefix']"/>
         <li>
             <xsl:variable name="name">
                 <xsl:call-template name="getLocalName">
@@ -118,7 +120,7 @@
             <xsl:variable name="outerURL" select="outerURL"/>
             <xsl:choose>
                 <xsl:when test="$systemNodeId">
-                    <a href="{$servletPath}/{$sitemapPath}{pathURL}">
+                    <a href="{$servletPath}/{$sitemapPath}{$languageCodePrefix}/{pathURL}">
                         <xsl:value-of select="$name"/>
                     </a>
                 </xsl:when>
